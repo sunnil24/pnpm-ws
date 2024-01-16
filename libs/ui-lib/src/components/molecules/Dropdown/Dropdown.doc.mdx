@@ -1,0 +1,28 @@
+import { Canvas, Meta } from '@storybook/addon-docs';
+
+import { Dropdown } from './Dropdown'
+
+import * as DropdownStories from './Dropdown.stories'
+
+import {ArgTypes} from '@storybook/blocks'
+
+<Meta of={DropdownStories} />
+
+# Dropdown
+
+A brief introduction to your component.
+
+## Install
+```sh 
+    npm install @my-org/Dropdown
+```
+## Import
+```js 
+    import {Dropdown} from 'my-org/Dropdown'
+```
+## Props 
+<ArgTypes of={Dropdown} />
+## Usage
+### Default
+<Canvas of={DropdownStories.Default} />
+

@@ -1,0 +1,22 @@
+{
+  "name": "@xyzproject/button",
+  "version": "1.0.4",
+  "description": "Button component",
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDepedencies": {
+    "@radix-ui/react-toggle": "1.0.3",
+    "class-variance-authority": "0.6.0"
+  }
+}
