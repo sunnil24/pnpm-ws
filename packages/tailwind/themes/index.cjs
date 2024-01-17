@@ -1,4 +1,4 @@
-export  const baseTheme = {
+  const baseTheme = {
   container: {
     center: true,
     padding: "2rem",
@@ -61,3 +61,6 @@ export  const baseTheme = {
     },
   },
 };
+
+
+module.exports = {baseTheme}

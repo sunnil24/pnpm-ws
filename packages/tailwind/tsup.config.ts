@@ -8,7 +8,7 @@ export const tsup: Options = {
   skipNodeModulesBundle: true,
   // entryPoints: ["index.ts", "themes/index.ts", "config/*.ts"],
   entry:{
-    "themes/index": "themes/index.ts",
+    // "themes/index": "themes/index.ts",
     "index": "index.ts",
   },
   target: "es2020",

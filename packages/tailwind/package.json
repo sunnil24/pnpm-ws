@@ -1,7 +1,6 @@
 {
   "name": "@xyzproject/tailwind-config-design-system",
   "version": "1.0.5",
-  "main": "index.js",
   "type": "module",
   "devDependencies": {
     "tsup": "7.2.0",
@@ -20,7 +19,7 @@
     "tailwind-merge": "^2.2.0"
   },
   "scripts": {
-    "tw-build":"tsup && copyfiles config/* styles/* dist",
+    "tw-build":"tsup && copyfiles themes/* config/* styles/* dist",
     "tw-pub": "npm publish",
     "linktw": "cd dist && npm link",
     "tw-drypub": "npm publish --dry-run"

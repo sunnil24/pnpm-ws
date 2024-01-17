@@ -1,4 +1,4 @@
-const { baseTheme } = require("../themes");
+const { baseTheme } = require("../themes/index.cjs");
 
  const content = [
   "./libs/ui-lib/src/components/**/*.{js,ts,jsx,tsx,mdx}",
