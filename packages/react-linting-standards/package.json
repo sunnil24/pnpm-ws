@@ -1,6 +1,6 @@
 {
   "name": "react-linting-standards",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ESLint + Prettier config for React",
   "type": "module",
   "keywords": [
@@ -47,7 +47,7 @@
     "node": ">=17.0.0"
   },
   "scripts": {
-    "linting-build": "tsup && copyfiles .prettierrc.json dist",
+    "linting-build": "copyfiles config/* .prettierrc.json .eslintrc.cjs dist",
     "tw-pub": "npm publish",
     "linktw": "cd dist && npm link",
     "tw-drypub": "npm publish --dry-run",
