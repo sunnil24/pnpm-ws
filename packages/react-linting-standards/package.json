@@ -1,6 +1,6 @@
 {
   "name": "react-linting-standards",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "ESLint + Prettier config for React",
   "type": "module",
   "keywords": [
@@ -13,10 +13,6 @@
   "devDependencies": {
     "copyfiles": "2.4.1",
     "tsup": "7.2.0"
-  },
-  "exports": {
-    ".": "./.eslintrc.cjs",
-    "./prettier": "./.prettierrc.json"
   },
   "main": ".eslintrc.cjs",
   "module": ".eslintrc.cjs",
