@@ -1,6 +1,6 @@
 {
   "name": "react-linting-standards",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "ESLint + Prettier config for React",
   "type": "module",
   "keywords": [
