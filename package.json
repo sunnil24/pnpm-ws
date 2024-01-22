@@ -60,11 +60,12 @@
     "build:storybook": "storybook build -o dist/storybook",
     "build:ui-lib": "node scripts/dist/index.js build",
     "publish:ui-lib": "node scripts/dist/index.js pub",
-    "tcv": "tailwind-config-viewer -o -c tailwind.config.viewer.js",
+    "tcv": "npx tailwind-config-viewer -o -c tailwind.config.js",
     "build:tcv": "rimraf dist/tcv && mkdir dist\\tcv && npx tailwind-config-viewer -c tailwind.config.viewer.js export dist/tcv"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/themes": "^2.0.3",
     "class-variance-authority": "^0.7.0"
   }
 }
