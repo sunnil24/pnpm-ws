@@ -1,6 +1,5 @@
 import { Grid } from '@radix-ui/themes';
 import React from "react";
-import '@radix-ui/themes/styles.css';
 
 export interface GridLayoutProps {
   className?: string;
