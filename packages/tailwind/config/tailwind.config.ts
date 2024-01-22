@@ -1,4 +1,4 @@
-const { baseTheme } = require("../themes/index.cjs");
+import {baseTheme} from "../themes"
 
  const content = [
   "./libs/ui-lib/src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,13 +7,17 @@ const { baseTheme } = require("../themes/index.cjs");
   "./apps/**/*.{js,ts,jsx,tsx,mdx}",
 ];
 
-
-
-const tailwindConfig = {
+export const tailwindConfig = {
   darkMode: ["class", '[data-mode="dark"]'],
   content,
   theme: {
-    ...baseTheme
+    ...baseTheme,
+    extend:{
+      gridTemplateColumns: {
+        '16': 'repeat(16, minmax(0, 1fr))',
+      }
+    }
   },
   plugins: [],
-};module.exports = tailwindConfig
+};
+

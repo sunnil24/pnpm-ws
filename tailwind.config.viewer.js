@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs'
+import path from 'path'
 
-module.exports = function extractDesignSystemVariables() {
+export function extractDesignSystemVariables() {
   const tokens = {};
   const regex = /--[^:\s]+:\s[^;]+;/g;
   let match;

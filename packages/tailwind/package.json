@@ -1,25 +1,42 @@
 {
   "name": "@xyzproject/tailwind-config-design-system",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "type": "module",
   "devDependencies": {
     "tsup": "7.2.0",
-    "copyfiles": "2.4.1"
+    "copyfiles": "2.4.1",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.0"
   },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
     "dist",
-    "package.json"
+    "package.json",
+    "styles"
   ],
-  "dependencies": {
+  "typesVersions": {
+    "<3.8": {
+      "*": ["dist/index.d.ts"]
+    },
+    ">=3.8": {
+      "*": ["dist/index.d.cts"]
+    }
+ },
+  "peerDependencies": {
     "clsx": "^2.1.0",
-    "tailwind-merge": "^2.2.0"
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss": "3.4.1",
+    "postcss":"8.4.33",
+    "autoprefixer":"10.4.17"
   },
   "scripts": {
-    "tw-build":"tsup && copyfiles themes/* config/* styles/* dist",
+    "tw-build":"tsup",
     "tw-pub": "npm publish",
     "linktw": "cd dist && npm link",
     "tw-drypub": "npm publish --dry-run"
