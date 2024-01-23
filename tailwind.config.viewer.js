@@ -1,12 +1,13 @@
-const fs = require("fs");
+import fs from 'fs'
+import path from 'path'
 
-module.exports = function extractDesignSystemVariables() {
+export function extractDesignSystemVariables() {
   const tokens = {};
   const regex = /--[^:\s]+:\s[^;]+;/g;
-let match;
+  let match;
   while (
     (match = regex.exec(
-      fs.readFileSync("./packages/tailwind/styles/tailwind.css", "utf8")
+      fs.readFileSync(path.join(__dirname, './packages/tailwind/styles/tailwind.css'), 'utf8')
     )) !== null
   ) {
     const [declaration] = match;
