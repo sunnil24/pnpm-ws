@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { useEnvironment } from './useEnvironment';
+import { useEnvironment } from './useEnv';
 
 describe('useEnvironment', () => {
   it('should return the correct environment config based on the hostname', () => {

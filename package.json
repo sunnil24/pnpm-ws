@@ -6,7 +6,7 @@
   "private": true,
   "workspaces": [
     "libs/ui-lib/src/components/*/*",
-    "libs/utils/*",
+    "libs/utils/hooks/*",
     "packages/*",
     "scripts"
   ],
