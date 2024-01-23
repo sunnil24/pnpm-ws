@@ -28,21 +28,6 @@ yarn add @your-org/use-env
 ```jsx
 import { useEnv } from '@your-org/use-env';
 
-const envConfig = {
-  uat: {
-    api_url: 'http://uat.xyz.com',
-  },
-  it: {
-    api_url: 'http://it.xyz.com',
-  },
-  prod: {
-    api_url: 'http://xyz.com',
-  },
-  local: {
-    api_url: 'http://localhost:4200',
-  },
-};
-
 function MyComponent() {
  const { envInit } = useEnv(); 
  envInit(); // Call without arguments to automatically determine the environment
