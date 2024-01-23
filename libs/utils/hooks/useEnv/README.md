@@ -1,20 +1,17 @@
 # useEnv Hook
+useEnv is a custom React hook that allows you to easily manage different environment configurations in your application.
 
-`useEnv` is a custom React hook that allows you to easily manage different environment configurations in your application.
+## Why useEnv?
+Managing different environments in a web application can be challenging. useEnv simplifies this process by providing a consistent way to handle environment configurations.
 
-The useEnv hook is a custom React hook that provides an easy way to manage different environment configurations in your application.
+By using useEnv, you can:
 
-The benefits of using this hook are:
+1.Easily switch between different environments (like 'uat', 'prod', 'local', etc.)
+2.Automatically determine the environment based on the hostname
+3.Override the automatic environment detection by storing 'isMocked' in sessionStorage
+4.Get the current environment configuration from any component in your application
 
-Centralized Configuration Management: By using this hook, you can centralize all your environment-specific configurations in one place. This makes it easier to manage and update these configurations as your application grows.
-
-Dynamic Environment Detection: The hook automatically detects the current environment based on the hostname. This means you don't have to manually switch between different configurations when moving from development to production, for example.
-
-Easy Access to Configurations: The getEnv function returned by the hook provides an easy way to access the current environment's configuration anywhere in your application. This can be very useful when you need to use these configurations in multiple components.
-
-Mocking Support: The hook supports a mockConfig that can be used when mockEnabled is set in the session storage. This can be very useful for testing and development purposes.
-
-In summary, the useEnv hook provides a clean and efficient way to manage environment-specific configurations in your React application. By encapsulating this logic in a custom hook, you can keep your components clean and focused on their primary responsibilities.
+This makes your code cleaner and easier to maintain, and allows you to focus on the core functionality of your application.
 
 ## Installation
 
@@ -26,8 +23,9 @@ npm install @your-org/use-env
 or 
 
 yarn add @your-org/use-env
+```
 
-
+```jsx
 import { useEnv } from '@your-org/use-env';
 
 const envConfig = {
@@ -46,24 +44,51 @@ const envConfig = {
 };
 
 function MyComponent() {
-    const { envInit, getEnv } = useEnv();
-    envInit(envConfig);
-    
-    useEffect(() => {
-    console.log(getEnv())
-    }, [])
+ const { envInit } = useEnv(); 
+ envInit(); // Call without arguments to automatically determine the environment
 
+ // You can also specify a particular environment:
+ envInit('uat'); // This will set the environment to 'uat'
 }
+
+// In any other component, you can get the current environment configuration:
+const { getEnv } = useEnv();
+const env = getEnv(); // This will return the current environment configuration
+```
+
+
+
+## Default Configuration
+```Js
+const envConfig = {
+  uat: {
+    rest: 'http://uat-rest.xyz.com',
+    data: 'http://uat-data.xyz.com',
+    content: 'http://uat-content.xyz.com',
+  },
+  it: {
+    rest: 'http://it-rest.xyz.com/rest',
+    data: 'http://it-data.xyz.com/data',
+    content: 'http://it-content.xyz.com/content',
+  },
+  prod: {
+    rest: 'http://rest.xyz.com/rest',
+    data: 'http://data.xyz.com/data',
+    content: 'http://content.xyz.com/content',
+  },
+  local: {
+    rest: 'http://localhost:4200/rest',
+    data: 'http://uat-data.xyz.com/data',
+    content: 'http://uat-content.xyz.com/content',
+  },
+  mocked: {
+    rest: 'http://uat-rest.xyz.com/rest',
+    data: 'http://uat-data.xyz.com/data',
+    content: 'http://uat-content.xyz.com/content',
+  },
+};
 ``````
 
-In this example, useEnv is used to get the correct environment configuration based on the current hostname. The envConfig object is passed as a parameter to the envInit function.
-
-
-API
-The useEnv hook returns an object with two functions:
-
-envInit(envConfig: EnvConfig): Initializes the environment configurations. It accepts an object that maps environment keys to their respective configurations. Each configuration is an object that maps keys to their respective values.
-
-getEnv(): Returns the configuration object for the current environment. If no matching environment key is found in the envConfig object, it returns the prod configuration.
+The hook will automatically determine the environment based on the hostname. If the hostname includes a key from envConfig, it will use that configuration. If 'isMocked' is stored in sessionStorage, it will use the 'mocked' configuration. If none of these conditions are met, it will use the 'prod' configuration.
 
 

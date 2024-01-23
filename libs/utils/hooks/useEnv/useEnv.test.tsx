@@ -1,42 +1,67 @@
-// Import necessary modules
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useEnv } from './useEnv';
 
-// Define the mock data for the environment configurations
-const mockEnvConfig = {
-  uat: {
-    api_url: 'http://uat.xyz.com',
-  },
-  it: {
-    api_url: 'http://it.xyz.com',
-  },
-  prod: {
-    api_url: 'http://xyz.com',
-  },
-  local: {
-    api_url: 'http://localhost:4200',
-  },
-};
-
-// Define the tests
 describe('useEnv', () => {
-  it('initializes the environment correctly', () => {
-    const { result } = renderHook(() => useEnv());
+  let originalHostname:string;
+  
 
-    act(() => {
-      result.current.envInit(mockEnvConfig);
-    });
-
-    expect(result.current.getEnv()).toEqual(mockEnvConfig.prod);
+  beforeEach(() => {
+    originalHostname = window.location.hostname;
   });
 
-  it('returns the correct environment configuration', () => {
+  afterEach(() => {
+    window.location.hostname = originalHostname;
+    sessionStorage.clear();
+  });
+
+  it('should set globalEnv to the specific config if provided', () => {
     const { result } = renderHook(() => useEnv());
-
     act(() => {
-      result.current.envInit(mockEnvConfig);
+      result.current.envInit('uat');
     });
+    expect(result.current.getEnv()).toEqual({
+      rest: 'http://uat-rest.xyz.com',
+      data: 'http://uat-data.xyz.com',
+      content: 'http://uat-content.xyz.com',
+    });
+  });
 
-    expect(result.current.getEnv()).toEqual(mockEnvConfig.prod);
+  it('should set globalEnv to the mocked config if isMocked is stored in sessionStorage', () => {
+    sessionStorage.setItem('isMocked', 'true');
+    const { result } = renderHook(() => useEnv());
+    act(() => {
+      result.current.envInit();
+    });
+    expect(result.current.getEnv()).toEqual({
+      rest: 'http://uat-rest.xyz.com/rest',
+      data: 'http://uat-data.xyz.com/data',
+      content: 'http://uat-content.xyz.com/content',
+    });
+  });
+
+  it('should set globalEnv to the config that matches the hostname', () => {
+    window.location.hostname = 'uat.xyz.com';
+    const { result } = renderHook(() => useEnv());
+    act(() => {
+      result.current.envInit();
+    });
+    expect(result.current.getEnv()).toEqual({
+      rest: 'http://uat-rest.xyz.com',
+      data: 'http://uat-data.xyz.com',
+      content: 'http://uat-content.xyz.com',
+    });
+  });
+
+  it('should set globalEnv to the prod config if no other conditions are met', () => {
+    window.location.hostname = 'unknown.com';
+    const { result } = renderHook(() => useEnv());
+    act(() => {
+      result.current.envInit();
+    });
+    expect(result.current.getEnv()).toEqual({
+      rest: 'http://rest.xyz.com/rest',
+      data: 'http://data.xyz.com/data',
+      content: 'http://content.xyz.com/content',
+    });
   });
 });
