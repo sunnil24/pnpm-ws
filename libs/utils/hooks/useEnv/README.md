@@ -53,28 +53,23 @@ const env = getEnv(); // This will return the current environment configuration
 const envConfig = {
   uat: {
     rest: 'http://uat-rest.xyz.com',
-    data: 'http://uat-data.xyz.com',
     content: 'http://uat-content.xyz.com',
   },
   it: {
     rest: 'http://it-rest.xyz.com/rest',
-    data: 'http://it-data.xyz.com/data',
     content: 'http://it-content.xyz.com/content',
   },
   prod: {
     rest: 'http://rest.xyz.com/rest',
-    data: 'http://data.xyz.com/data',
     content: 'http://content.xyz.com/content',
   },
-  local: {
-    rest: 'http://localhost:4200/rest',
-    data: 'http://uat-data.xyz.com/data',
-    content: 'http://uat-content.xyz.com/content',
+   local: {
+    rest: '/mock/rest',
+    content: '/mock/content',
   },
   mocked: {
-    rest: 'http://uat-rest.xyz.com/rest',
-    data: 'http://uat-data.xyz.com/data',
-    content: 'http://uat-content.xyz.com/content',
+    rest: '/mock/rest',
+    content: '/mock/content',
   },
 };
 ``````

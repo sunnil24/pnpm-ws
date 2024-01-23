@@ -3,8 +3,6 @@ import { useEnv } from './useEnv';
 
 describe('useEnv', () => {
   let originalHostname:string;
-  
-
   beforeEach(() => {
     originalHostname = window.location.hostname;
   });
@@ -21,7 +19,6 @@ describe('useEnv', () => {
     });
     expect(result.current.getEnv()).toEqual({
       rest: 'http://uat-rest.xyz.com',
-      data: 'http://uat-data.xyz.com',
       content: 'http://uat-content.xyz.com',
     });
   });
@@ -33,9 +30,8 @@ describe('useEnv', () => {
       result.current.envInit();
     });
     expect(result.current.getEnv()).toEqual({
-      rest: 'http://uat-rest.xyz.com/rest',
-      data: 'http://uat-data.xyz.com/data',
-      content: 'http://uat-content.xyz.com/content',
+      rest: '/mock/rest/',
+      content: '/mock/content',
     });
   });
 
@@ -47,7 +43,6 @@ describe('useEnv', () => {
     });
     expect(result.current.getEnv()).toEqual({
       rest: 'http://uat-rest.xyz.com',
-      data: 'http://uat-data.xyz.com',
       content: 'http://uat-content.xyz.com',
     });
   });
@@ -60,7 +55,6 @@ describe('useEnv', () => {
     });
     expect(result.current.getEnv()).toEqual({
       rest: 'http://rest.xyz.com/rest',
-      data: 'http://data.xyz.com/data',
       content: 'http://content.xyz.com/content',
     });
   });
