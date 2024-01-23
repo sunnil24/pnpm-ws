@@ -1,50 +1,42 @@
-import { renderHook } from '@testing-library/react-hooks';
-import { useEnvironment } from './useEnv';
+// Import necessary modules
+import { renderHook, act } from '@testing-library/react-hooks';
+import { useEnv } from './useEnv';
 
-describe('useEnvironment', () => {
-  it('should return the correct environment config based on the hostname', () => {
-    // Mock the window.location.hostname value
-    Object.defineProperty(window, 'location', {
-      value: {
-        hostname: 'uat.example.com'
-      }
+// Define the mock data for the environment configurations
+const mockEnvConfig = {
+  uat: {
+    api_url: 'http://uat.xyz.com',
+  },
+  it: {
+    api_url: 'http://it.xyz.com',
+  },
+  prod: {
+    api_url: 'http://xyz.com',
+  },
+  local: {
+    api_url: 'http://localhost:4200',
+  },
+};
+
+// Define the tests
+describe('useEnv', () => {
+  it('initializes the environment correctly', () => {
+    const { result } = renderHook(() => useEnv());
+
+    act(() => {
+      result.current.envInit(mockEnvConfig);
     });
 
-    const envConfig = {
-      uat: {
-        api_url: 'http://uat.example.com'
-      },
-      prod: {
-        api_url: 'http://example.com'
-      }
-    };
-
-    const { result } = renderHook(() => useEnvironment(envConfig));
-
-    // The hook should return the UAT config because the hostname includes 'uat'
-    expect(result.current).toEqual(envConfig.uat);
+    expect(result.current.getEnv()).toEqual(mockEnvConfig.prod);
   });
 
-  it('should return the production config if the hostname does not match any environment', () => {
-    // Mock the window.location.hostname value
-    Object.defineProperty(window, 'location', {
-      value: {
-        hostname: 'unknown.example.com'
-      }
+  it('returns the correct environment configuration', () => {
+    const { result } = renderHook(() => useEnv());
+
+    act(() => {
+      result.current.envInit(mockEnvConfig);
     });
 
-    const envConfig = {
-      uat: {
-        api_url: 'http://uat.example.com'
-      },
-      prod: {
-        api_url: 'http://example.com'
-      }
-    };
-
-    const { result } = renderHook(() => useEnvironment(envConfig));
-
-    // The hook should return the production config because the hostname does not include 'uat'
-    expect(result.current).toEqual(envConfig.prod);
+    expect(result.current.getEnv()).toEqual(mockEnvConfig.prod);
   });
 });

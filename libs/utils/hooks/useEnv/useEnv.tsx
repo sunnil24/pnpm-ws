@@ -1,25 +1,29 @@
-import { useEffect, useState } from 'react';
-
 interface EnvConfig {
   [key: string]: {
     [key: string]: string;
   };
 }
 
-export const useEnvironment = (envConfig: EnvConfig) => {
-  const [env, setEnv] = useState<null | { [key: string]: string }>(null);
+let globalEnv: { [key: string]: string } | null = null;
 
-  useEffect(() => {
-    if(Object.keys(envConfig).length){
+export const useEnv = () => {
+
+  const envInit = (envConfig: EnvConfig) => {
     const hostname = window.location.hostname;
     const foundKey = Object.keys(envConfig).find((envKey) => hostname.includes(envKey));
-    if (foundKey) {
-      setEnv(envConfig[foundKey]);
-    } else {
-      setEnv(envConfig.prod); 
+    if(sessionStorage.getItem('mockEnabled')){
+     return globalEnv = envConfig['mockConfig'];
     }
-}
-  }, [envConfig]);
+    if (foundKey) {
+      globalEnv = envConfig[foundKey];
+    } else {
+      globalEnv = envConfig.prod; 
+    }
+  }
 
-  return env;
+  const getEnv = () => {
+    return globalEnv;
+  }
+
+  return { envInit, getEnv };
 };
