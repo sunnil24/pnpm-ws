@@ -7,8 +7,11 @@ Managing different environments in a web application can be challenging. useEnv 
 By using useEnv, you can:
 
 1.Easily switch between different environments (like 'uat', 'prod', 'local', etc.)
+
 2.Automatically determine the environment based on the hostname
+
 3.Override the automatic environment detection by storing 'isMocked' in sessionStorage
+
 4.Get the current environment configuration from any component in your application
 
 This makes your code cleaner and easier to maintain, and allows you to focus on the core functionality of your application.
