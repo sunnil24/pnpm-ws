@@ -31,7 +31,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref: Ref<HTMLButtonElement>
   ): JSX.Element => {
     /**
-     * A utility function that applies the appropriate CSS classes based on the variant and size props
+     * A utility function that applies the appropriate CSS classes,  based on the variant and size props
      * using the clsx utility function.
      *
      * @function applyClasses

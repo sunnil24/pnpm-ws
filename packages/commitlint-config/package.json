@@ -1,0 +1,39 @@
+{
+  "name": "commit-lint-standards",
+  "version": "1.0.3",
+  "description": "",
+  "main": "dist/commitlint.config.js",
+  "module": "dist/commitlint.config.cjs",
+  "types":"dist/commitlint.config.d.ts",
+  "files":["dist","package.json"],
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "linting-build": "tsup && copyfiles .husky/* dist",
+    "linting-publish": "npm publish",
+    "linktw": "cd dist && npm link",
+    "tw-drypub": "npm publish --dry-run",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^18.4.4",
+    "@commitlint/cz-commitlint": "^18.4.4",
+    "commitizen": "^4.3.0",
+    "commitlint": "^18.4.4",
+    "copyfiles": "2.4.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "tsup": "7.2.0",
+    "validate-branch-name": "^1.3.0"
+  }
+}

@@ -15,6 +15,8 @@
     "@babel/preset-env": "7.23.8",
     "@babel/preset-react": "7.23.3",
     "@babel/preset-typescript": "7.23.3",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@commitlint/cz-commitlint": "^18.4.4",
     "@jsdevtools/version-bump-prompt": "6.1.0",
     "@storybook/addon-a11y": "7.6.7",
     "@storybook/addon-docs": "7.6.7",
@@ -38,36 +40,90 @@
     "@xt-pagesource/generate-plop": "1.4.1",
     "@xyzproject/tailwind-config-design-system": "*",
     "autoprefixer": "10.4.16",
-    "copyfiles": "2.4.1",
+    "commit-lint-standards": "^1.0.3",
+    "commitizen": "^4.3.0",
+    "commitlint": "^18.4.4",
+    "copyfiles": "^2.4.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
+    "lint-staged": "^15.2.0",
     "postcss": "8.4.33",
     "react": "18.2.0",
     "react-docgen-typescript": "2.2.2",
     "react-dom": "18.2.0",
+    "react-linting-standards": "*",
     "remark-gfm": "4.0.0",
     "rimraf": "5.0.5",
     "storybook": "7.6.7",
     "tailwind-config-viewer": "1.7.3",
-    "tailwindcss": "3.4.1",
+    "tailwindcss": "^3.4.1",
     "ts-jest": "29.1.1",
+    "tsup": "7.2.0",
     "typescript": "5.3.3",
+    "validate-branch-name": "^1.3.0",
     "vite": "4.5.1",
-    "vite-plugin-dts": "3.7.0"
+    "vite-plugin-dts": "3.7.0",
+    "vitest": "^1.2.1"
   },
   "scripts": {
+    "test": "vitest",
+    "test:watch": "vitest --watch",
     "storybook": "storybook dev -p 6006",
     "generate": "generate",
     "build:storybook": "storybook build -o dist/storybook",
     "build:ui-lib": "node scripts/dist/index.js build",
     "publish:ui-lib": "node scripts/dist/index.js pub",
+    "lint": "eslint 'apps/**/*.{ts,tsx}'",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+    "prepare": "husky install && copyfiles -f node_modules/commit-lint-standards/dist/.husky/* .husky",
+    "commit": "lint-staged && validate-branch-name && cz ",
+    "prepare-commit": "cross-env CHECKS_RUN=1 yarn run commit",
     "tcv": "npx tailwind-config-viewer -o -c tailwind.config.js",
     "build:tcv": "rimraf dist/tcv && mkdir dist\\tcv && npx tailwind-config-viewer -c tailwind.config.viewer.js export dist/tcv"
   },
   "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@radix-ui/react-icons": "^1.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
     "@radix-ui/themes": "^2.0.3",
     "@testing-library/react-hooks": "^8.0.1",
-    "class-variance-authority": "^0.7.0"
+    "class-variance-authority": "^0.7.0",
+    "commit-lint-standards": "^1.0.3",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-custom-alias": "^1.3.2",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest-dom": "^5.1.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sort-destructure-keys": "^1.5.0",
+    "eslint-plugin-tailwindcss": "^3.14.0",
+    "eslint-plugin-testing-library": "^6.2.0",
+    "prettier": "^3.2.4",
+    "prettier-plugin-packagejson": "^2.4.9",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "react-linting-standards": "^1.0.10"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "validate-branch-name": {
+    "pattern": "^(main|(feat|fix|task)/JIRA-\\d+/[\\w-]+)$",
+    "errorMsg": "Invalid branch name. Examples: [main, feat/JIRA-1200/user-authentication, fix/JIRA-1234/error-handling, task/JIRA-1300/code-cleanup]"
+  },
+  "lint-staged": {
+    "apps/**/*.{ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }
