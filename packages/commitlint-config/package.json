@@ -1,10 +1,11 @@
 {
   "name": "commit-lint-standards",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/commitlint.config.js",
-  "module": "dist/commitlint.config.js",
-  "type": "module",
+  "module": "dist/commitlint.config.cjs",
+  "types":"dist/commitlint.config.d.ts",
+  "files":["dist","package.json"],
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
@@ -13,7 +14,7 @@
   "scripts": {
     "test": "vitest",
     "test:watch": "vitest --watch",
-    "linting-build": "copyfiles .husky/* commitlint.config.js dist",
+    "linting-build": "tsup && copyfiles .husky/* dist",
     "linting-publish": "npm publish",
     "linktw": "cd dist && npm link",
     "tw-drypub": "npm publish --dry-run",
