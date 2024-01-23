@@ -25,6 +25,8 @@ or
 yarn add @your-org/use-env
 ```
 
+# Usage 
+
 ```jsx
 import { useEnv } from '@your-org/use-env';
 
@@ -32,7 +34,7 @@ function MyComponent() {
  const { envInit } = useEnv(); 
  envInit(); // Call without arguments to automatically determine the environment
 
- // You can also specify a particular environment:
+// You can also specify a particular environment:
  envInit('uat'); // This will set the environment to 'uat'
 }
 
