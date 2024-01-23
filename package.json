@@ -6,6 +6,7 @@
   "private": true,
   "workspaces": [
     "libs/ui-lib/src/components/*/*",
+    "libs/utils/hooks/*",
     "packages/*",
     "scripts"
   ],
@@ -88,6 +89,7 @@
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
     "@radix-ui/themes": "^2.0.3",
+    "@testing-library/react-hooks": "^8.0.1",
     "class-variance-authority": "^0.7.0",
     "commit-lint-standards": "^1.0.3",
     "cross-env": "^7.0.3",
