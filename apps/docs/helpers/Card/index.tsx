@@ -21,7 +21,7 @@ export const Card: FC<CardProps> = ({
       }
     : {};
   const a = 23;
-  
+
   return (
     <a
       href={href}

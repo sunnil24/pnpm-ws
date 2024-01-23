@@ -4,8 +4,6 @@
   "description": "Custom UI library generated using @genesisx/design-system plugin",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint --ext .js,.jsx,.tsx .",
-    "test": "vitest",
-    "test:coverage": "vitest --coverage"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
   }
 }
