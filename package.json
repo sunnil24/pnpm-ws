@@ -11,10 +11,6 @@
     "scripts"
   ],
   "devDependencies": {
-    "@babel/eslint-parser": "7.23.3",
-    "@babel/preset-env": "7.23.8",
-    "@babel/preset-react": "7.23.3",
-    "@babel/preset-typescript": "7.23.3",
     "@commitlint/config-conventional": "^18.4.4",
     "@commitlint/cz-commitlint": "^18.4.4",
     "@jsdevtools/version-bump-prompt": "6.1.0",
@@ -30,7 +26,6 @@
     "@storybook/react-vite": "7.6.7",
     "@storybook/testing-library": "0.2.2",
     "@storybook/theming": "7.6.7",
-    "@testing-library/jest-dom": "6.2.0",
     "@testing-library/react": "14.1.2",
     "@types/react": "18.2.47",
     "@types/react-dom": "18.2.18",
@@ -63,8 +58,9 @@
     "vitest": "^1.2.1"
   },
   "scripts": {
-    "test": "vitest",
-    "test:watch": "vitest --watch",
+    "test": "vitest --config ./vitest.config.ts",
+    "test:watch": "vitest --watch --config ./vitest.config.ts",
+    "coverage": "vitest run --coverage --config ./vitest.config.ts",
     "storybook": "storybook dev -p 6006",
     "generate": "generate",
     "build:storybook": "storybook build -o dist/storybook",
@@ -79,13 +75,13 @@
     "build:tcv": "rimraf dist/tcv && mkdir dist\\tcv && npx tailwind-config-viewer -c tailwind.config.viewer.js export dist/tcv"
   },
   "dependencies": {
-    "@babel/core": "^7.23.7",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/themes": "^2.0.3",
     "@testing-library/react-hooks": "^8.0.1",
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
+    "@vitest/coverage-v8": "^1.2.1",
     "class-variance-authority": "^0.7.0",
     "commit-lint-standards": "^1.0.3",
     "cross-env": "^7.0.3",
@@ -95,7 +91,6 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-custom-alias": "^1.3.2",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jest-dom": "^5.1.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.33.2",
@@ -103,6 +98,7 @@
     "eslint-plugin-sort-destructure-keys": "^1.5.0",
     "eslint-plugin-tailwindcss": "^3.14.0",
     "eslint-plugin-testing-library": "^6.2.0",
+    "jsdom": "^24.0.0",
     "prettier": "^3.2.4",
     "prettier-plugin-packagejson": "^2.4.9",
     "prettier-plugin-tailwindcss": "^0.5.11",
