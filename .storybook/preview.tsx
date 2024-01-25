@@ -22,7 +22,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ["Getting Started", "Using GenesisX UI", "Components", "*"],
+      order: ["Getting Started","Tailwind Variables", "Packages", "Components", "*"],
     },
   },
   actions: { argTypesRegex: "^on[A-Z].*" },

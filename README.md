@@ -30,27 +30,23 @@ Building and Publishing Tailwind Package
 
 ## To build the Tailwind package, use the following command:
  
-yarn workspace tailwind-config-design-system tw-build
+yarn workspace tailwind-config-design-system build
 
 ## To publish the Tailwind package, use the following command:
 
-yarn workspace tailwind-config-design-system tw-pub
+yarn workspace tailwind-config-design-system publish
 
+# useEnv Hook
 
-## Installing Tailwind Package
-You can install the Tailwind package in your project with the following command:
+useEnv is a custom React hook that allows you to easily manage different environment configurations in your application.
 
-yarn add @xyzproject/tailwind-config-design-system@latest
+Building and Publishing useEnv Package
 
+## To build the useEnv package, use the following command:
+ 
+yarn workspace @xyzproject/env-hook build
 
-## What Tailwind Package Provides
-The Tailwind package includes the following files:
+## To publish the useEnv package, use the following command:
 
-.config/postcss.config.cjs
-.config/tailwind.config.cjs
-.styles/normalize.css
-.styles/tailwind.css
-.themes/index.cjs
-.themes/index.js
-.index.js
-.index.cjs
+yarn workspace @xyzproject/env-hook publish
+
