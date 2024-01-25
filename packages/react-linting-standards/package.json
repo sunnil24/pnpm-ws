@@ -43,8 +43,8 @@
     "node": ">=17.0.0"
   },
   "scripts": {
-    "linting-build": "copyfiles config/* .prettierrc.json .eslintrc.cjs dist",
-    "tw-pub": "npm publish",
+    "build": "copyfiles config/* .prettierrc.json .eslintrc.cjs dist",
+    "publish": "npm publish",
     "linktw": "cd dist && npm link",
     "tw-drypub": "npm publish --dry-run",
     "lint": "eslint --ignore-path .gitignore .",

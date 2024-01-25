@@ -14,8 +14,8 @@
   "scripts": {
     "test": "vitest",
     "test:watch": "vitest --watch",
-    "linting-build": "tsup && copyfiles .husky/* dist",
-    "linting-publish": "npm publish",
+    "build": "tsup && copyfiles .husky/* dist",
+    "publish": "npm publish",
     "linktw": "cd dist && npm link",
     "tw-drypub": "npm publish --dry-run",
     "lint": "eslint --ignore-path .gitignore .",

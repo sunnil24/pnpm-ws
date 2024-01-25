@@ -34,8 +34,8 @@
     "autoprefixer":"10.x"
   },
   "scripts": {
-    "tw-build":"tsup",
-    "tw-pub": "npm publish",
+    "build":"tsup",
+    "publish": "npm publish",
     "linktw": "cd dist && npm link",
     "tw-drypub": "npm publish --dry-run"
   }
