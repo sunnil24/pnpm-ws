@@ -1,6 +1,6 @@
 {
     "name": "@xyzproject/env-hook",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "type": "module",
     "devDependencies": {
       "tsup": "7.2.0",
@@ -30,8 +30,8 @@
         "react-dom": "18.2.0"
     },
     "scripts": {
-      "hooks-build":"tsup",
-      "hooks-pub": "npm publish",
+      "build":"tsup",
+      "publish": "npm publish",
       "linktw": "cd dist && npm link",
       "tw-drypub": "npm publish --dry-run"
     }

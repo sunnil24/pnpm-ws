@@ -1,19 +1,19 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import { SearchBox } from './SearchBox';
+import {describe,test, expect, vi} from 'vitest'
 
 describe('SearchBox', () => {
-  it('should render a search input box and a search button', () => {
+  test('should render a search input box and a search button', () => {
     const { getByPlaceholderText, getByRole } = render(<SearchBox />);
     const input = getByPlaceholderText('Search');
     const button = getByRole('button');
-    expect(input).toBeInTheDocument();
-    expect(button).toBeInTheDocument();
+    expect(input).toBeDefined();
+    expect(button).toBeDefined();
   });
 
-  it('should call onSearch function with search query when the search button is clicked', () => {
-    const mockOnSearch = jest.fn();
+  test('should call onSearch function with search query when the search button is clicked', () => {
+    const mockOnSearch = vi.fn();
     const { getByRole } = render(<SearchBox onSearch={mockOnSearch} />);
     const button = getByRole('button');
     fireEvent.click(button);
@@ -21,7 +21,7 @@ describe('SearchBox', () => {
     expect(mockOnSearch).toHaveBeenCalledWith('');
   });
 
-  it('should update search query state when text is entered into the search input box', () => {
+  test('should update search query state when text is entered into the search input box', () => {
     const { getByText, getByPlaceholderText } = render(<SearchBox />);
     const input = getByPlaceholderText('Search');
     fireEvent.change(input, { target: { value: 'Test search query' } });
