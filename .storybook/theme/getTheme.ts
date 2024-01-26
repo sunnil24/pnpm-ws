@@ -12,8 +12,8 @@ export const getTheme = ({ base }) => {
     fontBase: '"Fira code", sans-serif',
     fontCode: "monospace",
 
-    brandTitle: "GenesisX",
-    brandUrl: "https://genesisx.netlify.app/",
+    brandTitle: "",
+    brandUrl: "",
     brandImage: logoUrl,
     brandTarget: "_self",
 
