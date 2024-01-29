@@ -25,7 +25,6 @@ function useStorage(storageType: StorageType = 'localStorage'): StorageHook {
 
   const getItem = useCallback(
     (key: string) => {
-      console.log(">>>STATE", key, state[key])
       return state[key];
     },
     [state]
