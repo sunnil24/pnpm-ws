@@ -1,0 +1,42 @@
+{
+  "name": "@xyzproject/throttle-hook",
+  "version": "1.0.0",
+  "type": "module",
+  "devDependencies": {
+    "tsup": "7.2.0",
+    "copyfiles": "2.4.1"
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "typesVersions": {
+    "<3.8": {
+      "*": [
+        "dist/index.d.ts"
+      ]
+    },
+    ">=3.8": {
+      "*": [
+        "dist/index.d.cts"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "publish": "npm publish",
+    "linktw": "cd dist && npm link",
+    "tw-drypub": "npm publish --dry-run"
+  }
+}
