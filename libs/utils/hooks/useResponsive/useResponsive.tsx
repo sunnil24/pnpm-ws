@@ -39,16 +39,11 @@ function calculate() {
   const newInfo = {} as ResponsiveInfo;
   let shouldUpdate = false;
   for (const key of Object.keys(responsiveConfig)) {
-    console.log('>>>>>> COMP', width, responsiveConfig[key])
-    console.log("<<<<<<<< compare", width >= responsiveConfig[key])
-    console.log("<<<<<<<< info", newInfo[key], info[key])
-
     newInfo[key] = width >= responsiveConfig[key];
     if (newInfo[key] !== info[key]) {
       shouldUpdate = true;
     }
   }
-  console.log("<<<<< UPDATE", info, newInfo)
   if (shouldUpdate) {
     info = newInfo;
   }
