@@ -53,7 +53,7 @@ export default function runScript(script: 'build' | 'pub') {
         }
       } catch (err) {
         console.error(
-          `\n${chalk.bgRedBright.bold.black('NUVEEN SCRIPT ')} ${chalk.redBright(
+          `\n${chalk.bgRedBright.bold.black('xyzproject SCRIPT ')} ${chalk.redBright(
             `Error while running target ${script} for ${component}`,
           )}`,
         );
@@ -65,7 +65,7 @@ export default function runScript(script: 'build' | 'pub') {
 
   const components = getComponents(componentsDir);
   const spinner = ora(
-    `${chalk.bgYellowBright.black.bold('NUVEEN SCRIPT ')} ${chalk.yellowBright(
+    `${chalk.bgYellowBright.black.bold('xyzproject SCRIPT ')} ${chalk.yellowBright(
       `Started running target ${script}...\n`,
     )}`,
   ).start();
@@ -84,14 +84,14 @@ export default function runScript(script: 'build' | 'pub') {
         }
       });
       spinner.succeed(
-        `${chalk.bgGreenBright.black.bold('NUVEEN SCRIPT ')} ${chalk.green(
+        `${chalk.bgGreenBright.black.bold('xyzproject SCRIPT ')} ${chalk.green(
           `Successfully ran target ${script} for ${component}`,
         )}\n`,
       );
     } else {
       Object.values(components).forEach(executeScript);
       spinner.succeed(
-        `${chalk.bgGreenBright.black.bold('NUVEEN SCRIPT ')} ${chalk.green(
+        `${chalk.bgGreenBright.black.bold('xyzproject SCRIPT ')} ${chalk.green(
           `Successfully ran target ${script}`,
         )}\n`,
       );
