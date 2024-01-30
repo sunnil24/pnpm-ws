@@ -1,0 +1,27 @@
+{
+  "name": "{{properCase name}}",
+  "version": "0.1.0",
+  "description": "{{properCase name}} component",
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "{tailwind}": "*",
+    "@radix-ui/react-toggle": "1.0.3",
+    "class-variance-authority": "0.6.0"
+  },
+  "peerDependencies": {
+    "react": "^18.x",
+    "react-dom": "^18.x"
+  }
+}
