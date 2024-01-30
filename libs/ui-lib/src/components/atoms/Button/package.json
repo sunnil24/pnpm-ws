@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/button",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Button component",
   "license": "MIT",
   "main": "dist/cjs/index.js",

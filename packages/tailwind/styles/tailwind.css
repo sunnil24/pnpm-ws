@@ -40,6 +40,14 @@
     --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
 
+     /* padding */
+     --padding-xs: 0.25rem;
+     --padding-sm: 0.5rem;
+     --padding-md: 1rem;
+     --padding-lg: 1.5rem;
+     --padding-xl: 2rem;
+    
+
     /* font sizes */
     --font-size-xs: 0.75rem; /* 12px in rem */
     --font-size-sm: 0.875rem; /* 14px in rem */

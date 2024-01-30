@@ -12,20 +12,6 @@ export const tailwindConfig = {
   content,
   theme: {
     ...baseTheme,
-    extend:{
-      gridTemplateColumns: {
-        '16': 'repeat(16, minmax(0, 1fr))',
-      }
-    },
-    container: {
-      padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
-      },
-    }
   },
   plugins: [],
 };
