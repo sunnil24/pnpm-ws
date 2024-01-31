@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/button",
-  "version": "1.0.6",
+  "version": "1.0.10",
   "description": "Button component",
   "license": "MIT",
   "main": "dist/cjs/index.js",
@@ -15,7 +15,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "peerDepedencies": {
+  "peerDependencies": {
     "@radix-ui/react-toggle": "1.0.3",
     "class-variance-authority": "0.6.0"
   }

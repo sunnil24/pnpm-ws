@@ -56,13 +56,9 @@ export default {
     },
   ],
   actions: (data) => {
-    console.log(data, 'data')
     // Generate index.ts/js and index.test.tsx/js
     const rootPath = getRootDirectoryPath()
-    console.log(config.COMPONENT_PATH, 'component_path')
     let componentTemplate;
-    console.log(config.COMPONENT_PATH, 'component_path')
-    console.log(config.COMPONENT_PATH, 'component_path')
     let folderPath = `${rootPath}/${getComputedFolderPath(data.monorepoPath, config.COMPONENT_PATH)}${data.folder}`;
     componentTemplate = `./react-component/${fileExtension}-templates/stateless.${fileExtension}.hbs`;
 

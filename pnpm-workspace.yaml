@@ -1,0 +1,7 @@
+packages:
+  - libs/ui-lib/src/components/*/*
+  - libs/utils/hooks/*
+  - packages/tailwind
+  - packages/commitlint-config
+  - packages/react-linting-standards
+  - scripts

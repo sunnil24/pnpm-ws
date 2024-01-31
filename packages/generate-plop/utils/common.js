@@ -37,8 +37,6 @@ export function getComputedFolderPath(monoropePath, resourcePath) {
  */
 export function getRootDirectoryPath() {
     const __filename = fileURLToPath(import.meta.url);
-    console.log(__filename, 'filenam ssdsd')
     const __dirname = dirname(__filename);
-    console.log(__filename, '__dirname')
     return __dirname.substring(0, (__dirname.indexOf('node_modules')-1))
 }

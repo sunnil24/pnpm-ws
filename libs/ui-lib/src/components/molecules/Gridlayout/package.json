@@ -16,7 +16,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "peerDepedencies": {
-    "@radix-ui/themes": "1.3.0"
+  "peerDependencies": {
+    "@radix-ui/themes": "^2.0.3"
   }
 }

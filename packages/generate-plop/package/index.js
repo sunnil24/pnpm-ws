@@ -38,7 +38,6 @@ export default {
   actions: (data) => {
     // Generate index.ts/js and index.test.tsx/js
     const rootPath = getRootDirectoryPath()
-    console.log(data.folder, 'data.folder')
     let folderPath = `${rootPath}/${getComputedFolderPath(data.monorepoPath, config.PACKAGES_PATH)}`;
 
     if (data.folder === 'custom-path') {

@@ -15,6 +15,5 @@ module.exports = function extractDesignSystemVariables() {
     const [key, value] = declaration.split(/:\s/);
     tokens[`var(${key.trim()})`] = value.trim().slice(0, -1);
   }
-  console.log(tokens,'tokens')
   return tokens;
 };

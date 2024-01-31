@@ -42,7 +42,7 @@ export default function runScript(script: 'build' | 'pub') {
           generateAndRunViteConfig(component, componentPath);
         } else if (script === 'pub') {
           if (fs.existsSync(path.join(componentPath, 'dist'))) {
-            execSync(`bump && cd dist && npm publish`, {
+            execSync(`bump && npm publish`, {
               stdio: 'inherit',
               cwd: componentPath,
             });
@@ -77,7 +77,6 @@ export default function runScript(script: 'build' | 'pub') {
     if (args._.length > 0) {
       args._.forEach(componentName => {
         const componentPath: string = components[componentName];
-        console.log(componentPath, 'comp path')
         component = path.basename(componentPath);
         if (componentPath) {
           executeScript(componentPath);

@@ -4,14 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "libs/ui-lib/src/components/*/*",
-    "libs/utils/hooks/*",
-    "packages/tailwind",
-    "packages/commitlint-config",
-    "packages/react-linting-standards",
-    "scripts"
-  ],
   "devDependencies": {
     "@commitlint/config-conventional": "^18.4.4",
     "@commitlint/cz-commitlint": "^18.4.4",
@@ -38,7 +30,7 @@
     "@typescript-eslint/parser": "^6.19.0",
     "@vitejs/plugin-react": "4.2.1",
     "@vitest/coverage-v8": "^1.2.1",
-    "@xyzproject/tailwind-config-design-system": "*",
+    "@xyzproject/tailwind-config-design-system": "workspace:*",
     "autoprefixer": "10.4.16",
     "class-variance-authority": "^0.7.0",
     "commit-lint-standards": "^1.0.3",
@@ -68,7 +60,7 @@
     "react": "18.2.0",
     "react-docgen-typescript": "2.2.2",
     "react-dom": "18.2.0",
-    "react-linting-standards": "*",
+    "react-linting-standards": "workspace:*",
     "remark-gfm": "4.0.0",
     "rimraf": "5.0.5",
     "storybook": "7.6.7",
@@ -82,26 +74,37 @@
     "vitest": "^1.2.1"
   },
   "scripts": {
+    "build:storybook": "storybook build -o dist/storybook",
+    "build:script": "pnpm --filter @xyzproject/scripts build",
+    "build:tw": "pnpm --filter @xyzproject/tailwind-config-design-system build",
+    "build:commitlint": "pnpm --filter commit-lint-standards build",
+    "build:plop": "pnpm --filter @xyzproject/generate-plop build",
+    "build:tcv": "rimraf dist/tcv && mkdir -p dist/tcv && npx tailwind-config-viewer -c tailwind.config.viewer.js export dist/tcv",
+    "build:reactlint": "pnpm --filter react-linting-standards build",
+    "buildAll": "pnpm build:script && pnpm build:tw && pnpm build:ui-lib && pnpm build:tcv && pnpm build:storybook && pnpm build:commitlint  && pnpm build:plop && pnpm build:reactlint",
+    "build:ui-lib": "node scripts/dist/index.js build",
+    "publish:ui-lib": "node scripts/dist/index.js pub",
+    "publish:tw": "pnpm --filter @xyzproject/tailwind-config-design-system publish",
+    "publish:commitlint": "pnpm --filter commit-lint-standards publish",
+    "publish:plop": "pnpm --filter @xyzproject/generate-plop publish",
+    "publish:reactlint": "pnpm --filter react-linting-standards publish",
+    "tcv": "npx tailwind-config-viewer -o -c tailwind.config.js",
     "test": "vitest --config ./vitest.config.ts",
     "test:watch": "vitest --watch --config ./vitest.config.ts",
     "coverage": "vitest run --coverage --config ./vitest.config.ts",
     "storybook": "storybook dev -p 6006",
     "generate": "generate",
-    "build:storybook": "storybook build -o dist/storybook",
-    "build:ui-lib": "node scripts/dist/index.js build",
-    "publish:ui-lib": "node scripts/dist/index.js pub",
     "lint": "eslint 'apps/**/*.{ts,tsx}'",
     "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
     "prepare": "husky install && copyfiles -f node_modules/commit-lint-standards/dist/.husky/* .husky",
     "commit": "lint-staged && validate-branch-name && cz ",
-    "prepare-commit": "cross-env CHECKS_RUN=1 yarn run commit",
-    "tcv": "npx tailwind-config-viewer -o -c tailwind.config.js",
-    "build:tcv": "rimraf dist/tcv && mkdir dist\\tcv && npx tailwind-config-viewer -c tailwind.config.viewer.js export dist/tcv"
+    "prepare-commit": "cross-env CHECKS_RUN=1 yarn run commit"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/themes": "^2.0.3",
-    "@xyzproject/generate-plop": "1.0.7"
+    "@xyzproject/generate-plop": "1.0.7",
+    "npm-run-all": "^4.1.5"
   },
   "config": {
     "commitizen": {

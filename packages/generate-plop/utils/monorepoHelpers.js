@@ -14,9 +14,7 @@ const rootPath = getRootDirectoryPath()
  * @returns {boolean}
  */
 export function isMonorepo() {
-  console.log('hh', rootPath)
   const rooteDirectories = fs.readdirSync(rootPath);
-  console.log(rooteDirectories, 'rooteDirectories')
   
   return rooteDirectories.indexOf('apps') >= 0 || rooteDirectories.indexOf('packages') >= 0;
 }
@@ -38,8 +36,6 @@ function getMonorepoApps() {
   if(fs.existsSync(`${rootPath}/${config.PACKAGES_PATH}`)){
     packages =  fs.readdirSync(`${rootPath}/${config.PACKAGES_PATH}`);
   }
-  console.log(apps, 'apps')
-  console.log(componentPackage, 'componentPackage')
   
   const appsProjects = apps ? apps.filter(file => !metaFileRegex.test(file)).map(app => `apps/${app}`) : []
   const packagesProjects = packages ? packages.filter(file => !metaFileRegex.test(file)).map(app => `packages/${app}`) : []
