@@ -1,0 +1,26 @@
+import { cva, VariantProps } from "class-variance-authority";
+
+export const {{properCase name}}Variants = cva(
+  "inline-flex items-center justify-center rounded-md text-sm font-medium",
+  {
+    variants: {
+      variant: {
+        contain: [],
+        outline: [],
+        link: [],
+      },
+      size: {
+        md: [],
+        sm: [],
+        lg: [],
+      },
+    },
+    defaultVariants: {
+      variant: "contain",
+      size: "md",
+    },
+  }
+);
+
+export interface {{properCase name}}VariantsProps
+  extends VariantProps<typeof {{properCase name}}Variants> {}

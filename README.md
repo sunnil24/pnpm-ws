@@ -1,52 +1,74 @@
 # XYZ Project Component Library
+This is the XYZ project, a component library using pnpm workspaces.
 
-This repository contains the component library for the XYZ project, including a set of reusable components and a Tailwind CSS configuration.
+### Instalation 
+Run the below command for installing all the packages of workspace
 
-## Components
+Step 1 : 
+### `pnpm i`
 
-The component library provides a set of reusable components such as `Button`, `Dropdown`, and `SearchBox`.
+Step 2 : 
+## Runs all build scripts for generating build for each and every package.
+### `pnpm buildAll`
 
-### Building and Publishing Components
+Step 3 : 
+## Builds the storybook and outputs it to the `dist/storybook` directory.
+### `pnpm build:storybook`
 
-To build a component, use the following command:
-p
-yarn build:ui-lib <ComponentName> 
-
-## To publish a component, use the following command:
-yarn publish:ui-lib <ComponentName>
-
-Replace <ComponentName> with the name of the component you want to build or publish.
+Step 4 : 
+## Runs storybook 
+###  `pnpm run storybook`
 
 
-## Installing Components
-yarn add @xyzproject/Button@latest -W
-yarn add @xyzproject/Dropdown@latest -W
-yarn add @xyzproject/SearchBox@latest -W
+### Build all the below package seperatly if you want already we built using buildAll command
 
-## Tailwind Package
-The Tailwind package provides a custom configuration for Tailwind CSS, including a set of pre-defined themes and utility classes.
+## Builds the scripts package that package will help to build the component package.
 
-Building and Publishing Tailwind Package
+### `pnpm --filter @xyzproject/scripts build`
 
-## To build the Tailwind package, use the following command:
- 
-yarn workspace tailwind-config-design-system build
+## Builds the tailwind configuration package.
 
-## To publish the Tailwind package, use the following command:
+### `pnpm --filter @xyzproject/tailwind-config-design-system build`
 
-yarn workspace tailwind-config-design-system publish
+## Builds the commit lint standards package.
 
-# useEnv Hook
+### `pnpm --filter commit-lint-standards build`
 
-useEnv is a custom React hook that allows you to easily manage different environment configurations in your application.
+## Builds the plop generation package.
 
-Building and Publishing useEnv Package
+### `pnpm --filter @xyzproject/generate-plop build`
 
-## To build the useEnv package, use the following command:
- 
-yarn workspace @xyzproject/env-hook build
+## Builds the react linting standards package.
 
-## To publish the useEnv package, use the following command:
+### `pnpm --filter react-linting-standards build`
 
-yarn workspace @xyzproject/env-hook publish
+##  Build the Tailwin config viewer.
+
+### `pnpm build:tcv`
+
+## Builds the UI library using the build script located at `scripts/dist/index.js`.
+
+### `pnpm build:ui-lib`
+
+## Publishing Packages
+
+## To publish a package, use the corresponding publish script:
+
+### `pnpm --filter @xyzproject/tailwind-config-design-system publish`
+
+## Publishes the tailwind configuration package.
+
+### `pnpm --filter commit-lint-standards publish`
+
+## Publishes the commit lint standards package.
+
+### `pnpm --filter @xyzproject/generate-plop publish`
+
+## Publishes the plop generation package.
+
+### `pnpm --filter react-linting-standards publish`
+
+## Publishes the react linting standards package.
+
+### `pnpm publish:ui-lib`
 

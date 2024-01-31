@@ -15,9 +15,9 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "peerDepedencies": {
+  "peerDependencies": {
     "@radix-ui/react-icons": "1.3.0",
     "class-variance-authority": "0.6.0",
-    "@xyzproject/button": "*"
+    "@xyzproject/button": "workspace:*"
   }
 }

@@ -1,7 +1,7 @@
 // Import necessary modules
 import React from 'react';
 import { render } from '@testing-library/react';
-import { GridLayout } from './GridLayout';
+import { GridLayout } from './GridLayout'
 import { describe, test } from 'vitest';
 // Define the test
 describe('GridLayout', () => {

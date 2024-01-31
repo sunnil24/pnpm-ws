@@ -1,7 +1,13 @@
   export  const baseTheme = {
   container: {
     center: true,
-    padding: "2rem",
+    padding: {
+      sm: "var(--padding-sm)",
+      md: "var(--padding-md)",
+      lg: "var(--padding-lg)",
+      xl: "var(--padding-xl)",
+      "2xl": "var(--padding-2xl)",
+    },
     screens: {
       sm: "var(--screen-sm)",
       md: "var(--screen-md)",
@@ -11,6 +17,9 @@
     },
   },
   extend: {
+    gridTemplateColumns: {
+      '16': 'repeat(16, minmax(0, 1fr))',
+    },
     colors: {
       primary: {
         DEFAULT: "var(--color-primary)",

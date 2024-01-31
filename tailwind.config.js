@@ -1,13 +1,13 @@
-import {tailwindConfig} from "@xyzproject/tailwind-config-design-system";
+const  {tailwindConfig}  = require("@xyzproject/tailwind-config-design-system")
+const extractDesignSystemVariables  = require("./tailwind.config.viewer")
 
-import {extractDesignSystemVariables} from "./tailwind.config.viewer";
-
-tailwindConfig.theme = {
-    ...tailwindConfig.theme,
-        configViewer: {
-            themeReplacements: {
-              ...extractDesignSystemVariables(),
-            },
-          }
-}
-module.exports = tailwindConfig;
+module.exports = {
+  presets: [tailwindConfig],
+  important: true,
+  theme: {
+    // ...baseTheme,
+    configViewer: {
+      themeReplacements: extractDesignSystemVariables(),
+    },
+  },
+};

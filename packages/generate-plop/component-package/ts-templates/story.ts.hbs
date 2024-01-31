@@ -1,0 +1,44 @@
+{{!-- import React from 'react';
+import { Meta, Story } from '@storybook/react';
+
+import {{ properCase name }} from './index';
+
+export default {
+component: { {{ properCase name }} },
+title: "{{ properCase name }}",
+} as typeof Meta
+
+export const all_checkboxes = () =>
+<{{ properCase name }} />;
+
+const Template: typeof Story = (args) =>
+<{{ properCase name }} />;
+
+export const {{ properCase name }}ViewStory = Template.bind({});
+{{ properCase name }}ViewStory.storyName = '{{ properCase name }}View';
+\ --}}
+
+import type { Meta, StoryObj, StoryFn } from "@storybook/react";
+import React, { ComponentProps } from "react";
+import  {{properCase name}}  from "./{{properCase name}}";
+
+type {{properCase name}}Props = ComponentProps<typeof {{properCase name}}>;
+
+const meta = {
+  title: "Components/{{properCase name}}",
+  component: {{properCase name}},
+  argTypes: {
+    // Add your controls here
+  },
+} satisfies Meta<typeof {{properCase name}}>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+// Add your story variants here
+
+export const Default: Story = {
+  args: {
+    // Add your default args here
+  },
+};

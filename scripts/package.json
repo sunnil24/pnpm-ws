@@ -1,10 +1,10 @@
 {
-  "name": "@nuveen/scripts",
+  "name": "@xyzproject/scripts",
   "description": "A custom scripts package for building and publishing design-system package",
   "version": "0.0.0",
   "main": "bin/index.js",
   "bin": {
-    "nuveen": "bin/index.js"
+    "xyzproject": "bin/index.js"
   },
   "dependencies": {
     "chalk": "^4.1.2",

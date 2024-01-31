@@ -12,7 +12,7 @@ In the root of the application that will consume this package, make sure there i
 .eslintrc.js Configuration
 In the .eslintrc.js file at the root of the app consuming this package, add the following content:
 module.exports = {
-  extends: ['./node_modules/nuveen-org-linting'],
+  extends: ['./node_modules/xyzproject-org-linting'],
   // Add any other configurations as needed
 };
 Package.json Scripts
