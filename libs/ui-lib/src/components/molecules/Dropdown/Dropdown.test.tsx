@@ -1,8 +1,8 @@
 // Dropdown.spec.tsx
 import { render, screen, fireEvent } from '@testing-library/react';
-import React from 'react'
 import { Dropdown } from './Dropdown';
 import { describe, test } from 'vitest';
+
 describe('Dropdown', () => {
   const options = [
     { id: '1', value: 'option1', textValue: 'Option 1' },
@@ -15,10 +15,10 @@ describe('Dropdown', () => {
 
     // Verify that the dropdown trigger button is rendered
     const triggerButton = screen.getByText('Option 1');
-    expect(triggerButton).toBeDefined();
+    expect(triggerButton).toBeInTheDocument();
 
-      const optionElement = screen.getByText(options[0].textValue);
-      expect(optionElement).toBeDefined();
+    const optionElement = screen.getByText(options[0].textValue);
+    expect(optionElement).toBeInTheDocument();
   });
 
   test('allows selecting an option', async () => {
@@ -33,6 +33,6 @@ describe('Dropdown', () => {
     fireEvent.click(optionToSelect);
 
     // Verify that the selected option is now displayed in the trigger button
-    expect(triggerButton.textContent).toBe('Option 1');
+    expect(triggerButton).toHaveTextContent('Option 1');
   });
 });

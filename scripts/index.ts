@@ -42,7 +42,7 @@ export default function runScript(script: 'build' | 'pub') {
           generateAndRunViteConfig(component, componentPath);
         } else if (script === 'pub') {
           if (fs.existsSync(path.join(componentPath, 'dist'))) {
-            execSync(`bump && npm publish`, {
+            execSync(`bump && pnpm publish -no-git-checks`, {
               stdio: 'inherit',
               cwd: componentPath,
             });

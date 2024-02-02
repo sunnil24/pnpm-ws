@@ -1,4 +1,3 @@
-import React from 'react';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import { cx } from 'class-variance-authority';
 import { Button } from '@xyzproject/button';

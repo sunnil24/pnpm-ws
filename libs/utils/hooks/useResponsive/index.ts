@@ -1,1 +1,1 @@
-export { configResponsive, useResponsive } from './useResponsive'
+export { configResponsive, useResponsive } from './useResponsive';

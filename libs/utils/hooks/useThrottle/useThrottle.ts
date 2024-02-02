@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from 'react';
 
 const useThrottle = <T>(value: T, delay: number = 500): T => {
   const [throttledValue, setThrottledValue] = useState(value);
@@ -22,4 +22,4 @@ const useThrottle = <T>(value: T, delay: number = 500): T => {
   return throttledValue;
 };
 
-export default useThrottle
+export default useThrottle;

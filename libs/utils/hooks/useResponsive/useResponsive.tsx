@@ -4,7 +4,7 @@ type Subscriber = () => void;
 
 const subscribers = new Set<Subscriber>();
 
-type ResponsiveConfig = Record<string, any>;
+type ResponsiveConfig = Record<string, unknown>;
 type ResponsiveInfo = Record<string, boolean>;
 
 let info: ResponsiveInfo;

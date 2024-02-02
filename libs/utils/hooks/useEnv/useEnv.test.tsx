@@ -2,17 +2,16 @@ import { useEnv } from './useEnv';
 import { describe, beforeEach, afterEach, test, beforeAll } from 'vitest';
 
 describe('useEnv hook test cases', () => {
-   beforeAll(() => {
+  beforeAll(() => {
     global.window = Object.create(window);
-Object.defineProperty(window, 'location', {
-  value: {
-    hostname: 'localhost'
-  },
-  writable: true
-});
-   })
-  beforeEach(() => {
+    Object.defineProperty(window, 'location', {
+      value: {
+        hostname: 'localhost',
+      },
+      writable: true,
+    });
   });
+  beforeEach(() => {});
 
   afterEach(() => {
     sessionStorage.clear();
