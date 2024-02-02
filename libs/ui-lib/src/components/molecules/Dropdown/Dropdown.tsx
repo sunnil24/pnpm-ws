@@ -1,9 +1,7 @@
-import React from 'react';
 import * as DropdownPrimitive from '@radix-ui/react-select';
 import { ChevronDownIcon, CheckIcon } from '@radix-ui/react-icons';
-import { cx } from "class-variance-authority";
-import { Button } from '@xyzproject/button'
-
+import { cx } from 'class-variance-authority';
+import { Button } from '@xyzproject/button';
 
 /**
  * Defines the props that are passed to the Dropdown component.
@@ -13,15 +11,20 @@ import { Button } from '@xyzproject/button'
  */
 
 interface DropdownProps extends DropdownPrimitive.SelectProps {
-  options?: (DropdownPrimitive.SelectItemProps & DropdownPrimitive.SelectItemTextProps)[];
-};
+  options?: (DropdownPrimitive.SelectItemProps &
+    DropdownPrimitive.SelectItemTextProps)[];
+}
 /**
  * The Dropdown component creates a dropdown menu that allows the user to select an option from a list.
  * @function Dropdown
  * @param {DropdownProps} props - The props passed to the Dropdown component.
  * @returns {JSX.Element} - Returns the Dropdown component as the JSX element.
  */
-export function Dropdown({ defaultValue, options, ...props }: DropdownProps): JSX.Element {
+export function Dropdown({
+  defaultValue,
+  options,
+  ...props
+}: DropdownProps): JSX.Element {
   return (
     // The root dropdown component from @radix-ui/react-select library
     <DropdownPrimitive.Root defaultValue={defaultValue}>
@@ -52,7 +55,9 @@ export function Dropdown({ defaultValue, options, ...props }: DropdownProps): JS
                   'focus:outline-none Dropdown-none',
                 )}
               >
-                <DropdownPrimitive.ItemText>{option.textValue}</DropdownPrimitive.ItemText>
+                <DropdownPrimitive.ItemText>
+                  {option.textValue}
+                </DropdownPrimitive.ItemText>
                 <DropdownPrimitive.ItemIndicator className="absolute left-2 inline-flex items-center">
                   <CheckIcon />
                 </DropdownPrimitive.ItemIndicator>
@@ -63,4 +68,4 @@ export function Dropdown({ defaultValue, options, ...props }: DropdownProps): JS
       </DropdownPrimitive.Content>
     </DropdownPrimitive.Root>
   );
-};
+}

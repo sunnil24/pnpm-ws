@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/button",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Button component",
   "license": "MIT",
   "main": "dist/cjs/index.js",
@@ -17,6 +17,12 @@
   },
   "peerDependencies": {
     "@radix-ui/react-toggle": "1.0.3",
-    "class-variance-authority": "0.6.0"
+    "class-variance-authority": "0.6.0",
+    "react": "18.2.0",
+    "@xyzproject/tailwind-config-design-system": "workspace:*"
+  },
+  "scripts": {
+    "build":"tsup",
+    "publish": "pnpm publish"
   }
 }

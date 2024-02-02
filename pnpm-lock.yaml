@@ -228,9 +228,15 @@ importers:
       '@radix-ui/react-toggle':
         specifier: 1.0.3
         version: 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.47)(react-dom@18.2.0)(react@18.2.0)
+      '@xyzproject/tailwind-config-design-system':
+        specifier: workspace:*
+        version: link:../../../../../../packages/tailwind
       class-variance-authority:
         specifier: 0.6.0
         version: 0.6.0(typescript@5.3.3)
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
 
   libs/ui-lib/src/components/molecules/Dropdown:
     dependencies:
@@ -265,7 +271,71 @@ importers:
         specifier: 0.6.0
         version: 0.6.0(typescript@5.3.3)
 
+  libs/utils/hooks/useDebounce:
+    dependencies:
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      copyfiles:
+        specifier: 2.4.1
+        version: 2.4.1
+      tsup:
+        specifier: 7.2.0
+        version: 7.2.0(postcss@8.4.33)(typescript@5.3.3)
+
   libs/utils/hooks/useEnv:
+    dependencies:
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      copyfiles:
+        specifier: 2.4.1
+        version: 2.4.1
+      tsup:
+        specifier: 7.2.0
+        version: 7.2.0(postcss@8.4.33)(typescript@5.3.3)
+
+  libs/utils/hooks/useResponsive:
+    dependencies:
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      copyfiles:
+        specifier: 2.4.1
+        version: 2.4.1
+      tsup:
+        specifier: 7.2.0
+        version: 7.2.0(postcss@8.4.33)(typescript@5.3.3)
+
+  libs/utils/hooks/useStorage:
+    dependencies:
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      copyfiles:
+        specifier: 2.4.1
+        version: 2.4.1
+      tsup:
+        specifier: 7.2.0
+        version: 7.2.0(postcss@8.4.33)(typescript@5.3.3)
+
+  libs/utils/hooks/useThrottle:
     dependencies:
       react:
         specifier: 18.2.0
@@ -370,9 +440,6 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: ^0.5.11
         version: 0.5.11(@ianvs/prettier-plugin-sort-imports@4.1.1)(prettier@3.2.4)
-      react-linting-standards:
-        specifier: ^1.0.0
-        version: 'link:'
     devDependencies:
       copyfiles:
         specifier: 2.4.1

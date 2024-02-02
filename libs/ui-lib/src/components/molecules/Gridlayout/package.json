@@ -18,5 +18,9 @@
   },
   "peerDependencies": {
     "@radix-ui/themes": "^2.0.3"
+  },
+  "scripts": {
+    "build":"tsup",
+    "publish": "pnpm publish"
   }
 }

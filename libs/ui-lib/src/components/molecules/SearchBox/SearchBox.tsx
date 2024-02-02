@@ -1,7 +1,7 @@
 import React from 'react';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import { cx } from "class-variance-authority";
-import { Button } from '@xyzproject/button'
+import { cx } from 'class-variance-authority';
+import { Button } from '@xyzproject/button';
 
 /**
  * SearchBoxProps interface for defining props for the SearchBox component
@@ -11,11 +11,10 @@ import { Button } from '@xyzproject/button'
  * @property {function} onSearch - A function that is called when the search button is clicked, and it passes the search query as an argument.
  */
 interface SearchBoxProps {
-    className?: string;
-    placeholder?: string;
-    onSearch?: (query: string) => void;
+  className?: string;
+  placeholder?: string;
+  onSearch?: (query: string) => void;
 }
-
 
 /**
  * SearchBoxState interface for defining state for the SearchBox component
@@ -23,18 +22,16 @@ interface SearchBoxProps {
  * @property {string} query - A string representing the current search query
  */
 interface SearchBoxState {
-    query: string;
+  query: string;
 }
-
 
 /**
 A default search function that logs the search query to the console
 @param {string} query - The search query to be logged to the console
 */
 const defaultSearch = (query: string) => {
-    console.log(`Performing search for "${query}"`);
+  console.log(`Performing search for "${query}"`);
 };
-
 
 /**
  * SearchBox component for creating a search box with a search button
@@ -42,51 +39,52 @@ const defaultSearch = (query: string) => {
  * @returns {JSX.Element} - Returns the SearchBox component as the JSX element
  */
 export function SearchBox({
-    className,
-    placeholder = 'Search',
-    onSearch = defaultSearch,
+  className,
+  onSearch = defaultSearch,
+  placeholder = 'Search',
 }: SearchBoxProps): JSX.Element {
-    const [state, setState] = React.useState<SearchBoxState>({ query: '' });
+  const [state, setState] = React.useState<SearchBoxState>({ query: '' });
 
+  /**
+   * Handles the change event of the input element and sets the query state
+   * @param {React.ChangeEvent<HTMLInputElement>} event - The change event of the input element
+   */
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setState({ ...state, query: event.target.value });
+  };
 
-    /**
-     * Handles the change event of the input element and sets the query state
-     * @param {React.ChangeEvent<HTMLInputElement>} event - The change event of the input element
-     */
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setState({ ...state, query: event.target.value });
-    };
+  /**
+   * Handles the form submission event and calls the onSearch callback function with the search query
+   * @param {React.FormEvent<HTMLFormElement>} event - The form submission event
+   */
+  const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (onSearch) {
+      onSearch(state.query);
+    }
+  };
 
-
-    /**
-     * Handles the form submission event and calls the onSearch callback function with the search query
-     * @param {React.FormEvent<HTMLFormElement>} event - The form submission event
-     */
-    const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        if (onSearch) {
-            onSearch(state.query);
-        }
-    };
-
-    return (
-        <form
-            onSubmit={handleSearch}
-            className={cx(
-                'flex items-center rounded-md border border-gray-300',
-                className
-            )}
-        >
-            <input
-                type="text"
-                value={state.query}
-                onChange={handleInputChange}
-                placeholder={placeholder}
-                className="py-2 px-4 focus:outline-none focus:border-blue-500 flex-grow"
-            />
-            <Button type="submit" variant="default" className="rounded-r-md border-l-0">
-                <MagnifyingGlassIcon className="h-5 w-5" />
-            </Button>
-        </form>
-    );
+  return (
+    <form
+      onSubmit={handleSearch}
+      className={cx(
+        'flex items-center rounded-md border border-gray-300',
+        className,
+      )}
+    >
+      <input
+        type="text"
+        value={state.query}
+        onChange={handleInputChange}
+        placeholder={placeholder}
+        className="py-2 px-4 focus:outline-none focus:border-blue-500 flex-grow"
+      />
+      <Button
+        type="submit"
+        className="rounded-r-md border-l-0"
+      >
+        <MagnifyingGlassIcon className="h-5 w-5" />
+      </Button>
+    </form>
+  );
 }
