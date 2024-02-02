@@ -1,5 +1,5 @@
 import { cva, VariantProps } from 'class-variance-authority';
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
 const styles = cva(['rounded-md p-4 text-sm'], {
   variants: {

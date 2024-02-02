@@ -1,6 +1,5 @@
 // Dropdown.stories.tsx
 
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
 // Import the Dropdown component and its props
