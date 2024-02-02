@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { configResponsive, useResponsive } from './useResponsive';
-import { describe, beforeAll, it, expect } from 'vitest'
+import { describe, beforeAll, it, expect } from 'vitest';
 
 describe('useResponsive', () => {
   beforeAll(() => {
@@ -8,7 +8,7 @@ describe('useResponsive', () => {
     Object.defineProperty(window, 'innerWidth', {
       writable: true,
       configurable: true,
-      value: 1024
+      value: 1024,
     });
   });
 
@@ -39,7 +39,7 @@ describe('useResponsive', () => {
 
     const { result } = renderHook(() => useResponsive());
 
-    console.log(">>>>>>> RESULT", result.current, window.innerWidth)
+    console.log('>>>>>>> RESULT', result.current, window.innerWidth);
     // Now, the 'sm' breakpoint should be active
     expect(result.current.sm).toBeTruthy();
   });

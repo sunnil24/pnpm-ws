@@ -6,9 +6,9 @@ vi.useFakeTimers();
 
 describe('useThrottle', () => {
   it('should update the throttled value after the specified delay', () => {
-    const { result, rerender } = renderHook(
-      ({ value, delay }) => useThrottle(value, delay),
-      { initialProps: { value: 'initial', delay: 500 } }
+    const { rerender, result } = renderHook(
+      ({ delay, value }) => useThrottle(value, delay),
+      { initialProps: { value: 'initial', delay: 500 } },
     );
 
     // Initially, the throttled value should be the initial value

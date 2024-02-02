@@ -1,1 +1,1 @@
-export * from './useEnv'
+export * from './useEnv';

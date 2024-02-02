@@ -51,8 +51,5 @@
     "lint:fix": "eslint --fix",
     "test": "vitest",
     "test:watch": "vitest --watch"
-  },
-  "dependencies": {
-    "react-linting-standards": "^1.0.0"
   }
 }

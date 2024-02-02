@@ -1,15 +1,15 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { SearchBox } from './SearchBox';
-import {describe,test, expect, vi} from 'vitest'
+import { describe, test, expect, vi } from 'vitest';
 
 describe('SearchBox', () => {
   test('should render a search input box and a search button', () => {
     const { getByPlaceholderText, getByRole } = render(<SearchBox />);
     const input = getByPlaceholderText('Search');
     const button = getByRole('button');
-    expect(input).toBeDefined();
-    expect(button).toBeDefined();
+    expect(input).toBeInTheDocument();
+    expect(button).toBeInTheDocument();
   });
 
   test('should call onSearch function with search query when the search button is clicked', () => {
@@ -22,9 +22,9 @@ describe('SearchBox', () => {
   });
 
   test('should update search query state when text is entered into the search input box', () => {
-    const { getByText, getByPlaceholderText } = render(<SearchBox />);
+    const { getByPlaceholderText, getByText } = render(<SearchBox />);
     const input = getByPlaceholderText('Search');
     fireEvent.change(input, { target: { value: 'Test search query' } });
-    expect(input.getAttribute('value')).toBe('Test search query');
+    expect(input).toHaveValue('Test search query');
   });
 });
