@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/button",
-  "version": "1.0.11",
+  "version": "1.0.15",
   "description": "Button component",
   "license": "MIT",
   "main": "dist/cjs/index.js",
@@ -19,10 +19,16 @@
     "@radix-ui/react-toggle": "1.0.3",
     "class-variance-authority": "0.6.0",
     "react": "18.2.0",
-    "@xyzproject/tailwind-config-design-system": "workspace:*"
+    "@xyzproject/tailwind-config-design-system": "workspace:*",
+    "@testing-library/react":"14.x",
+    "@testing-library/jest-dom": "6.x",
+    "vitest": "1.x"
   },
   "scripts": {
-    "build":"tsup",
-    "publish": "pnpm publish"
+    "publish": "pnpm publish",
+    "test": "vitest ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+    "build": "tsup"
   }
 }

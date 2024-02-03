@@ -1,11 +1,12 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, test, vi, expect } from 'vitest';
+import '@testing-library/jest-dom/vitest';
 import { Button } from './Button';
-import { describe, test, vi ,expect} from 'vitest';
 
 describe('Button', () => {
   test('renders with children', () => {
     render(<Button>Click me!</Button>);
-    expect(screen.getByText('Click me!')).toBeTruthy();
+    expect(screen.getByText('Click me!')).toBeInTheDocument();
   });
 
   test('calls onClick handler when clicked', () => {

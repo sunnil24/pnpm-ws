@@ -1,9 +1,0 @@
-{
-  "name": "@xyzproject-ui/ui-kit",
-  "version": "2.0.0",
-  "description": "Custom UI library generated using @genesisx/design-system plugin",
-  "license": "MIT",
-  "scripts": {
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
-  }
-}

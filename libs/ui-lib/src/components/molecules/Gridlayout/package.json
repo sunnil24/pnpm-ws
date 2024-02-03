@@ -17,10 +17,17 @@
     "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
-    "@radix-ui/themes": "^2.0.3"
+    "@radix-ui/themes": "^2.0.3",
+    "@testing-library/jest-dom": "6.x",
+    "@testing-library/react":"14.x",
+    "@xyzproject/tailwind-config-design-system": "workspace:*",
+    "vitest": "1.x"
   },
   "scripts": {
     "build":"tsup",
-    "publish": "pnpm publish"
+    "publish": "pnpm publish",
+    "test": "vitest ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix"
   }
 }

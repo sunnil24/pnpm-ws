@@ -15,14 +15,12 @@
     }
   },
   "scripts": {
-    "test": "vitest",
-    "test:watch": "vitest --watch",
+   
     "build": "tsup && copyfiles .husky/* dist",
-    "publish": "npm publish",
-    "linktw": "cd dist && npm link",
-    "tw-drypub": "npm publish --dry-run",
-    "lint": "eslint --ignore-path .gitignore .",
-    "lint:fix": "eslint --fix"
+    "publish": "pnpm publish",
+    "test": "vitest ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix"
   },
   "keywords": [],
   "author": "",

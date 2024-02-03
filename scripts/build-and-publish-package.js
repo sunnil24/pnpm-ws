@@ -29,7 +29,7 @@ try {
 
       console.log(`Bumping version and publishing ${packageJson.name}...`);
       execSync(`cd ${packageDir} && bump && cd -`, { stdio: 'inherit' });
-      execSync(`pnpm publish -r --filter=${packageJson.name}`, { stdio: 'inherit' });
+      execSync(`pnpm publish -r --filter=${packageJson.name} --no-git-checks`, { stdio: 'inherit' });
     }
   } else {
     console.error('Invalid operation. Please use "build" or "publish".');

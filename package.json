@@ -33,7 +33,7 @@
     "@xyzproject/tailwind-config-design-system": "workspace:*",
     "autoprefixer": "10.4.16",
     "class-variance-authority": "^0.7.0",
-    "commit-lint-standards": "^1.0.3",
+    "commit-lint-standards": "workspace:*",
     "commitizen": "^4.3.0",
     "commitlint": "^18.4.4",
     "copyfiles": "^2.4.1",
@@ -61,6 +61,7 @@
     "react-docgen-typescript": "2.2.2",
     "react-dom": "18.2.0",
     "react-linting-standards": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "remark-gfm": "4.0.0",
     "rimraf": "5.0.5",
     "storybook": "7.6.7",
@@ -75,8 +76,8 @@
   },
   "scripts": {
     "build": "turbo run build",
-    "build:package": "node build-and-publish-package.js",
-    "publish:package": "node build-and-publish-package.js",
+    "build:package": "node scripts/build-and-publish-package.js",
+    "publish:package": "node scripts/build-and-publish-package.js",
     "build:storybook": "storybook build -o dist/storybook",
     "build:plop": "pnpm --filter @xyzproject/generate-plop build",
     "publish:plop": "pnpm --filter @xyzproject/generate-plop publish",
@@ -109,7 +110,7 @@
     "errorMsg": "Invalid branch name. Examples: [main, feat/JIRA-1200/user-authentication, fix/JIRA-1234/error-handling, task/JIRA-1300/code-cleanup]"
   },
   "lint-staged": {
-    "apps/**/*.{ts,tsx}": [
+    "*/**/*.{ts,tsx}": [
       "eslint --fix"
     ]
   }

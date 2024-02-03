@@ -6,7 +6,9 @@ export const tsup: Options = {
   minify: true,
   bundle: true,
   skipNodeModulesBundle: true,
-  entryPoints: ['commitlint.config.ts'],
+  entry: {
+    "index": "index.ts",
+  },
   target: 'es2020',
   format: ['cjs', 'esm'],
   treeshake: true,

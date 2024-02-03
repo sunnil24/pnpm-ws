@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import { cx } from 'class-variance-authority';
 import { Button } from '@xyzproject/button';
@@ -42,7 +43,7 @@ export function SearchBox({
   onSearch = defaultSearch,
   placeholder = 'Search',
 }: SearchBoxProps): JSX.Element {
-  const [state, setState] = React.useState<SearchBoxState>({ query: '' });
+  const [state, setState] = useState<SearchBoxState>({ query: '' });
 
   /**
    * Handles the change event of the input element and sets the query state
@@ -78,10 +79,7 @@ export function SearchBox({
         placeholder={placeholder}
         className="py-2 px-4 focus:outline-none focus:border-blue-500 flex-grow"
       />
-      <Button
-        type="submit"
-        className="rounded-r-md border-l-0"
-      >
+      <Button type="submit" className="rounded-r-md border-l-0">
         <MagnifyingGlassIcon className="h-5 w-5" />
       </Button>
     </form>

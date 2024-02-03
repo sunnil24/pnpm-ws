@@ -21,10 +21,16 @@
     "@radix-ui/react-select": "1.2.2",
     "@xyzproject/button": "workspace:*",
     "class-variance-authority": "0.6.0",
-    "react": "18.2.0"
+    "@testing-library/react":"14.x",
+    "@testing-library/jest-dom": "6.x",
+    "vitest": "1.x",
+    "react": "18.x"
   },
   "scripts": {
     "build":"tsup",
-    "publish": "pnpm publish"
+    "publish": "pnpm publish",
+    "test": "vitest ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix"
   }
 }

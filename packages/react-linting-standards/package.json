@@ -44,12 +44,9 @@
   },
   "scripts": {
     "build": "copyfiles config/* .prettierrc.json .eslintrc.cjs dist",
-    "publish": "npm publish",
-    "linktw": "cd dist && npm link",
-    "tw-drypub": "npm publish --dry-run",
-    "lint": "eslint --ignore-path .gitignore .",
-    "lint:fix": "eslint --fix",
-    "test": "vitest",
-    "test:watch": "vitest --watch"
+    "publish": "pnpm publish",
+    "test": "vitest ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix"
   }
 }

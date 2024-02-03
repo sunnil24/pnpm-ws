@@ -4,7 +4,7 @@ type Subscriber = () => void;
 
 const subscribers = new Set<Subscriber>();
 
-type ResponsiveConfig = Record<string, unknown>;
+type ResponsiveConfig = Record<string, number>;
 type ResponsiveInfo = Record<string, boolean>;
 
 let info: ResponsiveInfo;
@@ -23,17 +23,6 @@ const isBrowser = !!(
   window.document.createElement
 );
 
-function handleResize() {
-  const oldInfo = info;
-  calculate();
-  if (oldInfo === info) return;
-  for (const subscriber of subscribers) {
-    subscriber();
-  }
-}
-
-let listening = false;
-
 function calculate() {
   const width = window.innerWidth;
   const newInfo = {} as ResponsiveInfo;
@@ -48,6 +37,17 @@ function calculate() {
     info = newInfo;
   }
 }
+
+function handleResize() {
+  const oldInfo = info;
+  calculate();
+  if (oldInfo === info) return;
+  for (const subscriber of subscribers) {
+    subscriber();
+  }
+}
+
+let listening = false;
 
 export function configResponsive(config: ResponsiveConfig) {
   responsiveConfig = config;

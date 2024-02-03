@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { Ref, forwardRef } from 'react';
 import * as ButtonPrimitive from '@radix-ui/react-toggle';
 import { buttonVariants, type ButtonVariantsProps } from './Button.styles';
@@ -39,7 +40,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
      * @param {Object} classes - The CSS classes to apply.
      * @returns {string} - The concatenated CSS classes.
      */
-    const applyClasses = (classes: Object): string =>
+    const applyClasses = (classes: object): string =>
       cn(buttonVariants({ variant, size, className }), classes);
 
     // Rendering the button component using ButtonPrimitive.Root component from @radix-ui/react-toggle library

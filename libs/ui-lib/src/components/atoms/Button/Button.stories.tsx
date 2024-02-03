@@ -1,9 +1,9 @@
 import type { Meta, StoryObj, StoryFn } from '@storybook/react';
 
 import { Button } from './Button';
-import  { ComponentProps } from 'react';
+import { ComponentProps } from 'react';
 
-type ButtonProps = ComponentProps<typeof Button>;
+export type ButtonProps = ComponentProps<typeof Button>;
 
 const meta = {
   title: 'Components/Button',
@@ -33,7 +33,7 @@ export const Default: Story = {
   },
 };
 
-export const Sizes: StoryFn = (_args) => (
+export const Sizes: StoryFn = () => (
   <div className="flex-wrap flex items-center gap-md">
     {sizes.map((size) => (
       <Button key={size} size={size}>
@@ -43,7 +43,7 @@ export const Sizes: StoryFn = (_args) => (
   </div>
 );
 
-export const Variants: StoryFn = (_args) => (
+export const Variants: StoryFn = () => (
   <div className="flex-wrap flex items-center gap-md">
     {variants.map((variant) => (
       <Button key={variant} variant={variant}>
