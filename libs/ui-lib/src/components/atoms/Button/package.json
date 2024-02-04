@@ -28,7 +28,7 @@
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",
-    "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+    "lint:fix": "eslint '**/*.{ts,tsx}' '**/*/*.{hsb}' --fix",
     "build": "tsup"
   }
 }

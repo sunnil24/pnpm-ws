@@ -6,12 +6,17 @@
 
 'use strict';
 
-import componentExists from '@xyzproject/generate-plop/utils/componentExists.js'
-import monorepoQues from '@xyzproject/generate-plop/utils/monorepoHelpers.js'
-import config from '@xyzproject/generate-plop/constants.js'
-import {isTypescript, getComputedFolderPath, getFileExtension, getRootDirectoryPath} from '@xyzproject/generate-plop/utils/common.js'
+import componentExists from '../utils/componentExists';
+import monorepoQues from '../utils/monorepoHelpers';
+import config from '../constants';
+import {
+  isTypescript,
+  getComputedFolderPath,
+  getFileExtension,
+  getRootDirectoryPath,
+} from '../utils/common';
 
-const fileExtension = getFileExtension()
+const fileExtension = getFileExtension();
 
 export default {
   description: 'Add a React component (atoms, molecules, organisms, templates)',
@@ -29,14 +34,21 @@ export default {
       name: 'folder',
       message: 'Where do you want to keep this component?',
       default: 'atoms',
-      choices: () => ['atoms', 'molecules', 'organisms', 'templates', 'custom-path']
+      choices: () => [
+        'atoms',
+        'molecules',
+        'organisms',
+        'templates',
+        'custom-path',
+      ],
     },
     {
       when: (data) => data.folder === 'custom-path',
       type: 'input',
       name: 'customFolder',
-      message: 'Give the custom path for the component relative to src directory:',
-      default: '/'
+      message:
+        'Give the custom path for the component relative to src directory:',
+      default: '/',
     },
     {
       type: 'input',
@@ -44,21 +56,23 @@ export default {
       message: 'What should it be called?',
       default: 'Button',
       validate: (value, data) => {
-        const compDir = data.folder === 'custom-path' ? `${config.SRC}/${data.customFolder}` : `${config.COMPONENT_PACKAGE}/${data.folder}`
+        const compDir =
+          data.folder === 'custom-path'
+            ? `${config.SRC}/${data.customFolder}`
+            : `${config.COMPONENT_PACKAGE}/${data.folder}`;
 
         if (/.+/.test(value)) {
           return componentExists(value, compDir, data.monorepoPath)
             ? 'A component with this name already exists '
             : true;
-        
         }
         return 'The name is required';
-      }
+      },
     },
   ],
   actions: (data) => {
     // Generate index.ts/js and index.test.tsx/js
-    const rootPath = getRootDirectoryPath()
+    const rootPath = getRootDirectoryPath();
     let componentTemplate;
     let folderPath = `${rootPath}/${getComputedFolderPath(data.monorepoPath, config.COMPONENT_PACKAGE)}${data.folder}`;
     componentTemplate = `./component-package/${fileExtension}-templates/stateless.${fileExtension}.hbs`;
@@ -83,51 +97,50 @@ export default {
         path: `${folderPath}/{{properCase name}}/index.${fileExtension}`,
         templateFile: `./component-package/${fileExtension}-templates/index.${fileExtension}.hbs`,
         abortOnFail: true,
-        
       },
       {
         type: 'add',
         path: `${folderPath}/{{properCase name}}/{{properCase name}}.${isTypescript() ? 'tsx' : 'js'}`,
         templateFile: componentTemplate,
-        abortOnFail: true
+        abortOnFail: true,
       },
       {
         type: 'add',
         path: `${folderPath}/{{properCase name}}/tests/{{properCase name}}.test.${isTypescript() ? 'tsx' : 'js'}`,
         templateFile: `./component-package/${fileExtension}-templates/test.${fileExtension}.hbs`,
-        abortOnFail: true
+        abortOnFail: true,
       },
       {
         type: 'add',
         path: `${folderPath}/{{properCase name}}/{{properCase name}}.story.${isTypescript() ? 'tsx' : 'js'}`,
         templateFile: `./component-package/${fileExtension}-templates/story.${fileExtension}.hbs`,
-        abortOnFail: true
+        abortOnFail: true,
       },
       {
         type: 'add',
         path: `${folderPath}/{{properCase name}}/{{properCase name}}.styles.${fileExtension}`,
         templateFile: `./component-package/${fileExtension}-templates/styles.${fileExtension}.hbs`,
-        abortOnFail: true
+        abortOnFail: true,
       },
       {
         type: 'add',
         path: `${folderPath}/{{properCase name}}/package.json`,
         templateFile: `./component-package/${fileExtension}-templates/package.json.hbs`,
-        abortOnFail: true
+        abortOnFail: true,
       },
       {
         type: 'add',
         path: `${folderPath}/{{properCase name}}/readme.md`,
         templateFile: `./component-package/${fileExtension}-templates/readme.md.hbs`,
-        abortOnFail: true
+        abortOnFail: true,
       },
       {
         type: 'add',
         path: `${folderPath}/{{properCase name}}/{{properCase name}}.doc.mdx`,
         templateFile: `./component-package/${fileExtension}-templates/mdx.doc.mdx.hbs`,
-        abortOnFail: true
-      }
+        abortOnFail: true,
+      },
     ];
     return actions;
-  }
+  },
 };
