@@ -1,3 +1,4 @@
-module.exports = {
-  extends: ['./node_modules/commit-lint-standards/dist/index.js']
-};
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const commitLint = require('commit-lint-standards');
+
+module.exports = commitLint;
