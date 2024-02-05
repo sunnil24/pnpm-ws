@@ -8,7 +8,7 @@ export default {
     index: 'index.ts',
   },
   target: 'es2022',
-  format: ['cjs', 'esm'],
+  format: ['esm'],
   treeshake: true,
   splitting: true,
 };
