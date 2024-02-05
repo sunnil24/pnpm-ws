@@ -1,4 +1,4 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-import LintConfig from 'commit-lint-standards';
+const commitLint = require('commit-lint-standards');
 
-module.exports = LintConfig;
+module.exports = commitLint;
