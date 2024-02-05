@@ -1,14 +1,4 @@
-import type { Options } from 'tsup';
+import type { Options } from "tsup";
+import Config from '@repo/tsup-config'
 
-export const tsup: Options = {
-  clean: true,
-  dts: false,
-  minify: true,
-  bundle: true,
-  skipNodeModulesBundle: true,
-  entry: ['config/*.js', '.eslintrc.cjs'],
-  target: 'es2020',
-  format: ['cjs', 'esm'],
-  treeshake: true,
-  splitting: false,
-};
+export const tsup: Options = {...Config, ...{entry: ['config/*.js', '.eslintrc.cjs']}} as Options;

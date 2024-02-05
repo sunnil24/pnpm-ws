@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['./node_modules/commit-lint-standards/dist/index.js']
+  extends: ['commit-lint-standards/dist']
 };

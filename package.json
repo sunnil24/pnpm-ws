@@ -62,6 +62,7 @@
     "react-docgen-typescript": "2.2.2",
     "react-dom": "18.2.0",
     "react-linting-standards": "workspace:*",
+    "@repo/tsup-config": "workspace:*",
     "remark-gfm": "4.0.0",
     "rimraf": "5.0.5",
     "storybook": "7.6.7",
