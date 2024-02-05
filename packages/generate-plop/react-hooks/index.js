@@ -6,12 +6,16 @@
 
 'use strict';
 
-import componentExists from '../utils/componentExists.js'
-import monorepoQues from '../utils/monorepoHelpers.js'
-import config from '../constants.js'
-import {getFileExtension, getComputedFolderPath, getRootDirectoryPath} from '../utils/common.js'
+import componentExists from '../utils/componentExists';
+import monorepoQues from '../utils/monorepoHelpers';
+import config from '../constants';
+import {
+  getFileExtension,
+  getComputedFolderPath,
+  getRootDirectoryPath,
+} from '../utils/common';
 
-const fileExtension = getFileExtension()
+const fileExtension = getFileExtension();
 
 export default {
   description: 'Add a React custom hook',
@@ -31,29 +35,29 @@ export default {
         }
 
         return 'The name is required';
-      }
-    }
+      },
+    },
   ],
   actions: (data) => {
     // Generate useHookName/index.js and useHookName/test.js
-    const rootPath = getRootDirectoryPath()
+    const rootPath = getRootDirectoryPath();
     const folderPath = `${rootPath}/${getComputedFolderPath(data.monorepoPath, config.HOOKS_PATH)}`;
-  
+
     const actions = [
       {
         type: 'add',
         path: `${folderPath}/use{{properCase name}}/index.${fileExtension}`,
         templateFile: `./react-hooks/${fileExtension}-templates/index.${fileExtension}.hbs`,
-        abortOnFail: true
+        abortOnFail: true,
       },
       {
         type: 'add',
         path: `${folderPath}/use{{properCase name}}/test.${fileExtension}`,
         templateFile: `./react-hooks/${fileExtension}-templates/test.${fileExtension}.hbs`,
-        abortOnFail: true
-      }
+        abortOnFail: true,
+      },
     ];
 
     return actions;
-  }
+  },
 };

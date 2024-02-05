@@ -18,7 +18,6 @@ try {
     }
   } else if (operation === 'publish') {
     const packageJsonFiles = glob.sync('**/package.json', { ignore: '**/node_modules/**' });
-
     for (const file of packageJsonFiles) {
       const packageJson = JSON.parse(fs.readFileSync(file, 'utf8'));
       const packageDir = path.dirname(file);
@@ -26,7 +25,6 @@ try {
       if (packageName && packageJson.name !== packageName) {
         continue;
       }
-
       console.log(`Bumping version and publishing ${packageJson.name}...`);
       execSync(`cd ${packageDir} && bump && cd -`, { stdio: 'inherit' });
       execSync(`pnpm publish -r --filter=${packageJson.name} --no-git-checks`, { stdio: 'inherit' });
