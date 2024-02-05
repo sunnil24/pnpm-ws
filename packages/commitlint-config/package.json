@@ -2,9 +2,9 @@
   "name": "commit-lint-standards",
   "version": "1.0.3",
   "description": "",
-  "main": "dist/commitlint.config.js",
-  "module": "dist/commitlint.config.cjs",
-  "types": "dist/commitlint.config.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "package.json"
@@ -15,7 +15,6 @@
     }
   },
   "scripts": {
-   
     "build": "tsup && copyfiles .husky/* dist",
     "publish": "pnpm publish",
     "test": "vitest ./",
