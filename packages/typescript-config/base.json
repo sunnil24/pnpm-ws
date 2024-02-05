@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+  "allowSyntheticDefaultImports": true,
+  "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "downlevelIteration": true
+  },
+  "exclude": ["node_modules"]
+}

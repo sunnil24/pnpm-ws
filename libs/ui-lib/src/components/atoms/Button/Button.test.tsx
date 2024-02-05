@@ -1,12 +1,12 @@
-import React from "react";
 import { fireEvent, render, screen } from '@testing-library/react';
-import { Button } from "./Button";
-import { describe, test, vi } from 'vitest';
+import { describe, test, vi, expect } from 'vitest';
+import '@testing-library/jest-dom/vitest';
+import { Button } from './Button';
 
 describe('Button', () => {
   test('renders with children', () => {
     render(<Button>Click me!</Button>);
-    expect(screen.getByText('Click me!')).toBeDefined();
+    expect(screen.getByText('Click me!')).toBeInTheDocument();
   });
 
   test('calls onClick handler when clicked', () => {
@@ -16,5 +16,4 @@ describe('Button', () => {
     fireEvent.click(button);
     expect(handleClick).toHaveBeenCalled();
   });
-
 });

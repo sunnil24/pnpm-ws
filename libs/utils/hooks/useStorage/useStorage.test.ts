@@ -34,7 +34,10 @@ describe('useStorage', () => {
       result.current.setItem('test', 'value');
     });
 
-    expect(storageMock.setItem).toHaveBeenCalledWith('test', JSON.stringify('value'));
+    expect(storageMock.setItem).toHaveBeenCalledWith(
+      'test',
+      JSON.stringify('value'),
+    );
   });
 
   it('should remove an item from storage', () => {

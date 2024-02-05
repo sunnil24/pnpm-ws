@@ -9,17 +9,26 @@ interface StorageHook {
 }
 
 function useStorage(storageType: StorageType = 'localStorage'): StorageHook {
-  const storage = storageType === 'localStorage' ? window.localStorage : window.sessionStorage;
+  const storage =
+    storageType === 'localStorage'
+      ? window.localStorage
+      : window.sessionStorage;
 
   const [state, setState] = useState(() => {
-    const storedData = Object.keys(storage).reduce((acc: Record<string, any>, key: string) => {
-      try {
-        acc[key] = JSON.parse(storage.getItem(key) || '');
-      } catch (error) {
-        console.error(`Error retrieving data from storage (key: ${key}):`, error);
-      }
-      return acc;
-    }, {});
+    const storedData = Object.keys(storage).reduce(
+      (acc: Record<string, any>, key: string) => {
+        try {
+          acc[key] = JSON.parse(storage.getItem(key) || '');
+        } catch (error) {
+          console.error(
+            `Error retrieving data from storage (key: ${key}):`,
+            error,
+          );
+        }
+        return acc;
+      },
+      {},
+    );
     return storedData;
   });
 
@@ -27,7 +36,7 @@ function useStorage(storageType: StorageType = 'localStorage'): StorageHook {
     (key: string) => {
       return state[key];
     },
-    [state]
+    [state],
   );
 
   const setItem = useCallback(
@@ -39,7 +48,7 @@ function useStorage(storageType: StorageType = 'localStorage'): StorageHook {
         console.error(`Error storing data in storage (key: ${key}):`, error);
       }
     },
-    [storage]
+    [storage],
   );
 
   const removeItem = useCallback(
@@ -54,7 +63,7 @@ function useStorage(storageType: StorageType = 'localStorage'): StorageHook {
         console.error(`Error removing data from storage (key: ${key}):`, error);
       }
     },
-    [storage]
+    [storage],
   );
 
   useEffect(() => {

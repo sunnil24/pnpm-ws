@@ -2,24 +2,24 @@
   "name": "commit-lint-standards",
   "version": "1.0.3",
   "description": "",
-  "main": "dist/commitlint.config.js",
-  "module": "dist/commitlint.config.cjs",
-  "types":"dist/commitlint.config.d.ts",
-  "files":["dist","package.json"],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
   },
   "scripts": {
-    "test": "vitest",
-    "test:watch": "vitest --watch",
     "build": "tsup && copyfiles .husky/* dist",
-    "publish": "npm publish",
-    "linktw": "cd dist && npm link",
-    "tw-drypub": "npm publish --dry-run",
-    "lint": "eslint --ignore-path .gitignore .",
-    "lint:fix": "eslint --fix"
+    "publish": "pnpm publish",
+    "test": "vitest ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +35,6 @@
     "lint-staged": "^15.2.0",
     "tsup": "7.2.0",
     "validate-branch-name": "^1.3.0",
-    "inquirer":"8.0.0"
+    "inquirer": "8.0.0"
   }
 }

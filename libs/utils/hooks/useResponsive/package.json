@@ -36,7 +36,8 @@
   "scripts": {
     "build": "tsup",
     "publish": "npm publish",
-    "linktw": "cd dist && npm link",
-    "tw-drypub": "npm publish --dry-run"
+    "test": "vitest ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix"
   }
 }

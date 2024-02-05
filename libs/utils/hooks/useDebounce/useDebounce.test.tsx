@@ -1,14 +1,14 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi } from 'vitest';
 import useDebounce from './useDebounce';
 import { renderHook, act } from '@testing-library/react-hooks';
 
-vi.useFakeTimers()
+vi.useFakeTimers();
 
 describe('useDebounce', () => {
   it('should update the debounced value after the specified delay', () => {
-    const { result, rerender } = renderHook(
-      ({ value, delay }) => useDebounce(value, delay),
-      { initialProps: { value: 'initial', delay: 500 } }
+    const { rerender, result } = renderHook(
+      ({ delay, value }) => useDebounce(value, delay),
+      { initialProps: { value: 'initial', delay: 500 } },
     );
 
     // Initially, the debounced value should be the initial value

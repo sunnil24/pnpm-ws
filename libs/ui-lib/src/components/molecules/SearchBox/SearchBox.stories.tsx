@@ -1,6 +1,5 @@
 // SearchBox.stories.tsx
 
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
 // Import the SearchBox component and its props
