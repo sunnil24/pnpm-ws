@@ -4,15 +4,16 @@
 
 'use strict';
 
-import componentExists from '../utils/componentExists';
-import monorepoQues from '../utils/monorepoHelpers';
-import config from '../constants';
+import componentExists from '../utils/componentExists.js';
+import monorepoQues from '../utils/monorepoHelpers.js';
+import config from '../constants.js';
 import {
   isTypescript,
   getComputedFolderPath,
   getFileExtension,
   getRootDirectoryPath,
-} from '../utils/common';
+} from '../utils/common.js';
+
 const fileExtension = getFileExtension();
 
 export default {

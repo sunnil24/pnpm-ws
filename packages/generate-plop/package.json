@@ -2,7 +2,6 @@
   "name": "@xyzproject/generate-plop",
   "version": "1.0.9",
   "description": "Generate new components fast and consistently.",
-  "main": "index.js",
   "type": "module",
   "bin": {
     "generate": "index.js"
@@ -14,10 +13,6 @@
     "test": "vitest ./",
     "lint": "eslint ./",
     "lint:fix": "eslint --fix"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "plop": "^4.0.1",

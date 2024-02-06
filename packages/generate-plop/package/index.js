@@ -6,13 +6,13 @@
 
 'use strict';
 
-import componentExists from '../utils/componentExists';
-import config from '../constants';
+import componentExists from '../utils/componentExists.js';
+import config from '../constants.js';
 import {
   getComputedFolderPath,
   getFileExtension,
   getRootDirectoryPath,
-} from '../utils/common';
+} from '../utils/common.js';
 
 const fileExtension = getFileExtension();
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 /**
  * Component Generator
  */
@@ -6,20 +7,21 @@
 
 'use strict';
 
-import componentExists from '../utils/componentExists';
-import monorepoQues from '../utils/monorepoHelpers';
-import config from '../constants';
+import componentExists from '../utils/componentExists.js';
+import monorepoQues from '../utils/monorepoHelpers.js';
+import config from '../constants.js';
+import fs from 'fs'
 import {
   isTypescript,
   getComputedFolderPath,
   getFileExtension,
   getRootDirectoryPath,
-} from '../utils/common';
+} from '../utils/common.js';
 
 const fileExtension = getFileExtension();
 
 export default {
-  description: 'Add a React component (atoms, molecules, organisms, templates)',
+  description: 'Add a  React Package component (atoms, molecules, organisms, templates)',
   prompts: [
     monorepoQues,
     // {
@@ -74,7 +76,15 @@ export default {
     // Generate index.ts/js and index.test.tsx/js
     const rootPath = getRootDirectoryPath();
     let componentTemplate;
-    let folderPath = `${rootPath}/${getComputedFolderPath(data.monorepoPath, config.COMPONENT_PACKAGE)}${data.folder}`;
+    console.log(data.monorepoPath, 'monorepoPath')
+    console.log(config.COMPONENT_PACKAGE, 'COMPONENT_PACKAGE')
+    console.log(data.folder, 'folder')
+    let folderPath;
+    if (fs.existsSync(`${rootPath}/${config.COMPONENT_PACKAGE}`)) {
+      folderPath = `${rootPath}/libs/ui-lib/src/components/${data.folder}`
+    } else {
+      folderPath = `${rootPath}/${getComputedFolderPath(data.monorepoPath, config.COMPONENT_PACKAGE)}${data.folder}`;
+    }
     componentTemplate = `./component-package/${fileExtension}-templates/stateless.${fileExtension}.hbs`;
 
     // switch (data.type) {

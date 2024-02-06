@@ -10,7 +10,8 @@ export default {
   APPS_PATH: 'apps/',
   PACKAGES_PATH: 'packages/',
   SERVICES: 'packages/services',
-  COMPONENT_PACKAGE :'libs/ui-lib/src/components/'
+  COMPONENT_PACKAGE: 'libs/ui-lib/src/components/',
+  HOOKS_PACKAGE: 'libs/utils/hooks',
 };
 
-export const metaFileRegex = /^\..*/
+export const metaFileRegex = /^\..*/;
