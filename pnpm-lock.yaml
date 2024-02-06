@@ -525,22 +525,22 @@ importers:
       autoprefixer:
         specifier: 10.x
         version: 10.4.16(postcss@8.4.33)
+      clsx:
+        specifier: ^2.x
+        version: 2.1.0
       postcss:
         specifier: 8.x
         version: 8.4.33
+      tailwind-merge:
+        specifier: ^2.x
+        version: 2.2.1
       tailwindcss:
         specifier: 3.x
         version: 3.4.1
     devDependencies:
-      clsx:
-        specifier: ^2.1.0
-        version: 2.1.0
       copyfiles:
         specifier: 2.4.1
         version: 2.4.1
-      tailwind-merge:
-        specifier: ^2.2.0
-        version: 2.2.1
       tsup:
         specifier: 7.2.0
         version: 7.2.0(postcss@8.4.33)(typescript@5.3.3)
@@ -6546,7 +6546,7 @@ packages:
   /clsx@2.1.0:
     resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
     engines: {node: '>=6'}
-    dev: true
+    dev: false
 
   /co@4.6.0:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
@@ -12626,7 +12626,7 @@ packages:
     resolution: {integrity: sha512-o+2GTLkthfa5YUt4JxPfzMIpQzZ3adD1vLVkvKE1Twl9UAhGsEbIZhHHZVRttyW177S8PDJI3bTQNaebyofK3Q==}
     dependencies:
       '@babel/runtime': 7.23.9
-    dev: true
+    dev: false
 
   /tailwindcss@3.4.1:
     resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}

@@ -1,16 +1,13 @@
 {
   "name": "@xyzproject/tailwind-config-design-system",
-  "version": "2.0.5",
+  "version": "2.0.8",
   "type": "module",
   "devDependencies": {
     "tsup": "7.2.0",
-    "copyfiles": "2.4.1",
-    "clsx": "^2.1.0",
-    "tailwind-merge": "^2.2.0"
+    "copyfiles": "2.4.1"
   },
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "main": "./dist/index.js",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -22,19 +19,25 @@
   ],
   "typesVersions": {
     "<3.8": {
-      "*": ["dist/index.d.ts"]
+      "*": [
+        "dist/index.d.ts"
+      ]
     },
     ">=3.8": {
-      "*": ["dist/index.d.cts"]
+      "*": [
+        "dist/index.d.cts"
+      ]
     }
- },
+  },
   "peerDependencies": {
     "tailwindcss": "3.x",
-    "postcss":"8.x",
-    "autoprefixer":"10.x"
+    "postcss": "8.x",
+    "autoprefixer": "10.x",
+    "clsx": "^2.x",
+    "tailwind-merge": "^2.x"
   },
   "scripts": {
-    "build":"tsup",
+    "build": "tsup",
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",

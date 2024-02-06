@@ -16,23 +16,23 @@ Tailwind.config.js
 Postcss.config.js
 In these files, import the respective configurations from the installed package:
 
-In Tailwind.config.js:
+### In Tailwind.config.js:
 
 import { tailwindConfig } from "@xyzproject/tailwind-config-design-system";
 
-In Postcss.config.js:
+export default {presets:[tailwindConfig], content: [...tailwindConfig.content,'../../node_modules/@xyzproject/**/**/es/index.js']}
+
+### In Postcss.config.js:
 
 import { postconfig } from "@xyzproject/tailwind-config-design-system";
 
+export default postConfig
 
-Package Contents
-The Tailwind Configuration Package provides the following files:
+### Import Style file inside the root component
 
-/styles: Contains style-related configurations and utilities.
-index.cjs: The CommonJS export of the package.
-index.d.cts: TypeScript declaration file.
-index.d.ts: TypeScript declaration file.
-index.js: The main JavaScript export of the package.
+import '@xyzproject/tailwind-config-design-system/styles/tailwind.css'
 
-With this package, you can leverage the power of Tailwind CSS with a custom configuration tailored for the XYZ project.
+
+
+
 
