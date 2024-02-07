@@ -15,6 +15,7 @@
     "tsup": "7.2.0"
   },
   "module": "dist/.eslintrc.cjs",
+  "main": "dist/.eslintrc.cjs",
   "files": [
     "dist",
     "package.json"
