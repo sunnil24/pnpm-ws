@@ -237,9 +237,6 @@ importers:
       '@radix-ui/react-toggle':
         specifier: 1.0.3
         version: 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.47)(react-dom@18.2.0)(react@18.2.0)
-      '@repo/tsup-config':
-        specifier: workspace:*
-        version: link:../../../../../../packages/tsup-config
       '@testing-library/jest-dom':
         specifier: 6.x
         version: 6.2.0(vitest@1.2.2)
@@ -528,9 +525,6 @@ importers:
 
   packages/tailwind:
     dependencies:
-      '@repo/tsup-config':
-        specifier: workspace:*
-        version: link:../tsup-config
       autoprefixer:
         specifier: 10.x
         version: 10.4.16(postcss@8.4.33)

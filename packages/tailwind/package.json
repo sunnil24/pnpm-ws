@@ -23,8 +23,7 @@
     "postcss": "8.x",
     "autoprefixer": "10.x",
     "clsx": "^2.x",
-    "tailwind-merge": "^2.x",
-    "@repo/tsup-config": "workspace:*"
+    "tailwind-merge": "^2.x"
   },
   "scripts": {
     "build": "tsup",

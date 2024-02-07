@@ -22,14 +22,13 @@
     "@xyzproject/tailwind-config-design-system": "workspace:*",
     "@testing-library/react": "14.x",
     "@testing-library/jest-dom": "6.x",
-    "@repo/tsup-config": "workspace:*",
     "vitest": "1.x"
   },
   "scripts": {
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",
-    "lint:fix": "eslint '**/*.{ts,tsx}' '**/*/*.{hsb}' --fix",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
     "build": "tsup",
     "clean": "rm -rf ./dist ./.turbo",
     "cleanmodules": "rm -rf ./node_modules"
