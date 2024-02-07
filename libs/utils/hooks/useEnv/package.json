@@ -6,9 +6,8 @@
       "tsup": "7.2.0",
       "copyfiles": "2.4.1"
     },
-    "types": "./dist/index.d.ts",
-    "main": "./dist/index.cjs",
-    "module": "./dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
     "publishConfig": {
       "access": "public",
       "registry": "https://registry.npmjs.org/"
@@ -17,14 +16,6 @@
       "dist",
       "package.json"
     ],
-    "typesVersions": {
-      "<3.8": {
-        "*": ["dist/index.d.ts"]
-      },
-      ">=3.8": {
-        "*": ["dist/index.d.cts"]
-      }
-   },
     "peerDependencies": {
         "react": "18.2.0",
         "react-dom": "18.2.0"
@@ -34,7 +25,9 @@
       "publish": "npm publish",
       "test": "vitest ./",
       "lint": "eslint ./",
-      "lint:fix": "eslint '**/*.{ts,tsx}' --fix"
+      "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+      "clean": "rm -rf ./dist ./.turbo",
+      "cleanmodules": "rm -rf ./node_modules"
     }
   }
   

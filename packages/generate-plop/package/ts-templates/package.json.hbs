@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "{{properCase name}} component",
   "license": "MIT",
-  "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
@@ -19,7 +19,7 @@
   "scripts": {
     "build": "tsup",
     "bump": "bump",
-    "clean": "rimraf dist",
+    "clean": "rm -rf ./dist ./.turbo"
     "pub": "npm run bump && npm run build && cd dist && npm publish",
     "dry-pub": "npm run build && npm publish --dry-pub"
   },

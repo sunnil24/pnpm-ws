@@ -1,4 +1,3 @@
-/* eslint-disable react/display-name */
 import { Ref, forwardRef } from 'react';
 import * as ButtonPrimitive from '@radix-ui/react-toggle';
 import { buttonVariants, type ButtonVariantsProps } from './Button.styles';

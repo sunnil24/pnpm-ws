@@ -14,7 +14,6 @@
     "copyfiles": "2.4.1",
     "tsup": "7.2.0"
   },
-  "main": "dist/.eslintrc.cjs",
   "module": "dist/.eslintrc.cjs",
   "files": [
     "dist",
@@ -47,6 +46,8 @@
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",
-    "lint:fix": "eslint '**/*.{ts,tsx}' --fix"
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+    "clean": "rm -rf ./dist ./.turbo",
+    "cleanmodules": "rm -rf ./node_modules"
   }
 }
