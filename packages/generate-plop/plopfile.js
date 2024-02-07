@@ -1,5 +1,4 @@
 /* eslint-disable import/extensions */
-/* eslint-disable prettier/prettier */
 import componentGenerator from './react-component/index.js';
 import fs from 'fs';
 import componentPackageGenerator from './component-package/index.js';
