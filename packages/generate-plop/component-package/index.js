@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 /**
  * Component Generator
  */
@@ -6,29 +7,23 @@
 
 'use strict';
 
-import componentExists from '../utils/componentExists';
-import monorepoQues from '../utils/monorepoHelpers';
-import config from '../constants';
+import componentExists from '../utils/componentExists.js';
+import monorepoQues from '../utils/monorepoHelpers.js';
+import config from '../constants.js';
+import fs from 'fs'
 import {
   isTypescript,
   getComputedFolderPath,
   getFileExtension,
   getRootDirectoryPath,
-} from '../utils/common';
+} from '../utils/common.js';
 
 const fileExtension = getFileExtension();
 
 export default {
-  description: 'Add a React component (atoms, molecules, organisms, templates)',
+  description: 'Add a  React Package component (atoms, molecules, organisms, templates)',
   prompts: [
     monorepoQues,
-    // {
-    //   type: 'list',
-    //   name: 'type',
-    //   message: 'Select the type of component',
-    //   default: 'Functional',
-    //   choices: () => ['Functional', 'Class']
-    // },
     {
       type: 'list',
       name: 'folder',
@@ -74,18 +69,13 @@ export default {
     // Generate index.ts/js and index.test.tsx/js
     const rootPath = getRootDirectoryPath();
     let componentTemplate;
-    let folderPath = `${rootPath}/${getComputedFolderPath(data.monorepoPath, config.COMPONENT_PACKAGE)}${data.folder}`;
+    let folderPath;
+    if (fs.existsSync(`${rootPath}/${config.COMPONENT_PACKAGE}`)) {
+      folderPath = `${rootPath}/libs/ui-lib/src/components/${data.folder}`
+    } else {
+      folderPath = `${rootPath}/${getComputedFolderPath(data.monorepoPath, config.COMPONENT_PACKAGE)}${data.folder}`;
+    }
     componentTemplate = `./component-package/${fileExtension}-templates/stateless.${fileExtension}.hbs`;
-
-    // switch (data.type) {
-    //   case 'Class': {
-    //     componentTemplate = `./component-package/${fileExtension}-templates/class.${fileExtension}.hbs`;
-    //     break;
-    //   }
-    //   default: {
-    //     componentTemplate = `./component-package/${fileExtension}-templates/stateless.${fileExtension}.hbs`;
-    //   }
-    // }
 
     if (data.folder === 'custom-path') {
       folderPath = `${rootPath}/${getComputedFolderPath(data.monorepoPath, config.SRC)}${data.customFolder.trim()}`;
@@ -112,14 +102,8 @@ export default {
       },
       {
         type: 'add',
-        path: `${folderPath}/{{properCase name}}/{{properCase name}}.story.${isTypescript() ? 'tsx' : 'js'}`,
-        templateFile: `./component-package/${fileExtension}-templates/story.${fileExtension}.hbs`,
-        abortOnFail: true,
-      },
-      {
-        type: 'add',
-        path: `${folderPath}/{{properCase name}}/{{properCase name}}.styles.${fileExtension}`,
-        templateFile: `./component-package/${fileExtension}-templates/styles.${fileExtension}.hbs`,
+        path: `${folderPath}/{{properCase name}}/{{properCase name}}.stories.${isTypescript() ? 'tsx' : 'js'}`,
+        templateFile: `./component-package/${fileExtension}-templates/stories.${fileExtension}.hbs`,
         abortOnFail: true,
       },
       {

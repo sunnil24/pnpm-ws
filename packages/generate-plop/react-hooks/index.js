@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 /**
  * Hooks Generator
  */
@@ -6,14 +7,14 @@
 
 'use strict';
 
-import componentExists from '../utils/componentExists';
-import monorepoQues from '../utils/monorepoHelpers';
-import config from '../constants';
+import componentExists from '../utils/componentExists.js';
+import monorepoQues from '../utils/monorepoHelpers.js';
+import config from '../constants.js';
 import {
   getFileExtension,
   getComputedFolderPath,
   getRootDirectoryPath,
-} from '../utils/common';
+} from '../utils/common.js';
 
 const fileExtension = getFileExtension();
 
@@ -30,7 +31,7 @@ export default {
         value = `use${value}`;
         if (/.+/.test(value)) {
           return componentExists(value, config.HOOKS_PATH, data.monorepoPath)
-            ? 'A hook with this name already exists '
+            ? 'A hook with this name already exists'
             : true;
         }
 

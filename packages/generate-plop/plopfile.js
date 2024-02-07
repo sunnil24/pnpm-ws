@@ -1,10 +1,11 @@
-import componentGenerator from './react-component';
+/* eslint-disable import/extensions */
+import componentGenerator from './react-component/index.js';
 import fs from 'fs';
-import componentPackageGenerator from './component-package';
-import packageGenerator from './package';
-import hooksGenerator from './react-hooks';
-import config from './constants';
-import { getRootDirectoryPath } from './utils/common';
+import componentPackageGenerator from './component-package/index.js';
+import packageGenerator from './package/index.js';
+import hooksGenerator from './react-hooks/index.js';
+import config from './constants.js';
+import { getRootDirectoryPath } from './utils/common.js';
 
 const rootPath = getRootDirectoryPath();
 
