@@ -19,7 +19,7 @@
     "@radix-ui/react-toggle": "1.0.3",
     "class-variance-authority": "0.6.0",
     "react": "18.2.0",
-    "@xyzproject/tailwind-config-design-system": "workspace:*",
+    "@xyzproject/tailwind-config": "workspace:*",
     "@testing-library/react": "14.x",
     "@testing-library/jest-dom": "6.x",
     "vitest": "1.x"

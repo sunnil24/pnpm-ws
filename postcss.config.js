@@ -1,3 +1,3 @@
-import { postConfig } from '@xyzproject/tailwind-config-design-system';
+import { postConfig } from '@xyzproject/tailwind-config';
 
 export default postConfig;
