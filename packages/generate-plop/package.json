@@ -12,7 +12,9 @@
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "clean": "rm -rf ./dist ./.turbo",
+    "cleanmodules": "rm -rf ./node_modules"
   },
   "peerDependencies": {
     "plop": "^4.0.1",

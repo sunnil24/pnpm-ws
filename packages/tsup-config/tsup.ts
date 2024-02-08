@@ -2,7 +2,7 @@ export default {
   clean: true,
   dts: true,
   minify: true,
-  bundle: true,
+  bundle: false,
   skipNodeModulesBundle: true,
   entry: {
     index: 'index.ts',

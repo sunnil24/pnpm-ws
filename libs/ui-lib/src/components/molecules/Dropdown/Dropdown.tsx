@@ -6,11 +6,12 @@ import { Button } from '@xyzproject/button';
 /**
  * Defines the props that are passed to the Dropdown component.
  * @interface DropdownProps
- * @extends DropdownPrimitive.SelectProps
+ * @extends DropdownPrimitive.PrimitiveDivProps
+ * @extends DropdownPrimitive.PrimitiveSpanProps
  * @property {(DropdownPrimitive.SelectItemProps & DropdownPrimitive.SelectItemTextProps)[]} [options] - The options to be displayed in the dropdown.
  */
 
-interface DropdownProps extends DropdownPrimitive.SelectProps {
+export interface DropdownProps extends DropdownPrimitive.SelectProps {
   options?: (DropdownPrimitive.SelectItemProps &
     DropdownPrimitive.SelectItemTextProps)[];
 }
@@ -23,7 +24,6 @@ interface DropdownProps extends DropdownPrimitive.SelectProps {
 export function Dropdown({
   defaultValue,
   options,
-  ...props
 }: DropdownProps): JSX.Element {
   return (
     // The root dropdown component from @radix-ui/react-select library
@@ -52,7 +52,7 @@ export function Dropdown({
                 className={cx(
                   'relative flex items-center px-8 py-2 rounded-md text-sm text-gray-700 dark:text-gray-300 font-medium focus:bg-gray-100 dark:focus:bg-gray-900',
                   'radix-disabled:opacity-50',
-                  'focus:outline-none Dropdown-none',
+                  'focus:outline-none Dropdown-none cursor-pointer',
                 )}
               >
                 <DropdownPrimitive.ItemText>

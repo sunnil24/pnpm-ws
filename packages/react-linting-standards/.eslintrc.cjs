@@ -15,12 +15,12 @@ module.exports = {
   env: {
     browser: true,
     commonjs: true,
-    es2021: true,
+    es2022: true,
     node: true,
     jest: true,
   },
   parserOptions: {
-    ecmaVersion: 2021,
+    ecmaVersion: 2022,
     sourceType: 'module',
     requireConfigFile: false,
     ecmaFeatures: {

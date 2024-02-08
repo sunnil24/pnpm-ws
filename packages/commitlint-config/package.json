@@ -2,8 +2,9 @@
   "name": "commit-lint-standards",
   "version": "1.0.3",
   "description": "",
+  "type": "module",
+  "module": "dist/index.js",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
@@ -19,7 +20,9 @@
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",
-    "lint:fix": "eslint '**/*.{ts,tsx}' --fix"
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+    "clean": "rm -rf ./dist ./.turbo",
+    "cleanmodules": "rm -rf ./node_modules"
   },
   "keywords": [],
   "author": "",

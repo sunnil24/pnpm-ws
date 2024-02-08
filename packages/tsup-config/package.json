@@ -2,10 +2,15 @@
     "name": "@repo/tsup-config",
     "version": "0.0.0",
     "license": "MIT",
+    "type": "module",
     "private":"true",
-    "main": "./dist/index.mjs",
+    "module": "./dist/index.js",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "scripts": {
-        "build": "tsup"
+        "build": "tsup",
+        "clean": "rm -rf ./dist ./.turbo",
+        "cleanmodules": "rm -rf ./node_modules"
     }
   }
   

@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "description": "{{properCase name}} component",
   "license": "MIT",
-  "main": "dist/index.js",
+   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "files": [
     "dist",
     "README.md",
@@ -20,5 +21,14 @@
     "@testing-library/react":"14.x",
     "@testing-library/jest-dom": "6.x",
     "vitest": "1.x"
+  },
+   "scripts": {
+    "publish": "pnpm publish",
+    "test": "vitest ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+    "build": "tsup",
+    "clean": "rm -rf ./dist ./.turbo",
+    "cleanmodules": "rm -rf ./node_modules"
   }
 }

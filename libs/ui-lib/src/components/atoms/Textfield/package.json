@@ -1,9 +1,7 @@
 {
-  "name": "@xyzproject/gridlayout",
-  "version": "0.0.4",
-  "description": "Gridlayout component",
-  "license": "MIT",
-  "module": "dist/index.js",
+  "name": "@xyzproject/textfield",
+  "version": "0.1.0",
+   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
@@ -16,18 +14,19 @@
     "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
-    "@radix-ui/themes": "^2.0.3",
-    "@testing-library/jest-dom": "6.x",
-    "@testing-library/react":"14.x",
+    "react": "18.x",
     "@xyzproject/tailwind-config-design-system": "workspace:*",
-    "vitest": "1.x"
+    "@testing-library/react":"14.x",
+    "@testing-library/jest-dom": "6.x",
+    "vitest": "1.x",
+    "@radix-ui/themes": "2.x"
   },
-  "scripts": {
-    "build":"tsup",
+   "scripts": {
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",
     "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+    "build": "tsup",
     "clean": "rm -rf ./dist ./.turbo",
     "cleanmodules": "rm -rf ./node_modules"
   }

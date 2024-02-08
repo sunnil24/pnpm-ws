@@ -90,6 +90,12 @@ export default {
       },
       {
         type: 'add',
+        path: `${folderPath}/{{properCase name}}/tsup.config.${fileExtension}`,
+        templateFile: `./component-package/${fileExtension}-templates/tsup.config.${fileExtension}.hbs`,
+        abortOnFail: true,
+      },
+      {
+        type: 'add',
         path: `${folderPath}/{{properCase name}}/{{properCase name}}.${isTypescript() ? 'tsx' : 'js'}`,
         templateFile: componentTemplate,
         abortOnFail: true,
