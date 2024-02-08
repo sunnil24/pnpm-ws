@@ -8,12 +8,8 @@
       "lint": {
         "dependsOn": ["^build"]
       },
-      "clean": {
-        "dependsOn": ["^build"]
-      },
-      "cleanmodules": {
-        "dependsOn": ["^build"]
-      },
+      "clean": {},
+      "cleanmodules":{},
       "test": {
         "dependsOn": ["build"],
         "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"]
