@@ -1,4 +1,5 @@
 module.exports = {
+  "react/display-name": "off",
   'react/function-component-definition': 'off',
   'react/jsx-filename-extension': [
     'warn',

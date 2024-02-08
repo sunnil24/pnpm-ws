@@ -28,11 +28,11 @@ Step 4 :
 
 ## Builds the tailwind configuration package.
 
-### `pnpm --filter @xyzproject/tailwind-config-design-system build`
+### `pnpm --filter @xyzproject/tailwind-config  build`
 
 ## Builds the commit lint standards package.
 
-### `pnpm --filter commit-lint-standards build`
+### `pnpm --filter @xyzproject/commit-lint-standards build`
 
 ## Builds the plop generation package.
 
@@ -40,7 +40,7 @@ Step 4 :
 
 ## Builds the react linting standards package.
 
-### `pnpm --filter react-linting-standards build`
+### `pnpm --filter @xyzproject/react-linting-standards build`
 
 ##  Build the Tailwin config viewer.
 
@@ -54,11 +54,11 @@ Step 4 :
 
 ## To publish a package, use the corresponding publish script:
 
-### `pnpm --filter @xyzproject/tailwind-config-design-system publish`
+### `pnpm --filter @xyzproject/tailwind-config  publish`
 
 ## Publishes the tailwind configuration package.
 
-### `pnpm --filter commit-lint-standards publish`
+### `pnpm --filter @xyzproject/commit-lint-standards publish`
 
 ## Publishes the commit lint standards package.
 
@@ -66,7 +66,7 @@ Step 4 :
 
 ## Publishes the plop generation package.
 
-### `pnpm --filter react-linting-standards publish`
+### `pnpm --filter @xyzproject/react-linting-standards publish`
 
 ## Publishes the react linting standards package.
 

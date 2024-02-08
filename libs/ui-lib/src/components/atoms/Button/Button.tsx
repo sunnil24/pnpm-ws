@@ -1,7 +1,7 @@
 import { Ref, forwardRef } from 'react';
 import * as ButtonPrimitive from '@radix-ui/react-toggle';
 import { buttonVariants, type ButtonVariantsProps } from './Button.styles';
-import { cn } from '@xyzproject/tailwind-config-design-system';
+import { cn } from '@xyzproject/tailwind-config';
 /**
  * The ButtonVProps interface extends the ButtonPrimitive.PrimitiveButtonProps interface, the ButtonVariantProps interface
  * of buttonVariants object.

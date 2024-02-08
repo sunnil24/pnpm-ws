@@ -20,7 +20,7 @@
     "plop": "^4.0.1",
     "copyfiles": "2.4.1",
     "vitest": "1.x",
-    "commit-lint-standards": "workspace:*",
-    "react-linting-standards": "workspace:*"
+    "@xyzproject/commit-lint-standards": "workspace:*",
+    "@xyzproject/react-linting-standards": "workspace:*"
   }
 }

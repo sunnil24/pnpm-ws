@@ -7,7 +7,7 @@ Follow these steps to install the Tailwind Configuration Package:
 ## Step 1
 Run the following command in your project directory:
 
-yarn add @xyzproject/tailwind-config-design-system@latest
+yarn add @xyzproject/tailwind-config @latest
 
 ## Step 2
 Create two configuration files in your project:
@@ -18,19 +18,19 @@ In these files, import the respective configurations from the installed package:
 
 ### In Tailwind.config.js:
 
-import { tailwindConfig } from "@xyzproject/tailwind-config-design-system";
+import { tailwindConfig } from "@xyzproject/tailwind-config ";
 
 export default {presets:[tailwindConfig], content: [...tailwindConfig.content,'../../node_modules/@xyzproject/**/**/es/index.js']}
 
 ### In Postcss.config.js:
 
-import { postconfig } from "@xyzproject/tailwind-config-design-system";
+import { postconfig } from "@xyzproject/tailwind-config ";
 
 export default postConfig
 
 ### Import Style file inside the root component
 
-import '@xyzproject/tailwind-config-design-system/styles/tailwind.css'
+import '@xyzproject/tailwind-config /styles/tailwind.css'
 
 
 

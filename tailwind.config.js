@@ -1,4 +1,4 @@
-import { tailwindConfig } from '@xyzproject/tailwind-config-design-system';
+import { tailwindConfig } from '@xyzproject/tailwind-config';
 import extractDesignSystemVariables from './tailwind.config.viewer';
 
 export const presets = [tailwindConfig];

@@ -8,7 +8,7 @@ const operation = scriptName.split(':')[0];
 const packageName = process.argv[2];
 
 // Define the priority list of component names
-const priorityComponents = ['@repo/tsup-config', '@xyzproject/tailwind-config-design-system'];
+const priorityComponents = ['@repo/tsup-config', '@xyzproject/tailwind-config'];
 
 try {
   if (operation === 'build') {

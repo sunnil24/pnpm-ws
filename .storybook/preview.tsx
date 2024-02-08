@@ -1,7 +1,7 @@
 import React from "react";
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
 import { DocsContainer, DocsContainerProps } from "@storybook/blocks";
-import '@xyzproject/tailwind-config-design-system/styles/tailwind.css';
+import '@xyzproject/tailwind-config/styles/tailwind.css';
 import { Theme } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
 interface ExampleContainerProps extends DocsContainerProps {
