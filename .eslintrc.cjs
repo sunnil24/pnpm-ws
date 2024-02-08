@@ -1,4 +1,4 @@
-const linting = require('react-linting-standards');
+const linting = require('@xyzproject/react-linting-standards');
 
 module.exports = {
   ...linting,

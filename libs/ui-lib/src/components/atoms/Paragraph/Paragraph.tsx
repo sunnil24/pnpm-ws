@@ -1,3 +1,4 @@
+// @ts-expect-error Text Component has some default props which are spreading into the component directly
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Text, textPropDefs } from '@radix-ui/themes';
 
