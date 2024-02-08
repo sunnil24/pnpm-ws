@@ -1,0 +1,44 @@
+import { Canvas, Meta } from "@storybook/addon-docs";
+import { Paragraph } from "./Paragraph";
+import * as ParagraphStories from "./Paragraph.stories";
+import { ArgTypes } from "@storybook/blocks";
+
+<Meta of={ParagraphStories} />
+`
+# Paragraph
+
+A brief introduction to your component.
+
+## Install
+
+```sh
+npm install @component-ui/paragraph
+```
+
+## Import
+
+```js
+import { Button } from "@component-ui/paragraph";
+```
+
+## Props
+
+<ArgTypes of={Paragraph} />
+
+## Usage
+
+### Default
+
+<Canvas of={ParagraphStories.Default} />
+
+### CustomColor
+
+<Canvas of={ParagraphStories.CustomColor} />
+
+### TextWeight
+
+<Canvas of={ParagraphStories.TextWeight} />
+
+### TextAlign
+
+<Canvas of={ParagraphStories.TextAlign} />

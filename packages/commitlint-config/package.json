@@ -1,6 +1,6 @@
 {
-  "name": "commit-lint-standards",
-  "version": "1.0.3",
+  "name": "@xyzproject/commit-lint-standards",
+  "version": "2.0.0",
   "description": "",
   "type": "module",
   "module": "dist/index.js",
