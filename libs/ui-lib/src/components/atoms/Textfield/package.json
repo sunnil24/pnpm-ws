@@ -1,8 +1,6 @@
 {
-  "name": "xyzproject/textarea",
+  "name": "@xyzproject/textfield",
   "version": "0.1.0",
-  "description": "Textarea component",
-  "license": "MIT",
    "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",

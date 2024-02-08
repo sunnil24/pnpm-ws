@@ -1,0 +1,40 @@
+import { Canvas, Meta } from "@storybook/addon-docs";
+import { Textfield } from "./Textfield";
+import * as TextfieldStories from "./Textfield.stories";
+import { ArgTypes } from "@storybook/blocks";
+
+<Meta of={TextfieldStories} />
+
+# Text Field
+
+A brief introduction to your component.
+
+## Install
+
+```sh
+npm install @component-ui/textfield
+```
+
+## Import
+
+```js
+import Input from "@component-ui/textfield";
+```
+
+## Props
+
+<ArgTypes of={Textfield}/>
+
+## Usage
+
+### Default
+
+<Canvas of={TextfieldStories.Default} />
+
+### Variants
+
+<Canvas of={TextfieldStories.Variants} />
+
+### With Icon
+
+<Canvas of={TextfieldStories.WithIcon} />

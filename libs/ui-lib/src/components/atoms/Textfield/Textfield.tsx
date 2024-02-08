@@ -17,13 +17,13 @@ interface CustomSlotProps
   children: React.ReactNode;
 }
 
-interface TextAreaProps {
+interface TextFieldProps {
   rootProps?: CustomRootProps;
   inputProps?: CustomInputProps;
   slotProps?: CustomSlotProps;
 }
 
-export const Textarea: React.FC<TextAreaProps> = ({
+export const Textfield: React.FC<TextFieldProps> = ({
   inputProps,
   rootProps,
   slotProps,

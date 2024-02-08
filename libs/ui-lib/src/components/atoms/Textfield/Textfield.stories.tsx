@@ -1,6 +1,6 @@
 import type { Meta, StoryObj, StoryFn } from '@storybook/react';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import { Textarea } from './Textarea';
+import { Textfield } from './Textfield';
 
 const variantsInfo = [
   {
@@ -27,8 +27,8 @@ const variantsInfo = [
 ];
 
 const meta = {
-  title: 'Components/Textarea',
-  component: Textarea,
+  title: 'Components/Textfield',
+  component: Textfield,
   argTypes: {
     rootProps: {
       size: '1',
@@ -48,7 +48,7 @@ const meta = {
       color: 'gold',
     },
   },
-} satisfies Meta<typeof Textarea>;
+} satisfies Meta<typeof Textfield>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -69,6 +69,7 @@ export const Default: Story = {
       className: 'text-blue-500',
       placeholder: 'Text Field',
     },
+    
     slotProps: {
       isIconEnabled: false,
       gap: '2',
@@ -80,14 +81,14 @@ export const Default: Story = {
 export const Variants: StoryFn = () => (
   <>
     {variantsInfo.map((variant, i) => (
-      <Textarea key={i} inputProps={variant} />
+      <Textfield key={i} inputProps={variant} />
     ))}
   </>
 );
 
 export const WithIcon: StoryFn = () => (
   <>
-    <Textarea
+    <Textfield
       slotProps={{
         isIconEnabled: true,
         gap: '2',
