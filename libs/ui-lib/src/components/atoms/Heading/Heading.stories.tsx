@@ -1,22 +1,23 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { Meta, StoryObj, StoryFn } from '@storybook/react';
-import { Paragraph, ParagraphProps } from './Paragraph';
+import { HeadingComponent, headingProps } from './Heading';
 import '@radix-ui/themes/styles.css';
 
 export default {
-  title: 'Components/Paragraph',
-  component: Paragraph,
-  // argTypes
-} as Meta<typeof Paragraph>;
+  title: 'Components/Heading',
+  component: HeadingComponent,
+} as Meta<typeof HeadingComponent>;
 
-type Story = StoryObj<typeof Paragraph>;
+type Story = StoryObj<typeof HeadingComponent>;
 
-const Template: StoryFn<ParagraphProps> = (args) => <Paragraph {...args} />;
+const Template: StoryFn<headingProps> = (args) => (
+  <HeadingComponent {...args} />
+);
 
 export const Default: Story = {
   args: {
     children:
-      'Default paragraph just passing the text as in composition children pattern ',
+      'Default Heading just passing the text as in composition children pattern ',
   },
   render: Template,
 };
@@ -32,10 +33,10 @@ export const CustomColor: Story = {
 
 const weightVariations = ['regular', 'medium', 'bold'];
 export const TextWeight: StoryFn = () => (
-  <div className="flex-wrap flex items-center gap-md">
+  <div className="flex-wrap flex flex-col gap-md">
     {weightVariations.map((weight) => (
-      <Paragraph key={weight} weight={weight}>
-        Pararagraph {weight}
+      <HeadingComponent key={weight} weight={weight}>
+        Heading {weight}
         <br></br>
         <br></br>
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -47,17 +48,17 @@ export const TextWeight: StoryFn = () => (
         of Letraset sheets containing Lorem Ipsum passages, and more recently
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum
-      </Paragraph>
+      </HeadingComponent>
     ))}
   </div>
 );
 
 const sizeVariations = ['1', '2', '3', '4', '5', '6'];
 export const TextSizes: StoryFn = () => (
-  <div className="flex-wrap flex items-center gap-md">
+  <div className="flex-wrap flex flex-col gap-md">
     {sizeVariations.map((size) => (
-      <Paragraph key={size} size={size}>
-        Pararagraph Size {size}
+      <HeadingComponent key={size} size={size}>
+        Heading Size {size}
         <br></br>
         <br></br>
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -69,17 +70,17 @@ export const TextSizes: StoryFn = () => (
         of Letraset sheets containing Lorem Ipsum passages, and more recently
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum
-      </Paragraph>
+      </HeadingComponent>
     ))}
   </div>
 );
 const alignVariations = ['left', 'center', 'right'];
 export const TextAlign: StoryFn = () => (
-  <div className="flex-wrap flex flex-col">
+  <div className="flex-wrap flex flex-col gap-md">
     {alignVariations.map((align) => (
-      <Paragraph key={align} align={align}>
-        Pararagraph {align}
-      </Paragraph>
+      <HeadingComponent key={align} align={align}>
+        Heading {align}
+      </HeadingComponent>
     ))}
   </div>
 );
