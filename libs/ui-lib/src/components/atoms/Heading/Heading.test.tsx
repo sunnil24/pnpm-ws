@@ -11,6 +11,6 @@ describe('Heading Component', () => {
 
   test('should render Text component', () => {
     const { getByText } = render(<HeadingComponent>Test</HeadingComponent>);
-    expect(getByText('Test').tagName).toBe('SPAN');
+    expect(getByText('Test').tagName).toBe('H1');
   });
 });
