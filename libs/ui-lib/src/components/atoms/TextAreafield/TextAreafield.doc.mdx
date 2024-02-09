@@ -1,0 +1,41 @@
+import { Canvas, Meta } from "@storybook/addon-docs";
+import { TextAreaField } from "./index";
+import * as TextAreaStories from "./Textarea.stories";
+import { ArgTypes } from "@storybook/blocks";
+
+<Meta of={TextAreaStories} />
+`
+# HeadingComponent
+
+A brief introduction to your component.
+
+## Install
+
+```sh
+npm install @component-ui/textarea
+```
+
+## Import
+
+```js
+import { TextAreaField } from "@component-ui/textarea";
+```
+
+## Props
+
+<ArgTypes of={TextAreaField} />
+
+## Usage
+
+### Default
+
+<Canvas of={TextAreaStories.Default} />
+
+### Variants
+
+<Canvas of={TextAreaStories.Variants} />
+
+### CustomOutlineColor
+
+<Canvas of={TextAreaStories.CustomOutlineColor} />
+
