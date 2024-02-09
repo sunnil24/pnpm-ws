@@ -23,7 +23,7 @@ interface TextFieldProps {
   slotProps?: CustomSlotProps;
 }
 
-export const Textfield: React.FC<TextFieldProps> = ({
+export const Text: React.FC<TextFieldProps> = ({
   inputProps,
   rootProps,
   slotProps,

@@ -19,7 +19,8 @@
     "@testing-library/react":"14.x",
     "@testing-library/jest-dom": "6.x",
     "vitest": "1.x",
-    "@radix-ui/themes": "2.x"
+    "@radix-ui/themes": "2.x",
+    "@radix-ui/react-icons": "1.x"
   },
    "scripts": {
     "publish": "pnpm publish",

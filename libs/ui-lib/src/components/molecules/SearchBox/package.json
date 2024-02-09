@@ -23,7 +23,8 @@
     "@testing-library/react":"14.x",
     "@testing-library/jest-dom": "6.x",
     "vitest": "1.x",
-    "react": "18.x"
+    "react": "18.x",
+    "@radix-ui/themes": "^2.x"
     },
   "scripts": {
     "build":"tsup",

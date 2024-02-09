@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { describe, test, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import { Textfield } from '../Textfield';
+import { Text } from './TextField';
 
 describe('TextField', () => {
   test('renders input value', () => {
-    render(<Textfield inputProps={{ value: 'test' }} />);
+    render(<Text inputProps={{ value: 'test' }} />);
     const input = screen.getByRole('textbox');
     expect(input).toHaveValue('test');
   });
@@ -18,7 +18,7 @@ describe('TextField', () => {
       children: <span>Icon</span>,
     };
     const { getByText } = render(
-      <Textfield
+      <Text
         rootProps={rootProps}
         inputProps={inputProps}
         slotProps={slotProps}
@@ -29,7 +29,7 @@ describe('TextField', () => {
 
   test('does not render icon slot if disabled', () => {
     const { queryByText } = render(
-      <Textfield slotProps={{ isIconEnabled: false }} />,
+      <Text slotProps={{ isIconEnabled: false }} />,
     );
     expect(queryByText('Icon')).not.toBeInTheDocument();
   });
