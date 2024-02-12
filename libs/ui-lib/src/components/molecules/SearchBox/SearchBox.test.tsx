@@ -1,6 +1,8 @@
 import { render, fireEvent } from '@testing-library/react';
-import { SearchBox } from './SearchBox';
 import { describe, test, expect, vi } from 'vitest';
+import '@testing-library/jest-dom/vitest';
+import { SearchBox } from './SearchBox';
+
 
 describe('SearchBox', () => {
   test('should render a search input box and a search button', () => {
