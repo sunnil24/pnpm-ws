@@ -1,0 +1,38 @@
+import { Canvas, Meta } from '@storybook/addon-docs';
+import { GridLayout } from './index'
+import * as GridLayoutStories from './GridLayout.stories'
+import {ArgTypes} from '@storybook/blocks'
+
+<Meta of={GridLayoutStories} />
+
+# GridLayout
+
+A brief introduction to your component.
+
+## Install
+```sh 
+    npm install @my-org/GridLayout
+```
+## Import Component
+
+```js
+ import {GridLayout} from 'my-org/GridLayout'
+```
+
+## Import Style File in your root level of the component
+
+import '@radix-ui/themes/styles.css';
+
+
+```js
+ import {GridLayout} from 'my-org/GridLayout'
+```
+## Props
+
+<ArgTypes of={GridLayout} />
+
+## Usage
+
+### Default
+
+<Canvas of={GridLayoutStories.Default} />
