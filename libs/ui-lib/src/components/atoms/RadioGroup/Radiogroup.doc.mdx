@@ -1,0 +1,45 @@
+import { Canvas, Meta } from "@storybook/addon-docs";
+import { RadioGroupItem,RadioGroupRoot } from "./index";
+import * as RadiogroupStories from "./RadioGroup.stories";
+import { ArgTypes } from "@storybook/blocks";
+
+<Meta of={RadiogroupStories} />
+`
+# RadioGroupComponent
+
+A brief introduction to your component.
+
+## Install
+
+```sh
+npm install @component-ui/radiogroup
+```
+
+## Import
+
+```js
+import { RadioGroupRoot, RadioGroupItem } from "@component-ui/radiogroup";
+```
+
+
+## RadioGroupRoot Props
+
+<ArgTypes of={RadioGroupRoot} />
+
+## RadioGroupItem Props
+
+<ArgTypes of={RadioGroupItem} />
+
+## Usage
+
+### Default
+
+<Canvas of={RadiogroupStories.Default} />
+
+### Default
+
+<Canvas of={RadiogroupStories.Size} />
+
+### WithColor
+
+<Canvas of={RadiogroupStories.WithColor} />
