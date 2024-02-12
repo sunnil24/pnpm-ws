@@ -259,6 +259,24 @@ importers:
         specifier: 1.x
         version: 1.2.2(@types/node@20.11.16)(jsdom@24.0.0)
 
+  libs/ui-lib/src/components/atoms/CheckBoxField:
+    dependencies:
+      '@testing-library/jest-dom':
+        specifier: 6.x
+        version: 6.2.0(vitest@1.2.2)
+      '@testing-library/react':
+        specifier: 14.x
+        version: 14.1.2(react-dom@18.2.0)(react@18.2.0)
+      '@xyzproject/tailwind-config':
+        specifier: workspace:*
+        version: link:../../../../../../packages/tailwind
+      react:
+        specifier: 18.x
+        version: 18.2.0
+      vitest:
+        specifier: 1.x
+        version: 1.2.2(@types/node@20.11.16)(jsdom@24.0.0)
+
   libs/ui-lib/src/components/atoms/CheckboxField:
     dependencies:
       '@testing-library/jest-dom':
@@ -296,6 +314,27 @@ importers:
         version: 1.2.2(@types/node@20.11.16)(jsdom@24.0.0)
 
   libs/ui-lib/src/components/atoms/Paragraph:
+    dependencies:
+      '@radix-ui/themes':
+        specifier: ^2.x
+        version: 2.0.3(@types/react-dom@18.2.18)(@types/react@18.2.47)(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/jest-dom':
+        specifier: 6.x
+        version: 6.2.0(vitest@1.2.2)
+      '@testing-library/react':
+        specifier: 14.x
+        version: 14.1.2(react-dom@18.2.0)(react@18.2.0)
+      '@xyzproject/tailwind-config':
+        specifier: workspace:*
+        version: link:../../../../../../packages/tailwind
+      react:
+        specifier: 18.x
+        version: 18.2.0
+      vitest:
+        specifier: 1.x
+        version: 1.2.2(@types/node@20.11.16)(jsdom@24.0.0)
+
+  libs/ui-lib/src/components/atoms/RadioGroup:
     dependencies:
       '@radix-ui/themes':
         specifier: ^2.x
