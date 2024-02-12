@@ -1,0 +1,35 @@
+  {
+  "name": "@xyzproject/radio-group",
+  "version": "0.1.0",
+  "description": "Radiogroup component",
+  "license": "MIT",
+   "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "react": "18.x",
+    "@xyzproject/tailwind-config": "workspace:*",
+    "@testing-library/react":"14.x",
+    "@testing-library/jest-dom": "6.x",
+    "vitest": "1.x",
+    "@radix-ui/themes": "^2.x"
+  },
+   "scripts": {
+    "publish": "pnpm publish",
+    "test": "vitest ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+    "build": "tsup",
+    "clean": "rm -rf ./dist ./.turbo",
+    "cleanmodules": "rm -rf ./node_modules"
+  }
+}
