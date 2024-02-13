@@ -16,6 +16,9 @@
     /* tertiary colors */
     --color-tertiary: #ffc107;
     --color-tertiary-foreground: #fffde7;
+
+    --loader-segment: #707070;
+    --loader-track: #C4C4C4;
   }
 
   .dark {
@@ -30,6 +33,8 @@
     /* tertiary colors */
     --color-tertiary: #ffc107;
     --color-tertiary-foreground: #fffde7;
+
+    --loader-track: #C4C4C4;
   }
   :root,
   .dark {
