@@ -82,7 +82,10 @@ export const Default: Story = {
 export const Variants: StoryFn = () => (
   <>
     {variantsInfo.map((variant, i) => (
-      <Text key={i} inputProps={variant} />
+      <div className='mb-2' key={i}>
+      <Text  inputProps={variant} />
+
+      </div>
     ))}
   </>
 );

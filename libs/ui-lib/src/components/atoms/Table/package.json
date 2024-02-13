@@ -1,0 +1,32 @@
+{
+  "name": "@xyzproject/table",
+  "version": "0.1.0",
+  "description": "Table component",
+  "license": "MIT",
+   "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "react": "18.x",
+    "ag-grid-react": "^31.x",
+    "ag-grid-community": "^31.x"
+  },
+   "scripts": {
+    "publish": "pnpm publish",
+    "test": "vitest ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+    "build": "tsup",
+    "clean": "rm -rf ./dist ./.turbo",
+    "cleanmodules": "rm -rf ./node_modules"
+  }
+}
