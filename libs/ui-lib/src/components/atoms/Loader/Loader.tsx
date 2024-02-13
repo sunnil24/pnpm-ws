@@ -2,6 +2,7 @@ type LoaderSizes = 'sm' | 'md' | 'lg'
 
 interface LoaderProps {
   size?: LoaderSizes
+  className?: string
 }
 
 const sizeMap: Record<LoaderSizes, string> = {
@@ -10,12 +11,12 @@ const sizeMap: Record<LoaderSizes, string> = {
   lg: 'h-12 w-12',
 }
 
-export const Loader: React.FC<LoaderProps> = ({ size = 'sm' }) => {
+export const Loader: React.FC<LoaderProps> = ({ size = 'sm', className }) => {
   return (
     <div role='status' data-testid='spinner'>
       <svg
         aria-hidden='true'
-        className={`${sizeMap[size]} text-loader-track animate-spin dark:text-loader-segment fill-loader-segment`}
+        className={`${sizeMap[size]} inline text-[--loader-track] animate-spin dark:text-[--loader-track] fill-[--loader-segment] ${className || ''}`}
         viewBox='0 0 100 101'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
