@@ -19,6 +19,8 @@
 
     --loader-segment: #707070;
     --loader-track: #C4C4C4;
+
+    --card-border: #DDE1E6;
   }
 
   .dark {
