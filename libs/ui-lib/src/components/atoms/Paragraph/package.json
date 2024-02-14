@@ -15,13 +15,18 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "dependencies": {
+    "@radix-ui/themes": "^2.x"
+  },
   "peerDependencies": {
     "react": "18.x",
-    "@xyzproject/tailwind-config": "workspace:*",
-    "@testing-library/react":"14.x",
+    "react-dom": "18.x"
+  },
+  "devDependencies": {
+    "@testing-library/react": "14.x",
     "@testing-library/jest-dom": "6.x",
-    "vitest": "1.x",
-    "@radix-ui/themes": "^2.x"
+    "@storybook/react": "7.x",
+    "vitest": "^1.x"
   },
    "scripts": {
     "publish": "pnpm publish",

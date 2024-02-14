@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/button",
-  "version": "1.0.16",
+  "version": "1.2.0",
   "description": "Button component",
   "license": "MIT",
   "module": "dist/index.js",
@@ -15,14 +15,20 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "dependencies": {
+    "@radix-ui/react-toggle": "1.x",
+    "@xyzproject/tailwind-config": "workspace:*"
+  },
   "peerDependencies": {
-    "@radix-ui/react-toggle": "1.0.3",
-    "class-variance-authority": "0.6.0",
-    "react": "18.2.0",
-    "@xyzproject/tailwind-config": "workspace:*",
+    "react": "18.x",
+    "react-dom": "18.x"
+  },
+  "devDependencies": {
     "@testing-library/react": "14.x",
+    "class-variance-authority": "0.x",
     "@testing-library/jest-dom": "6.x",
-    "vitest": "1.x"
+    "@storybook/react": "7.x",
+    "vitest": "^1.x"
   },
   "scripts": {
     "publish": "pnpm publish",

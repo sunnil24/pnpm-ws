@@ -17,10 +17,13 @@
   },
   "peerDependencies": {
     "react": "18.x",
-    "@xyzproject/tailwind-config": "workspace:*",
+    "react-dom": "18.x"
+  },
+  "devDependencies": {
     "@testing-library/react": "14.x",
     "@testing-library/jest-dom": "6.x",
-    "vitest": "1.x"
+    "@storybook/react": "7.x",
+    "vitest": "^1.x"
   },
   "scripts": {
     "publish": "pnpm publish",

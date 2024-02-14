@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/gridlayout",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Gridlayout component",
   "license": "MIT",
   "module": "dist/index.js",
@@ -15,12 +15,19 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "dependencies": {
+    "@radix-ui/themes": "^2.x"
+  },
   "peerDependencies": {
-    "@radix-ui/themes": "^2.x",
-    "@testing-library/jest-dom": "6.x",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "class-variance-authority": "0.x"
+  },
+  "devDependencies": {
     "@testing-library/react": "14.x",
-    "@xyzproject/tailwind-config": "workspace:*",
-    "vitest": "1.x"
+    "@testing-library/jest-dom": "6.x",
+    "@storybook/react": "7.x",
+    "vitest": "^1.x"
   },
   "scripts": {
     "build": "tsup",

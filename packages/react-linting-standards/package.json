@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/react-linting-standards",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ESLint + Prettier config for React",
   "type": "module",
   "keywords": [
@@ -20,7 +20,7 @@
     "dist",
     "package.json"
   ],
-  "peerDependencies": {
+  "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",

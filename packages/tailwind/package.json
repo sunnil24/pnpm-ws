@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/tailwind-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "type": "module",
   "devDependencies": {
     "tsup": "7.2.0",
@@ -18,7 +18,7 @@
     "package.json",
     "styles"
   ],
-  "peerDependencies": {
+  "dependencies": {
     "tailwindcss": "3.x",
     "postcss": "8.x",
     "autoprefixer": "10.x",
