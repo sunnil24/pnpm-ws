@@ -15,6 +15,14 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "peerDependencies": {
+    "react": "18.x",
+    "react-dom": "18.x",
+    "@testing-library/react": "14.x",
+    "vitest": "^1.x",
+    "vite": "4.x",
+    "@testing-library/jest-dom": "6.x"
+  },
   "scripts": {
     "publish": "pnpm publish",
     "test": "vitest ./",
