@@ -15,13 +15,6 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "peerDependencies": {
-    "react": "18.x",
-    "@xyzproject/tailwind-config": "workspace:*",
-    "@testing-library/react": "14.x",
-    "@testing-library/jest-dom": "6.x",
-    "vitest": "1.x"
-  },
   "scripts": {
     "publish": "pnpm publish",
     "test": "vitest ./",
