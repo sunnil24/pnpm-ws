@@ -7,8 +7,10 @@ export interface HeadingProps extends HeadingPropsDif {
   children: React.ReactNode;
   className?: string;
 }
-export const HeadingComponent = (props: HeadingProps) => {
+const HeadingComponent = (props: HeadingProps) => {
   const { children } = props;
   // @ts-expect-error Text Component has some default props which are spreading into the component directly
   return <Heading {...props}>{children}</Heading>;
 };
+
+export default HeadingComponent;

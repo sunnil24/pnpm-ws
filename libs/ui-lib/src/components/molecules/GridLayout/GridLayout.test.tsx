@@ -1,6 +1,7 @@
 // Import necessary modules
 import { render } from '@testing-library/react';
-import { GridLayout } from './index';
+import GridLayout from './index';
+import '@testing-library/jest-dom/vitest';
 import { describe, test, expect } from 'vitest';
 // Define the test
 describe('GridLayout', () => {

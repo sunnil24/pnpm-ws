@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import { cx } from 'class-variance-authority';
-import { Button } from '@xyzproject/button';
+import Button from '@xyzproject/button';
 
 /**
  * SearchBoxProps interface for defining props for the SearchBox component
@@ -10,7 +10,7 @@ import { Button } from '@xyzproject/button';
  * @property {string} placeholder - An optional prop that sets the placeholder text for the search input
  * @property {function} onSearch - A function that is called when the search button is clicked, and it passes the search query as an argument.
  */
-interface SearchBoxProps {
+export interface SearchBoxProps {
   className?: string;
   placeholder?: string;
   onSearch?: (query: string) => void;
@@ -38,7 +38,7 @@ const defaultSearch = (query: string) => {
  * @param {SearchBoxProps} props - Props for the SearchBox component
  * @returns {JSX.Element} - Returns the SearchBox component as the JSX element
  */
-export function SearchBox({
+function SearchBox({
   className,
   onSearch = defaultSearch,
   placeholder = 'Search',
@@ -85,3 +85,5 @@ export function SearchBox({
     </form>
   );
 }
+
+export default SearchBox;

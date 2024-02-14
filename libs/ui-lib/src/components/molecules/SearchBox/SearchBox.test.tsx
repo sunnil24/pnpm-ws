@@ -1,8 +1,7 @@
 import { render, fireEvent } from '@testing-library/react';
 import { describe, test, expect, vi } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import { SearchBox } from './SearchBox';
-
+import SearchBox from './index';
 
 describe('SearchBox', () => {
   test('should render a search input box and a search button', () => {
@@ -23,7 +22,7 @@ describe('SearchBox', () => {
   });
 
   test('should update search query state when text is entered into the search input box', () => {
-    const { getByPlaceholderText, getByText } = render(<SearchBox />);
+    const { getByPlaceholderText } = render(<SearchBox />);
     const input = getByPlaceholderText('Search');
     fireEvent.change(input, { target: { value: 'Test search query' } });
     expect(input).toHaveValue('Test search query');

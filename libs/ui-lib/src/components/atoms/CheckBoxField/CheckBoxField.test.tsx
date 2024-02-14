@@ -1,7 +1,8 @@
 import { describe, expect, test, vi } from 'vitest';
-import { CheckboxField, CheckboxProps } from './index';
+import CheckboxField from './index';
 import '@testing-library/jest-dom/vitest';
 import { render, fireEvent } from '@testing-library/react';
+import { CheckboxProps } from './CheckBoxField';
 
 describe('CheckboxField', () => {
   test('renders Checkbox with props', () => {

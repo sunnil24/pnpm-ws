@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { TextAreaField } from './index';
+import TextAreaField from './index';
 
 const variantsInfo = [
   {

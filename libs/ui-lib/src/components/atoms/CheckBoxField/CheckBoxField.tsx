@@ -6,7 +6,9 @@ type CheckboxDif = typeof checkboxPropDefs;
 export interface CheckboxProps extends CheckboxDif {
   className?: string;
 }
-export const CheckboxField = (props: CheckboxProps) => {
+const CheckboxField = (props: CheckboxProps) => {
   // @ts-expect-error Text Component has some default props which are spreading into the component directly
   return <Checkbox {...props} />;
 };
+
+export default CheckboxField;

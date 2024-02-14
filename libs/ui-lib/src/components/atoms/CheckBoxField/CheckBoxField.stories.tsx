@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { Meta } from '@storybook/react';
-import { CheckboxField, CheckboxProps } from './index';
+import CheckboxField from './index';
+import { CheckboxProps } from './CheckBoxField';
 
 export default {
   title: 'Components/Checkbox',

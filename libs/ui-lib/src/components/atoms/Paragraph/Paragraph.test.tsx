@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { Paragraph } from './index';
+import Paragraph from './index';
 import { describe, expect, test } from 'vitest';
 import '@testing-library/jest-dom/vitest';
 
