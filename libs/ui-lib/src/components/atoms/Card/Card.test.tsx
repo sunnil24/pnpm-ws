@@ -7,11 +7,11 @@ describe('Card', () => {
   // @ts-ignore
   render(
     <Card>
-      <div data-testid='card-child'>Child content</div>
+      <div data-testid="card-child">Child content</div>
     </Card>
   )
 
   test('should render Card component correctly', () => {
-    expect(screen.getByTestId('card-child').textContent).toBe('Child content')
+    expect(screen.getByTestId('card-child')).toHaveTextContent('Child content')
   })
 })

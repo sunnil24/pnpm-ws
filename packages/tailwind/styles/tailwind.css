@@ -4,6 +4,7 @@
 
 @layer base {
   /* ------- Design Tokens ------- */
+
   :root {
     /* primary colors */
     --color-primary: #007aff;
@@ -17,29 +18,10 @@
     --color-tertiary: #ffc107;
     --color-tertiary-foreground: #fffde7;
 
-    --loader-segment: #707070;
-    --loader-track: #C4C4C4;
+    --loader-segment: #707070; /* Need to remove from there */
+    --loader-track: #c4c4c4; /* Need to remove from there */
 
-    --card-border: #DDE1E6;
-  }
 
-  .dark {
-    /* primary colors */
-    --color-primary: #007aff;
-    --color-primary-foreground: #e3f2fd;
-
-    /* secondary colors */
-    --color-secondary: #6c757d;
-    --color-secondary-foreground: #f2f4f5;
-
-    /* tertiary colors */
-    --color-tertiary: #ffc107;
-    --color-tertiary-foreground: #fffde7;
-
-    --loader-track: #C4C4C4;
-  }
-  :root,
-  .dark {
     /* spacing */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
@@ -47,13 +29,12 @@
     --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
 
-     /* padding */
-     --padding-xs: 0.25rem;
-     --padding-sm: 0.5rem;
-     --padding-md: 1rem;
-     --padding-lg: 1.5rem;
-     --padding-xl: 2rem;
-    
+    /* padding */
+    --padding-xs: 0.25rem;
+    --padding-sm: 0.5rem;
+    --padding-md: 1rem;
+    --padding-lg: 1.5rem;
+    --padding-xl: 2rem;
 
     /* font sizes */
     --font-size-xs: 0.75rem; /* 12px in rem */

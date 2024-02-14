@@ -15,8 +15,14 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "dependencies": {
+    "@radix-ui/themes": "2.x"
+  },
   "peerDependencies": {
     "react": "18.x",
+    "reac-dom": "18.x"
+  },
+  "devDependencies": {
     "@xyzproject/tailwind-config": "workspace:*",
     "@testing-library/react":"14.x",
     "@testing-library/jest-dom": "6.x",
