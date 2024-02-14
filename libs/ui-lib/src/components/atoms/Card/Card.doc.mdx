@@ -1,0 +1,32 @@
+import { Canvas, Meta } from "@storybook/addon-docs";
+import { Card } from "./Card";
+import * as CardStories from "./Card.stories";
+import { ArgTypes } from "@storybook/blocks";
+
+<Meta of={CardStories} />
+`
+# Card
+
+Card component takes in children and renders it insdide a card view
+
+## Install
+
+```sh
+npm install @component-ui/card
+```
+
+## Import
+
+```js
+import { Card } from "@component-ui/card"
+```
+
+## Props
+
+<ArgTypes of={Card} />
+
+## Usage
+
+### Default
+
+<Canvas of={CardStories.Default} />
