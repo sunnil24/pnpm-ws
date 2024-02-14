@@ -27,7 +27,8 @@
     "@testing-library/react": "14.x",
     "vitest": "^1.x",
     "vite": "4.x",
-    "@testing-library/jest-dom": "6.x"
+    "@testing-library/jest-dom": "6.x",
+    "@storybook/react": "7.x"
   },
   "scripts": {
     "build":"tsup",
