@@ -1,9 +1,8 @@
 // Dropdown.spec.tsx
 import { render, screen, fireEvent } from '@testing-library/react';
-import { Dropdown } from './Dropdown';
+import Dropdown from './index';
 import { describe, test, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-
 
 describe('Dropdown', () => {
   const options = [

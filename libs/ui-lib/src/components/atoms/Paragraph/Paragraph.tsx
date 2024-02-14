@@ -7,8 +7,10 @@ export interface ParagraphProps extends TextProps {
   children: React.ReactNode;
   className?: string;
 }
-export const Paragraph = (props: ParagraphProps) => {
+const Paragraph = (props: ParagraphProps) => {
   const { children } = props;
   // @ts-expect-error Text Component has some default props which are spreading into the component directly
   return <Text {...props}>{children}</Text>;
 };
+
+export default Paragraph;

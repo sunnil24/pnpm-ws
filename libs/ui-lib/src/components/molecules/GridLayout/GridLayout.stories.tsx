@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { ComponentProps } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { GridLayout } from './index';
+import GridLayout from './index';
 import { Box } from '@radix-ui/themes';
 
 export type GridProps = ComponentProps<typeof GridLayout>;

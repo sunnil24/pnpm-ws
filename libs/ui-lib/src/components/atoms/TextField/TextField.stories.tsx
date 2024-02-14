@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj, StoryFn } from '@storybook/react';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import { Text } from './index';
+import Text from './index';
 
 const variantsInfo = [
   {

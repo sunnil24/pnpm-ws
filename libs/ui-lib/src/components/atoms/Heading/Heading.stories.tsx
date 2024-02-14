@@ -1,7 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { Meta, StoryObj, StoryFn } from '@storybook/react';
-import { HeadingComponent, headingProps } from './Heading';
+import HeadingComponent from './index';
 import '@radix-ui/themes/styles.css';
+import { HeadingProps } from './Heading';
 
 export default {
   title: 'Components/Heading',
@@ -10,7 +11,7 @@ export default {
 
 type Story = StoryObj<typeof HeadingComponent>;
 
-const Template: StoryFn<headingProps> = (args) => (
+const Template: StoryFn<HeadingProps> = (args) => (
   <HeadingComponent {...args} />
 );
 

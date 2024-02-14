@@ -19,4 +19,4 @@ const GridLayout = ({
   );
 };
 
-export { GridLayout };
+export default GridLayout;

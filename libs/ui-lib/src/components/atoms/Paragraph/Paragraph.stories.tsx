@@ -1,7 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { Meta, StoryObj, StoryFn } from '@storybook/react';
-import { Paragraph, ParagraphProps } from './Paragraph';
+import Paragraph from './index';
 import '@radix-ui/themes/styles.css';
+import { ParagraphProps } from './Paragraph';
 
 export default {
   title: 'Components/Paragraph',

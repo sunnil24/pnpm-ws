@@ -3,7 +3,8 @@
 import { Story, Meta } from '@storybook/react';
 
 // Import the SearchBox component and its props
-import { SearchBox, SearchBoxProps } from './SearchBox';
+import SearchBox from './index';
+import { SearchBoxProps } from './SearchBox';
 
 // Default export for the Storybook
 export default {

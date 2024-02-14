@@ -1,16 +1,16 @@
-import { render, screen } from "@testing-library/react"
-import { beforeEach, describe, expect, test } from "vitest"
-import { Loader } from "./index"
+import { render, screen } from '@testing-library/react';
+import { beforeEach, describe, expect, test } from 'vitest';
+import Loader from './index';
 
-describe("<Loader />", () => {
+describe('<Loader />', () => {
   beforeEach(() => {
-    render(<Loader />)
-  })
+    render(<Loader />);
+  });
 
-  test("should render the loader correctly", () => {
-    screen.debug()
+  test('should render the loader correctly', () => {
+    screen.debug();
 
-    expect(screen.getByRole("status")).toBeTruthy()
-    expect(screen.getByTestId("spinner").textContent).toBe("Loading...")
-  })
-})
+    expect(screen.getByRole('status')).toBeInTheDocument();
+    expect(screen.getByTestId('spinner')).toHaveTextContent('Loading...');
+  });
+});

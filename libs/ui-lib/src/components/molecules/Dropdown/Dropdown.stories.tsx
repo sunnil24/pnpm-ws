@@ -2,7 +2,8 @@
 import { Story, Meta } from '@storybook/react';
 
 // Import the Dropdown component and its props
-import { Dropdown, DropdownProps } from './Dropdown';
+import Dropdown from './index';
+import { DropdownProps } from './Dropdown';
 
 // Define the mock data for the dropdown
 const optionsA = [

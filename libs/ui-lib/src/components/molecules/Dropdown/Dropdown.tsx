@@ -1,7 +1,7 @@
 import * as DropdownPrimitive from '@radix-ui/react-select';
 import { ChevronDownIcon, CheckIcon } from '@radix-ui/react-icons';
 import { cx } from 'class-variance-authority';
-import { Button } from '@xyzproject/button';
+import Button from '@xyzproject/button';
 
 /**
  * Defines the props that are passed to the Dropdown component.
@@ -21,10 +21,7 @@ export interface DropdownProps extends DropdownPrimitive.SelectProps {
  * @param {DropdownProps} props - The props passed to the Dropdown component.
  * @returns {JSX.Element} - Returns the Dropdown component as the JSX element.
  */
-export function Dropdown({
-  defaultValue,
-  options,
-}: DropdownProps): JSX.Element {
+function Dropdown({ defaultValue, options }: DropdownProps): JSX.Element {
   return (
     // The root dropdown component from @radix-ui/react-select library
     <DropdownPrimitive.Root defaultValue={defaultValue}>
@@ -69,3 +66,5 @@ export function Dropdown({
     </DropdownPrimitive.Root>
   );
 }
+
+export default Dropdown;
