@@ -17,17 +17,18 @@
   },
   "dependencies": {
     "@radix-ui/react-toggle": "1.x",
-    "class-variance-authority": "0.x",
     "@xyzproject/tailwind-config": "workspace:*"
   },
   "peerDependencies": {
     "react": "18.x",
-    "react-dom": "18.x",
+    "react-dom": "18.x"
+  },
+  "devDependencies": {
     "@testing-library/react": "14.x",
-    "vitest": "^1.x",
-    "vite": "4.x",
+    "class-variance-authority": "0.x",
     "@testing-library/jest-dom": "6.x",
-    "@storybook/react": "7.x"
+    "@storybook/react": "7.x",
+    "vitest": "^1.x"
   },
   "scripts": {
     "publish": "pnpm publish",
