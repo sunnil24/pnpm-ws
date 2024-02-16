@@ -4,9 +4,15 @@ import { useDropzone } from "react-dropzone";
 
 export interface FileUploadProps {
   onUpload: (file: File) => void;
+  uploadText: string;
+  fileFormatText: string;
 }
 
-const FileUpload: React.FC<FileUploadProps> = ({ onUpload }) => {
+const FileUpload: React.FC<FileUploadProps> = ({
+  onUpload,
+  uploadText,
+  fileFormatText,
+}) => {
   const [file, setFile] = React.useState<File | null>(null);
   const { getRootProps, getInputProps } = useDropzone({
     onDrop: (acceptedFiles) => {
@@ -23,13 +29,15 @@ const FileUpload: React.FC<FileUploadProps> = ({ onUpload }) => {
           className="flex flex-col items-center justify-center"
         >
           <input {...getInputProps()} />
-          <span className="text-sm text-gray-500" data-testid="dropzone">Drag and drop file here</span>
+          <span className="text-sm text-gray-500" data-testid="dropzone">
+            Drag and drop file here
+          </span>
           <span className="text-sm text-gray-500">Or</span>
           <div className="flex items-center mt-2 border-2 border-gray-300 rounded-md p-1 cursor-pointer">
             <span className="underline">
               <ArrowUpIcon />
             </span>
-            <span className="text-sm text-gray-500">Upload File</span>
+            <span className="text-sm text-gray-500">{uploadText}</span>
           </div>
           {file && (
             <span className="mt-2 text-sm text-gray-500">{file.name}</span>
@@ -37,7 +45,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ onUpload }) => {
         </div>
       </div>
       <span className="mt-2 text-xs text-gray-500 self-start">
-        Files should be in excel format
+        {fileFormatText}
       </span>
     </div>
   );

@@ -26,7 +26,8 @@
     "vitest": "^1.x"
   },
   "dependencies": {
-    "react-dropzone" : "^14.x"
+    "react-dropzone" : "^14.x",
+    "@radix-ui/react-icons":"^1.x"
   },
    "scripts": {
     "publish": "pnpm publish",

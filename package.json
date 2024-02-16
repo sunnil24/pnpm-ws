@@ -95,7 +95,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
     "prepare": "husky install && copyfiles -f node_modules/@xyzproject/commit-lint-standards/dist/.husky/* .husky",
-    "commit": "lint-staged && validate-branch-name && cz ",
+    "commit": "validate-branch-name && cz ",
     "prepare-commit": "cross-env CHECKS_RUN=1 yarn run commit"
   },
   "dependencies": {

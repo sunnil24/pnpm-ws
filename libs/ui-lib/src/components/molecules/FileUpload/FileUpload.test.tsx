@@ -5,9 +5,17 @@ import "@testing-library/jest-dom/vitest";
 
 describe("FileUpload component", () => {
   it("renders correctly without file", () => {
-    const { getByText } = render(<FileUpload onUpload={() => {}} />);
+    const uploadText = "Upload File";
+    const fileFormatText = "Files should be in excel format";
+    const { getByText } = render(
+      <FileUpload
+        onUpload={() => {}}
+        uploadText={uploadText}
+        fileFormatText={fileFormatText}
+      />,
+    );
     expect(getByText("Drag and drop file here")).toBeInTheDocument();
-    expect(getByText("Upload File")).toBeInTheDocument();
-    expect(getByText("Files should be in excel format")).toBeInTheDocument();
+    expect(getByText(uploadText)).toBeInTheDocument();
+    expect(getByText(fileFormatText)).toBeInTheDocument();
   });
 });
