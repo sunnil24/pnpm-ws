@@ -9,22 +9,48 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        contain: [
-          'bg-blue-500',
-          'text-white',
-          'border-transparent',
-          'hover:bg-blue-600',
+        primaryContained: [
+          'bg-button-primary',
+          'text-button-primary-text',
+          'hover:bg-button-primary-hover',
+          'hover:text-button-primary-text',
         ],
-        outline: [
-          'bg-transparent',
-          'hover:bg-blue-500 ',
-          'text-blue-700',
-          'hover:text-white ',
-          'border border-blue-500',
-          'hover:border-transparent ',
+        primaryOutlined: [
+          'border-button-primary',
           'rounded',
+          'text-button-primary',
+          'border-button-primary-border',
+          'border-2',
+          'm-2',
+          'hover:bg-button-primary-hover',
+          'hover:text-button-primary-text',
         ],
-        link: ['underline-offset-4 ', 'hover:underline ', 'text-primary'],
+        primaryLink: [
+          'underline-offset-4 ',
+          'hover:underline ',
+          'text-button-primary',
+        ],
+        secondaryContained: [
+          'bg-button-secondary',
+          'text-button-secondary-text',
+          'hover:bg-button-secondary-hover',
+          'hover:text-button-secondary-text',
+        ],
+        secondaryOutlined: [
+          'border-button-secondary',
+          'rounded',
+          'text-button-secondary',
+          'border-button-secondary-border',
+          'border-2',
+          'm-2',
+          'hover:bg-button-secondary-hover',
+          'hover:text-button-secondary-text',
+        ],
+        secondaryLink: [
+          'underline-offset-4 ',
+          'hover:underline ',
+          'text-button-secondary',
+        ],
       },
       size: {
         md: ['h-10 ', 'py-2 ', 'px-4'],
@@ -33,7 +59,7 @@ export const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: 'contain',
+      variant: 'primaryContained',
       size: 'md',
     },
   },

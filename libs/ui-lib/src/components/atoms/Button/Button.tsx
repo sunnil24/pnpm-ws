@@ -11,6 +11,7 @@ interface ButtonProps
     ButtonVariantsProps {
   asChild?: boolean;
   children: React.ReactNode;
+  role?: string;
 }
 /**
  * A custom button component with multiple variants and sizes.
@@ -25,8 +26,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       asChild,
       children,
       className,
+      role = 'button',
       size = 'md',
-      variant = 'contain',
+      variant = 'primaryContained',
       ...props
     }: ButtonProps,
     ref: Ref<HTMLButtonElement>,
@@ -40,12 +42,19 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
      * @returns {string} - The concatenated CSS classes.
      */
     const applyClasses = (classes: object): string =>
-      cn(buttonVariants({ variant, size, className }), classes);
+      cn(
+        buttonVariants({
+          variant,
+          size,
+          className,
+        }),
+        classes,
+      );
 
     // Rendering the button component using ButtonPrimitive.Root component from @radix-ui/react-toggle library
     return (
       <ButtonPrimitive.Root
-        role="button"
+        role={role}
         className={applyClasses({})}
         {...props}
         ref={ref}
@@ -55,5 +64,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
+Button.displayName = 'Button';
 
 export default Button;

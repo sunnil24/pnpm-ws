@@ -2,8 +2,6 @@ import React from "react";
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
 import { DocsContainer, DocsContainerProps } from "@storybook/blocks";
 import '@xyzproject/tailwind-config/styles/tailwind.css';
-import { Theme } from "@radix-ui/themes";
-import '@radix-ui/themes/styles.css';
 interface ExampleContainerProps extends DocsContainerProps {
   children: React.ReactNode;
 }
@@ -35,7 +33,6 @@ export const parameters = {
 };
 
 export const decorators = [
-    (Story) => (<Theme><Story /></Theme>),
   withThemeByDataAttribute({
     themes: {
       light: "light",
