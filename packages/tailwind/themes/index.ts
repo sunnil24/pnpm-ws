@@ -21,49 +21,61 @@ export const baseTheme = {
       '16': 'repeat(16, minmax(0, 1fr))',
     },
     colors: {
-      primary: {
-        DEFAULT: 'var(--color-primary)',
-        foreground: 'var(--color-primary-foreground)',
+      basics: {
+        ltgrey: 'var(--ltgrey)',
+        black: 'var(--black)',
+        white: 'var(--white)',
+        error: 'var(--error)',
+        warning: 'var(--warning)',
+        success: 'var(--success)',
+        overlay: 'var(--overlay)',
+        grey10: 'var(--coolgrey-10)',
+        grey20: 'var(--coolgrey-20)',
+        grey30: 'var(--coolgrey-30)',
+        grey40: 'var(--coolgrey-40)',
+        grey50: 'var(--coolgrey-50)',
+        grey60: 'var(--coolgrey-60)',
+        grey70: 'var(--coolgrey-70)',
+        grey80: 'var(--coolgrey-80)',
+        grey90: 'var(--coolgrey-90)',
+        grey100: 'var(--coolgrey-100)',
       },
-      secondary: {
-        DEFAULT: 'var(--color-secondary)',
-        foreground: 'var(--color-secondary-foreground)',
+      body: 'var(--color-body)',
+      background: {
+        primary: 'var(--color-background-primary)',
+        secondary: 'var(--color-background-secondary)',
       },
-      tertiary: {
-        DEFAULT: 'var(--color-tertiary)',
-        foreground: 'var(--color-tertiary-foreground)',
+      para: {
+        primary: 'var(--color-text-primary)',
+        secondary: 'var(--color-text-secondary)',
       },
-    },
-    borderWidth: {
-      xs: 'var(--border-width-xs)',
-      sm: `var(--border-width-sm)`,
-      md: `var(--border-width-md)`,
-      lg: `var(--border-width-lg)`,
-      xl: 'var(--border-width-xl)',
-    },
-    spacing: {
-      xs: 'var(--spacing-xs)',
-      sm: `var(--spacing-sm)`,
-      md: `var(--spacing-md)`,
-      lg: `var(--spacing-lg)`,
-      xl: 'var(--spacing-xl)',
-    },
-    fontSize: {
-      xs: 'var(--font-size-xs)',
-      sm: `var(--font-size-sm)`,
-      md: `var(--font-size-md)`,
-      lg: `var(--font-size-lg)`,
-      xl: 'var(--font-size-xl)',
-      xl2: 'var(--font-size-xl2)',
-      xl3: 'var(--font-size-xl3)',
-      xl4: 'var(--font-size-xl4)',
-    },
-    lineHeight: {
-      xs: 'var(--line-height-xs)',
-      sm: 'var(--line-height-sm)',
-      md: `var(--line-height-md)`,
-      lg: `var(--line-height-lg)`,
-      xl: 'var(--line-height-xl)',
+      button: {
+        primary: {
+          DEFAULT: 'var(--color-button-primary-background)',
+          border: 'var(--color-button-primary-border)',
+          text: 'var(--color-button-primary-text)',
+          hover: 'var(--color-button-primary-hover)',
+        },
+        secondary: {
+          DEFAULT: 'var(--color-button-secondary-background)',
+          border: 'var(--color-button-secondary-border)',
+          text: 'var(--color-button-secondary-text)',
+          hover: 'var(--color-button-secondary-hover)',
+        },
+        tertiary: {
+          DEFAULT: 'var(--color-button-tertiary-background)',
+          text: 'var(--color-button-tertiary-text)',
+          hover: 'var(--color-button-tertiary-hover)',
+        },
+      },
+      form: {
+        primary: {
+          DEFAULT: 'var(--color-form-primary-background)',
+          border: 'var(--color-form-primary-border)',
+          text: 'var(--color-form-primary-text)',
+          hover: 'var(--color-form-primary-hover)',
+        },
+      },
     },
     fontFamily: {
       custom: ['CustomFont'], // Declare Custom Font Name
