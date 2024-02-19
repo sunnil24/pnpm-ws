@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { beforeEach, describe, expect, test } from 'vitest';
+import '@testing-library/jest-dom/vitest';
 import Loader from './index';
 
 describe('<Loader />', () => {
