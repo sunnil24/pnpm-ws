@@ -1,11 +1,11 @@
-import type { Meta, StoryObj, Storyfn } from '@storybook/react';
-import { Table, TableProps } from './index';
+import type { Meta, StoryObj } from "@storybook/react";
+import { TableProps } from "./Table";
+import Table from "./index";
 
 const meta = {
-  title: 'Components/Table',
+  title: "Components/Table",
   component: Table,
-  argTypes: {
-  },
+  argTypes: {},
 } as Meta<TableProps>;
 
 export default meta;
@@ -14,30 +14,29 @@ type Story = StoryObj<typeof meta>;
 // Add your story variants here
 export const Default: Story = {
   args: {
-    domLayout: 'autoHeight',
-    rowClass: 'bg-secondary-foreground',
+    domLayout: "autoHeight",
     columnDefs: [
-      { field: 'request' },
-      { field: 'model' },
-      { field: 'assignedto' },
-      { field: 'portfoliomanager' },
+      { field: "request" },
+      { field: "model" },
+      { field: "assignedto" },
+      { field: "portfoliomanager" },
     ],
     rowData: [
       {
-        request: 'Tesla',
-        model: 'Model Y',
+        request: "Tesla",
+        model: "Model Y",
         assignedto: 64950,
         portfoliomanager: true,
       },
       {
-        request: 'Ford',
-        model: 'F-Series',
+        request: "Ford",
+        model: "F-Series",
         assignedto: 33850,
         portfoliomanager: false,
       },
       {
-        request: 'Toyota',
-        model: 'Corolla',
+        request: "Toyota",
+        model: "Corolla",
         assignedto: 29600,
         portfoliomanager: false,
       },

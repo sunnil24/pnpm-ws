@@ -1,7 +1,7 @@
-import { Ref, forwardRef } from 'react';
-import * as ButtonPrimitive from '@radix-ui/react-toggle';
-import { buttonVariants, type ButtonVariantsProps } from './Button.styles';
-import { cn } from '@xyzproject/tailwind-config';
+import { Ref, forwardRef } from "react";
+import * as ButtonPrimitive from "@radix-ui/react-toggle";
+import { buttonVariants, ButtonVariantsProps } from "./Button.styles";
+import { cn } from "@xyzproject/tailwind-config";
 /**
  * The ButtonVProps interface extends the ButtonPrimitive.PrimitiveButtonProps interface, the ButtonVariantProps interface
  * of buttonVariants object.
@@ -12,6 +12,8 @@ interface ButtonProps
   asChild?: boolean;
   children: React.ReactNode;
   role?: string;
+  variant?: ButtonVariantsProps["variant"];
+  size?: ButtonVariantsProps["size"];
 }
 /**
  * A custom button component with multiple variants and sizes.
@@ -26,9 +28,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       asChild,
       children,
       className,
-      role = 'button',
-      size = 'md',
-      variant = 'primaryContained',
+      role = "button",
+      size = "md",
+      variant = "primaryContained",
       ...props
     }: ButtonProps,
     ref: Ref<HTMLButtonElement>,
@@ -64,6 +66,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
-Button.displayName = 'Button';
+Button.displayName = "Button";
 
 export default Button;
