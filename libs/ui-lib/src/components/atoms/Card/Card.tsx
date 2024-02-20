@@ -1,12 +1,12 @@
-import React from 'react';
-import { Card as RadixCard } from '@radix-ui/themes';
+import React from "react";
+import { Card as RadixCard } from "@radix-ui/themes";
 
 interface CardProps {
   className?: string;
   children: React.ReactNode;
 }
 
-export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
+const Card: React.FC<CardProps> = ({ children, className = "" }) => {
   return (
     <RadixCard
       size="1"
@@ -17,3 +17,5 @@ export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
     </RadixCard>
   );
 };
+
+export default Card;

@@ -1,23 +1,22 @@
-import type { Meta, StoryObj, StoryFn } from '@storybook/react'
-import { ComponentProps } from 'react'
-import { Card } from './Card'
+import type { Meta, StoryObj } from "@storybook/react";
+import Card from "./index";
 
 const meta = {
-  title: 'Components/Card',
+  title: "Components/Card",
   component: Card,
   argTypes: {},
-} satisfies Meta<typeof Card>
+} satisfies Meta<typeof Card>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
     children: (
-      <div className='flex justify-between'>
+      <div className="flex justify-between">
         <div>Left End</div>
         <div>Right End</div>
       </div>
     ),
   },
-}
+};
