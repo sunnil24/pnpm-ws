@@ -1,53 +1,66 @@
-import { ArrowUpIcon } from "@radix-ui/react-icons";
 import React from "react";
 import { useDropzone } from "react-dropzone";
+import ExcelFileIcon from "./ExcelFileIcon";
+import { UploadIcon } from "@radix-ui/react-icons";
 
 export interface FileUploadProps {
   onUpload: (file: File) => void;
-  uploadText: string;
-  fileFormatText: string;
+  uploadText?: string;
+  fileFormatText?: string;
+  dragText?: string;
+  className?: string;
 }
 
 const FileUpload: React.FC<FileUploadProps> = ({
+  dragText,
+  fileFormatText,
   onUpload,
   uploadText,
-  fileFormatText,
+  className,
 }) => {
   const [file, setFile] = React.useState<File | null>(null);
-  const { getRootProps, getInputProps } = useDropzone({
+  const { getInputProps, getRootProps } = useDropzone({
     onDrop: (acceptedFiles) => {
-      setFile(acceptedFiles[0]);
-      onUpload(acceptedFiles[0]);
+      const file1 = acceptedFiles[0];
+      setFile(file1);
+      onUpload(file1);
     },
   });
 
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center w-64 h-64 border-2 border-dashed border-gray-300 rounded-md hover:border-blue-500 relative">
-        <div
-          {...getRootProps()}
-          className="flex flex-col items-center justify-center"
-        >
-          <input {...getInputProps()} />
-          <span className="text-sm text-gray-500" data-testid="dropzone">
-            Drag and drop file here
-          </span>
-          <span className="text-sm text-gray-500">Or</span>
-          <div className="flex items-center mt-2 border-2 border-gray-300 rounded-md p-1 cursor-pointer">
-            <span className="underline">
-              <ArrowUpIcon />
-            </span>
-            <span className="text-sm text-gray-500">{uploadText}</span>
-          </div>
-          {file && (
-            <span className="mt-2 text-sm text-gray-500">{file.name}</span>
+    <>
+      <div
+        {...getRootProps()}
+        className={`flex flex-col items-center justify-center h-136 p-16 gap-3 border border-dashed border-gray-400 bg-basics-grey20 w-full ${className}`}
+      >
+        <div className="flex flex-col items-center justify-center">
+          <input {...getInputProps({ accept: ".xls,.xlsx,.csv" })} />
+          {file ? (
+            <div className="flex gap-2">
+              <ExcelFileIcon />
+              <span className="mt-2 text-sm text-gray-500">{file.name}</span>
+            </div>
+          ) : (
+            <>
+              <div className="flex h-8 px-3 justify-center items-center gap-2 flex-shrink-0 rounded-md border border-gray-300">
+                <span className="underline">
+                  <UploadIcon />
+                </span>
+                <span className="text-black text-base font-normal leading-relaxed">
+                  {uploadText}
+                </span>
+              </div>
+              <span className="text-sm text-gray-500" data-testid="dropzone">
+                {dragText}
+              </span>
+            </>
           )}
         </div>
       </div>
-      <span className="mt-2 text-xs text-gray-500 self-start">
+      <span className="mt-0 text-xs text-gray-500 self-start">
         {fileFormatText}
       </span>
-    </div>
+    </>
   );
 };
 
