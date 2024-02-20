@@ -1,0 +1,37 @@
+{
+  "name": "@xyzproject/dataitem",
+  "version": "0.1.0",
+  "description": "DataItem component",
+  "license": "MIT",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "react": "18.x",
+    "react-dom": "18.x"
+  },
+  "devDependencies": {
+    "@storybook/react": "7.x",
+    "@testing-library/jest-dom": "6.x",
+    "@testing-library/react": "14.x",
+    "vitest": "^1.x"
+  },
+  "scripts": {
+    "publish": "pnpm publish",
+    "test": "vitest ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+    "build": "tsup",
+    "clean": "rm -rf ./dist ./.turbo",
+    "cleanmodules": "rm -rf ./node_modules"
+  }
+}
