@@ -20,7 +20,7 @@
   },
   "peerDependencies": {
     "react": "18.x",
-    "reac-dom": "18.x"
+    "react-dom": "18.x"
   },
   "devDependencies": {
     "@xyzproject/tailwind-config": "workspace:*",
