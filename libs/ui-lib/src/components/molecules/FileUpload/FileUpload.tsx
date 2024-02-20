@@ -31,14 +31,14 @@ const FileUpload: React.FC<FileUploadProps> = ({
     <>
       <div
         {...getRootProps()}
-        className={`flex flex-col items-center justify-center h-136 p-16 gap-3 border border-dashed border-gray-400 bg-basics-grey20 w-full ${className}`}
+        className={`flex flex-col items-center justify-center p-16 gap-3 border border-dashed border-basics-grey40 bg-basics-grey20 w-full ${className}`}
       >
         <div className="flex flex-col items-center justify-center">
           <input {...getInputProps({ accept: ".xls,.xlsx,.csv" })} />
           {file ? (
             <div className="flex gap-2">
               <ExcelFileIcon />
-              <span className="mt-2 text-sm text-gray-500">{file.name}</span>
+              <span className="mt-2 text-sm">{file.name}</span>
             </div>
           ) : (
             <>
@@ -46,18 +46,18 @@ const FileUpload: React.FC<FileUploadProps> = ({
                 <span className="underline">
                   <UploadIcon />
                 </span>
-                <span className="text-black text-base font-normal leading-relaxed">
+                <span className="text-para-primary text-base font-normal leading-relaxed">
                   {uploadText}
                 </span>
               </div>
-              <span className="text-sm text-gray-500" data-testid="dropzone">
+              <span className="text-sm" data-testid="dropzone">
                 {dragText}
               </span>
             </>
           )}
         </div>
       </div>
-      <span className="mt-0 text-xs text-gray-500 self-start">
+      <span className="mt-0 text-xs text-para-primary self-start">
         {fileFormatText}
       </span>
     </>
