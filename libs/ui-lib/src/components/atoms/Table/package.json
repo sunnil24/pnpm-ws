@@ -15,10 +15,19 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "peerDependencies": {
-    "react": "18.x",
+  "dependencies": {
     "ag-grid-react": "^31.x",
     "ag-grid-community": "^31.x"
+  },
+  "peerDependencies": {
+    "react": "18.x",
+    "react-dom": "18.x"
+  },
+  "devDependencies": {
+    "@testing-library/react": "14.x",
+    "@testing-library/jest-dom": "6.x",
+    "@storybook/react": "7.x",
+    "vitest": "^1.x"
   },
    "scripts": {
     "publish": "pnpm publish",
