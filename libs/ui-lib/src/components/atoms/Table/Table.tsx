@@ -26,6 +26,7 @@ const Table: React.FC<TableProps> = ({
   return (
     <div className={className}>
       <AgGridReact
+        domLayout="autoHeight"
         headerHeight={40}
         rowHeight={52}
         columnDefs={updatedColumnDefs}

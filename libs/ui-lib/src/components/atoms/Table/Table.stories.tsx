@@ -14,7 +14,6 @@ type Story = StoryObj<typeof meta>;
 // Add your story variants here
 export const Default: Story = {
   args: {
-    domLayout: "autoHeight",
     columnDefs: [
       { field: "request" },
       { field: "model" },
