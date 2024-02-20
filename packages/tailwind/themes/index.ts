@@ -78,7 +78,9 @@ export const baseTheme = {
       },
     },
     fontFamily: {
-      custom: ["CustomFont"], // Declare Custom Font Name
+      regular: ["sans-regular", "sans-serif"],
+      bold: ["sans-bold", "sans-serif"],
+      semibold: ["sans-semibold", "sans-serif"],
     },
   },
 };

@@ -1,9 +1,9 @@
 {
   "name": "@xyzproject/card",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Card component",
   "license": "MIT",
-   "module": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
@@ -24,11 +24,11 @@
   },
   "devDependencies": {
     "@xyzproject/tailwind-config": "workspace:*",
-    "@testing-library/react":"14.x",
+    "@testing-library/react": "14.x",
     "@testing-library/jest-dom": "6.x",
     "vitest": "1.x"
   },
-   "scripts": {
+  "scripts": {
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",

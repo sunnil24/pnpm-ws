@@ -9,7 +9,7 @@ export const getTheme = ({ base }) => {
   return create({
     base,
     // Typography
-    fontBase: '"Fira code", sans-serif',
+    fontBase: '"sans-regular", sans-serif',
     fontCode: "monospace",
 
     brandTitle: "",
