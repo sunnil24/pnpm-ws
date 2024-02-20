@@ -19,10 +19,10 @@ importers:
         version: link:packages/generate-plop
       ag-grid-community:
         specifier: ^31.0.3
-        version: 31.1.0
+        version: 31.0.3
       ag-grid-react:
         specifier: ^31.0.3
-        version: 31.1.0(react-dom@18.2.0)(react@18.2.0)
+        version: 31.0.3(react-dom@18.2.0)(react@18.2.0)
       eslint-import-resolver-typescript:
         specifier: ^3.6.1
         version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
@@ -429,10 +429,10 @@ importers:
     dependencies:
       ag-grid-community:
         specifier: ^31.x
-        version: 31.1.0
+        version: 31.0.3
       ag-grid-react:
         specifier: ^31.x
-        version: 31.1.0(react-dom@18.2.0)(react@18.2.0)
+        version: 31.0.3(react-dom@18.2.0)(react@18.2.0)
       react:
         specifier: 18.x
         version: 18.2.0
@@ -576,6 +576,28 @@ importers:
       class-variance-authority:
         specifier: 0.x
         version: 0.7.0
+      react:
+        specifier: 18.x
+        version: 18.2.0
+      react-dom:
+        specifier: 18.x
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@storybook/react':
+        specifier: 7.x
+        version: 7.6.7(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
+      '@testing-library/jest-dom':
+        specifier: 6.x
+        version: 6.2.0(vitest@1.2.2)
+      '@testing-library/react':
+        specifier: 14.x
+        version: 14.1.2(react-dom@18.2.0)(react@18.2.0)
+      vitest:
+        specifier: ^1.x
+        version: 1.2.2(@types/node@20.11.16)(jsdom@24.0.0)
+
+  libs/ui-lib/src/components/molecules/LabeledDataPair:
+    dependencies:
       react:
         specifier: 18.x
         version: 18.2.0
@@ -6056,17 +6078,17 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /ag-grid-community@31.1.0:
-    resolution: {integrity: sha512-MTGBWwtJiKm2XHkyrmjxsybDODiOHAcPZm8QfxozwVfWy5yPUED08GFJd2sIdSs8n2OxAnIqmr6lJloX4j3zaw==}
+  /ag-grid-community@31.0.3:
+    resolution: {integrity: sha512-k81YmLaOQOab9BavYD+Pw2smZSl6TXOJqj9hRuf70XQl3EknOHCGcra7joJxZRJLMKE/HdR+u33TNyX4TCuWfg==}
     dev: false
 
-  /ag-grid-react@31.1.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-C5hbGHD0FJHCesmthQxkHPf+QKi4BBv9JHGYti9qtxLgzv/3i10+O8qg5Fer4juvWdKxCrPJ0dZWW+7fQ6kApQ==}
+  /ag-grid-react@31.0.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-CE4Z5Rdb0H3MFBhmge9854AyDvI4DoG7ZoUJRFB1p2pu5ANVe6tv7cwEI/ugHemEXRRP6s5uvW+ndv0Q6x1/+Q==}
     peerDependencies:
       react: ^16.3.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.3.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      ag-grid-community: 31.1.0
+      ag-grid-community: 31.0.3
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
