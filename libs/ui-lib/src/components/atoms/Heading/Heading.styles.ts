@@ -1,21 +1,24 @@
-import { cva, VariantProps } from 'class-variance-authority'
+import { cva, VariantProps } from "class-variance-authority";
 
 /**
  * The headingVariants object using class-variance-authority (cva) library,
  * which contains CSS classes for various heading variants.
  */
-export const headingVariants = cva('text-black font-bold', {
+export const headingVariants = cva("text-black font-bold", {
   variants: {
-    headingLevel: {
-      heading: ['text-5xl'],
-      subheading: ['text-4xl'],
-      'section-heading': ['text-xl'],
+    variant: {
+      h1: ["text-5xl"],
+      h2: ["text-4xl"],
+      h3: ["text-3xl"],
+      h4: ["text-2xl"],
+      h5: ["text-xl"],
+      h6: ["text-lg"],
     },
   },
   defaultVariants: {
-    headingLevel: 'heading',
+    variant: "h1",
   },
-})
+});
 
 /**
  * The HeadingVariantsProps interface extends the VariantProps interface of headingVariants object.

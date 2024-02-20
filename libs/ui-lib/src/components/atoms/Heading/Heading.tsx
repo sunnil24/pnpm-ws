@@ -1,34 +1,36 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Heading, headingPropDefs } from '@radix-ui/themes'
-import { headingVariants } from './Heading.styles'
-import { cn } from '@xyzproject/tailwind-config'
+import { Heading, headingPropDefs } from "@radix-ui/themes";
+import { headingVariants } from "./Heading.styles";
+import { cn } from "@xyzproject/tailwind-config";
 
-type HeadingPropsDif = typeof headingPropDefs
+type HeadingPropsDif = typeof headingPropDefs;
+export type HeadingLevels = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 export interface HeadingProps extends HeadingPropsDif {
-  children: React.ReactNode
-  className?: string
-  headingLevel: 'heading' | 'subheading' | 'section-heading'
+  children: React.ReactNode;
+  className?: string;
+  variant?: HeadingLevels;
+  asTag: HeadingLevels;
 }
 
 const HeadingComponent = (props: HeadingProps) => {
-  const { children, className, headingLevel = 'heading' } = props
+  const { asTag, children, className, variant = "h1" } = props;
 
   const applyClasses = (classes: object): string =>
     cn(
       headingVariants({
-        headingLevel,
+        variant,
         className,
       }),
-      classes
-    )
+      classes,
+    );
 
   return (
-    // @ts-ignore
-    <Heading className={applyClasses({})} {...props}>
+    // @ts-expect-error size enum error
+    <Heading className={applyClasses({})} as={asTag} {...props}>
       {children}
     </Heading>
-  )
-}
+  );
+};
 
-export default HeadingComponent
+export default HeadingComponent;

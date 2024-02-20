@@ -1,9 +1,9 @@
 {
   "name": "@xyzproject/heading",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Heading component",
   "license": "MIT",
-   "module": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
@@ -16,7 +16,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@radix-ui/themes": "^2.x"
+    "@radix-ui/themes": "^2.x",
+    "@xyzproject/tailwind-config": "workspace:*"
   },
   "peerDependencies": {
     "react": "18.x",
@@ -26,9 +27,10 @@
     "@testing-library/react": "14.x",
     "@testing-library/jest-dom": "6.x",
     "@storybook/react": "7.x",
+    "class-variance-authority": "0.x",
     "vitest": "^1.x"
   },
-   "scripts": {
+  "scripts": {
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",
