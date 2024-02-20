@@ -1,4 +1,31 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Loading Font Family  */
+
+@font-face {
+  font-family: 'sans-regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'sans-bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'sans-semibold';
+  font-style: normal;
+  font-weight: 600;
+
+  src: url('./fonts/semibold.woff2') format('woff2');
+}
+
+body {
+  font-family: 'sans-regular', sans-serif ;
+}
+
 
 /* Document
    ========================================================================== */
