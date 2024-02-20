@@ -1,5 +1,5 @@
 {
-  "name": "@xyzproject/LabeledDataPair",
+  "name": "@xyzproject/labeled-data-pair",
   "version": "0.1.0",
   "description": "LabeledDataPair component",
   "license": "MIT",
@@ -24,9 +24,6 @@
     "@testing-library/jest-dom": "6.x",
     "@storybook/react": "7.x",
     "vitest": "^1.x"
-  },
-  "dependencies": {
-    "@xyzproject/dataitem": "*"
   },
    "scripts": {
     "publish": "pnpm publish",

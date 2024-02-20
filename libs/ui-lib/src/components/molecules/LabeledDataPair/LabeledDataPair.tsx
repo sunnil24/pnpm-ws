@@ -1,14 +1,27 @@
 import React from "react";
-import DataItem from "@xyzproject/dataitem";
-import { DataItemProps } from "@xyzproject/dataitem/DataItem";
+
+interface DataItemProps {
+  label: string;
+  data: string;
+}
+const DataItem: React.FC<DataItemProps> = ({ label, data }) => (
+  <div className="flex flex-col">
+    <dt className="font-semibold text-base pb-2">{label}</dt>
+    <dd className="text-sm">{data}</dd>
+  </div>
+);
 
 export interface LabeledDataPairProps {
   items: DataItemProps[];
+  className?: string;
 }
 
-const LabeledDataPair: React.FC<LabeledDataPairProps> = ({ items }) => {
+const LabeledDataPair: React.FC<LabeledDataPairProps> = ({
+  items,
+  className,
+}) => {
   return (
-    <dl className="flex space-x-6">
+    <dl className={`flex space-x-6 ${className}`}>
       {items.map((item, index) => (
         <DataItem key={index} label={item.label} data={item.data} />
       ))}

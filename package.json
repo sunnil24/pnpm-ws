@@ -113,12 +113,12 @@
     }
   },
   "validate-branch-name": {
-    "pattern": "^(main|(feat|fix|task)/JIRA-\\d+/[\\w-]+)$",
-    "errorMsg": "Invalid branch name. Examples: [main, feat/JIRA-1200/user-authentication, fix/JIRA-1234/error-handling, task/JIRA-1300/code-cleanup]"
+    "pattern": "^(main|(feat|fix|task)/NSMA-\\d+/[\\w-]+)$",
+    "errorMsg": "Invalid branch name. Examples: [main, feat/NSMA-1200/user-authentication, fix/NSMA-1234/error-handling, task/NSMA-1300/code-cleanup]"
   },
   "lint-staged": {
     "*/**/*.{ts,tsx}": [
-      "eslint --fix"
+      "eslint --fix --"
     ]
   }
 }
