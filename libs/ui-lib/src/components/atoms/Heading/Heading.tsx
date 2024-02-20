@@ -1,16 +1,36 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Heading, headingPropDefs } from '@radix-ui/themes';
+import { Heading, headingPropDefs } from "@radix-ui/themes";
+import { headingVariants } from "./Heading.styles";
+import { cn } from "@xyzproject/tailwind-config";
 
 type HeadingPropsDif = typeof headingPropDefs;
+export type HeadingLevels = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 export interface HeadingProps extends HeadingPropsDif {
   children: React.ReactNode;
   className?: string;
+  variant?: HeadingLevels;
+  asTag: HeadingLevels;
 }
+
 const HeadingComponent = (props: HeadingProps) => {
-  const { children } = props;
-  // @ts-expect-error Text Component has some default props which are spreading into the component directly
-  return <Heading {...props}>{children}</Heading>;
+  const { asTag, children, className, variant = "h1" } = props;
+
+  const applyClasses = (classes: object): string =>
+    cn(
+      headingVariants({
+        variant,
+        className,
+      }),
+      classes,
+    );
+
+  return (
+    // @ts-expect-error size enum error
+    <Heading className={applyClasses({})} as={asTag} {...props}>
+      {children}
+    </Heading>
+  );
 };
 
 export default HeadingComponent;
