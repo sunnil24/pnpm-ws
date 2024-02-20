@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/loader",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Loader component",
   "license": "MIT",
   "module": "dist/index.js",

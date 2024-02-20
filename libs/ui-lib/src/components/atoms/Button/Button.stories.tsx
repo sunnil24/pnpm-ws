@@ -1,24 +1,24 @@
-import type { Meta, StoryObj, StoryFn } from '@storybook/react';
-import Button from './index';
-import { ComponentProps } from 'react';
+import type { Meta, StoryObj, StoryFn } from "@storybook/react";
+import Button from "./index";
+import { ComponentProps } from "react";
 
 export type ButtonProps = ComponentProps<typeof Button>;
 
 const meta = {
-  title: 'Components/Button',
+  title: "Components/Button",
   component: Button,
   argTypes: {
     variant: [
-      'primaryContained',
-      'primaryOutlined',
-      'primaryLink',
-      'secondaryContained',
-      'secondaryOutlined',
-      'secondaryLink',
+      "primaryContained",
+      "primaryOutlined",
+      "primaryLink",
+      "secondaryContained",
+      "secondaryOutlined",
+      "secondaryLink",
     ],
     size: {
-      control: { type: 'radio' },
-      options: ['md', 'sm', 'lg'],
+      control: { type: "radio" },
+      options: ["md", "sm", "lg"],
     },
   },
 } as Meta<ButtonProps>;
@@ -26,22 +26,22 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-const sizes: ButtonProps['size'][] = ['sm', 'md', 'lg'];
+const sizes: ButtonProps["size"][] = ["sm", "md", "lg"];
 
-const primaryVarients: ButtonProps['variant'][] = [
-  'primaryContained',
-  'primaryOutlined',
-  'primaryLink',
+const primaryVarients: ButtonProps["variant"][] = [
+  "primaryContained",
+  "primaryOutlined",
+  "primaryLink",
 ];
-const scondaryVarient: ButtonProps['variant'][] = [
-  'secondaryContained',
-  'secondaryOutlined',
-  'secondaryLink',
+const scondaryVarient: ButtonProps["variant"][] = [
+  "secondaryContained",
+  "secondaryOutlined",
+  "secondaryLink",
 ];
 
 export const Default: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
 };
 
@@ -50,7 +50,7 @@ export const Sizes: StoryFn = () => (
     {sizes.map((size) => (
       <Button
         className="m-1"
-        variant={'primaryContained'}
+        variant={"primaryContained"}
         key={size}
         size={size}
       >
