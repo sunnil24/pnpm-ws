@@ -2,37 +2,30 @@ import { Badge } from '@radix-ui/themes'
 import { chipVariants } from './Chip.styles'
 import { cn } from '@xyzproject/tailwind-config'
 
-type ChipVariants =
-  | 'new'
-  | 'inProgess'
-  | 'reviewReady'
-  | 'reviewProgress'
-  | 'reviewComplete'
-  | 'tradeProgress'
-  | 'eodComplete'
+// ChipVariants =
+// 0 maps to the content 'New'
+// 1 maps to the content 'In Progress'
+// 2 maps to the content 'Ready for Peer Review'
+// 3 maps to the content 'Peer Review In Progress'
+// 4 maps to the content 'Peer Review Complete'
+// 5 maps to the content 'Trade In Progress'
+// 6 maps to the content 'EOD Complete'
+
+export type ChipVariants = 0 | 1 | 2 | 3 | 4 | 5 | 6
 
 export interface ChipProps {
   content: string
+  variation?: ChipVariants
   className?: string
 }
 
-const statusToVariantMap: Record<string, ChipVariants> = {
-  New: 'new',
-  'In Progress': 'inProgess',
-  'Ready for Peer Review': 'reviewReady',
-  'Peer Review In Progress': 'reviewProgress',
-  'Peer Review Complete': 'reviewComplete',
-  'Trade In Progress': 'tradeProgress',
-  'EOD Complete': 'eodComplete',
-}
-
 const Chip: React.FC<ChipProps> = (props) => {
-  const { content, className = '' } = props
+  const { content, className = '', variation = 0 } = props
 
   const applyClasses = (classes: object): string =>
     cn(
       chipVariants({
-        variant: statusToVariantMap[content],
+        variation,
         className,
       }),
       classes

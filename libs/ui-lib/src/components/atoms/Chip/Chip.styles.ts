@@ -6,18 +6,18 @@ import { cva, VariantProps } from 'class-variance-authority'
  */
 export const chipVariants = cva('text-xs font-semibold py-1 px-2 rounded', {
   variants: {
-    variant: {
-      new: ['bg-[--badge-green-bg] text-[--badge-green-text]'],
-      inProgess: ['bg-[--badge-blue-bg] text-[--badge-blue-text]'],
-      reviewReady: ['bg-[--badge-beige-bg] text-[--badge-beige-text]'],
-      reviewProgress: ['bg-[--badge-beige-bg] text-[--badge-beige-text]'],
-      reviewComplete: ['bg-[--badge-peach-bg] text-[--badge-peach-text]'],
-      tradeProgress: ['bg-[--badge-lilac-bg] text-[--badge-lilac-text]'],
-      eodComplete: ['bg-[--badge-grey-bg] text-[--badge-grey-text]'],
+    variation: {
+      0: ['bg-[--badge-green-bg] text-[--badge-green-text]'],
+      1: ['bg-[--badge-blue-bg] text-[--badge-blue-text]'],
+      2: ['bg-[--badge-beige-bg] text-[--badge-beige-text]'],
+      3: ['bg-[--badge-beige-bg] text-[--badge-beige-text]'],
+      4: ['bg-[--badge-peach-bg] text-[--badge-peach-text]'],
+      5: ['bg-[--badge-lilac-bg] text-[--badge-lilac-text]'],
+      6: ['bg-[--badge-grey-bg] text-[--badge-grey-text]'],
     },
   },
   defaultVariants: {
-    variant: 'new',
+    variation: 0,
   },
 })
 

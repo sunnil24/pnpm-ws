@@ -1,6 +1,6 @@
 import type { Meta, StoryObj, StoryFn } from '@storybook/react'
 import Chip from './index'
-import { ChipProps } from './Chip'
+import { ChipProps, ChipVariants } from './Chip'
 
 export default {
   title: 'Components/Chip',
@@ -18,19 +18,16 @@ export const Default: Story = {
   render: Template,
 }
 
-const statusVariants: Array<string> = [
-  'New',
-  'In Progress',
-  'Ready for Peer Review',
-  'Peer Review In Progress',
-  'Peer Review Complete',
-  'Trade In Progress',
-  'EOD Complete',
-]
+const statusVariants: Array<ChipVariants> = [0, 1, 2, 3, 4, 5, 6]
 export const StatusVariants: StoryFn = () => (
   <div className='flex  gap-md'>
-    {statusVariants.map((content) => (
-      <Chip className='mr-3' key={content} content={content} />
+    {statusVariants.map((variant) => (
+      <Chip
+        className='mr-3'
+        key={variant}
+        content={'Test Content'}
+        variation={variant}
+      />
     ))}
   </div>
 )
