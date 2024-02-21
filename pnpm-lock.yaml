@@ -327,6 +327,9 @@ importers:
       '@radix-ui/themes':
         specifier: ^2.x
         version: 2.0.3(@types/react-dom@18.2.18)(@types/react@18.2.47)(react-dom@18.2.0)(react@18.2.0)
+      '@xyzproject/tailwind-config':
+        specifier: workspace:*
+        version: link:../../../../../../packages/tailwind
       react:
         specifier: 18.x
         version: 18.2.0
@@ -343,6 +346,9 @@ importers:
       '@testing-library/react':
         specifier: 14.x
         version: 14.1.2(react-dom@18.2.0)(react@18.2.0)
+      class-variance-authority:
+        specifier: 0.x
+        version: 0.7.0
       vitest:
         specifier: ^1.x
         version: 1.2.2(@types/node@20.11.16)(jsdom@24.0.0)

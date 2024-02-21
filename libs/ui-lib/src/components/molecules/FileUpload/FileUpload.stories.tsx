@@ -15,14 +15,12 @@ const meta: Meta<ComponentProps<typeof FileUpload>> = {
 export default meta;
 
 const DefaultTemplate: Story<FileUploadProps> = (args) => (
-  <div className="flex items-center gap-md">
-    <FileUpload {...args} />
-    <div className="flex items-center gap-md">Option 1</div>
-  </div>
+  <FileUpload {...args} />
 );
 
 export const Default = DefaultTemplate.bind({});
 Default.args = {
   uploadText: "Upload File",
-  fileFormatText: "Files should be in excel format",
+  fileFormatText: "Upload an Excel file format",
+  dragText: "or drop file to upload",
 };
