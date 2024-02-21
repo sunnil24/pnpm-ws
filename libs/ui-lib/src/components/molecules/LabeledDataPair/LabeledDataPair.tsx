@@ -30,3 +30,4 @@ const LabeledDataPair: React.FC<LabeledDataPairProps> = ({
 };
 
 export default LabeledDataPair;
+export type { DataItemProps };
