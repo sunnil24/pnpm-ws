@@ -1,9 +1,9 @@
 {
-  "name": "@xyzproject/FileUpload",
-  "version": "0.1.0",
+  "name": "@xyzproject/file-upload",
+  "version": "1.0.0",
   "description": "FileUpload component",
   "license": "MIT",
-   "module": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
@@ -26,10 +26,10 @@
     "vitest": "^1.x"
   },
   "dependencies": {
-    "react-dropzone" : "^14.x",
-    "@radix-ui/react-icons":"^1.x"
+    "react-dropzone": "^14.x",
+    "@radix-ui/react-icons": "^1.x"
   },
-   "scripts": {
+  "scripts": {
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",
