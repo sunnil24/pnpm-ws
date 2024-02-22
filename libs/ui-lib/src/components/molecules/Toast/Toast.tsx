@@ -1,16 +1,25 @@
-import React, { useState, FC } from "react";
+import { useState, FC } from "react";
 import { Cross1Icon, InfoCircledIcon, CheckIcon } from "@radix-ui/react-icons";
 
 const statusMap = {
-  success: "success",
-  error: "error",
-  warning: "warning",
+  success: {
+    bgColor: "bg-basics-success",
+    Icon: CheckIcon,
+  },
+  error: {
+    bgColor: "bg-basics-error",
+    Icon: InfoCircledIcon,
+  },
+  warning: {
+    bgColor: "bg-basics-warning",
+    Icon: InfoCircledIcon,
+  },
 };
 
 interface ToastProps {
   message: string;
   position?: string;
-  type?: "success" | "error" | "warning";
+  type?: keyof typeof statusMap;
   handleClose?: () => void;
 }
 
@@ -18,28 +27,11 @@ const Toast: FC<ToastProps> = ({
   handleClose,
   message,
   position = "top",
-  type = statusMap.success,
+  type = "success",
 }) => {
   const [show, setShow] = useState(true);
 
-  let bgColor, Icon;
-  switch (type) {
-    case statusMap.success:
-      bgColor = "bg-basics-success";
-      Icon = CheckIcon;
-      break;
-    case statusMap.error:
-      bgColor = "bg-basics-error";
-      Icon = InfoCircledIcon;
-      break;
-    case statusMap.warning:
-      bgColor = "bg-basics-warning";
-      Icon = InfoCircledIcon;
-      break;
-    default:
-      bgColor = "bg-basics-success";
-      Icon = CheckIcon;
-  }
+  const { bgColor, Icon } = statusMap[type] || statusMap.success;
 
   if (!show) return null;
 
