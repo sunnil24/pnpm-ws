@@ -6,73 +6,96 @@
   /* ------- Design Tokens ------- */
 
   :root {
- /* ------- Design Tokens ------- */
- --green: #2ba824; /* Primary Color */
- --green-hover: #2D9015;  /* Primary State Color  */
- --grey: #253746;  /* Secondary Color */
- --blue: #003F54; /* tertiary Color */
-   
- /* Basic Colors*/
- --ltgrey: #f2f3f4;
- --black: #000000;
- --white: #FFFFFF;
- --error: #DA1E28;
- --warning: #F1C21B;
- --success: #25A249;
- --coolgrey-10: #f2f4f8;
- --coolgrey-20: #dde1e6;
- --coolgrey-30:#c1c7cd;
- --coolgrey-40: #a2a9b0;
- --coolgrey-50: #878d96;
- --coolgrey-60: #697077;
- --coolgrey-70: #4d5358; /* Primary Text Label*/
- --coolgrey-80: #343a3f;
- --coolgrey-90: #21272a;
- --coolgrey-100: #121619;
- 
- /* body */
- --color-body: var(--ltgrey); /* Each Every Page Background*/
+    /* ------- Design Tokens ------- */
+    --green: #2ba824; /* Primary Color */
+    --green-hover: #2d9015; /* Primary State Color  */
+    --grey: #253746; /* Secondary Color */
+    --blue: #003f54; /* tertiary Color */
 
- /*  Background */
- --color-background-primary: var(--grey);
- --color-background-secondary: var(--white);
+    /* Basic Colors*/
+    --ltgrey: #f2f3f4;
+    --black: #000000;
+    --white: #ffffff;
+    --error: #da1e28;
+    --warning: #f1c21b;
+    --success: #25a249;
+    --coolgrey-10: #f2f4f8;
+    --coolgrey-20: #dde1e6;
+    --coolgrey-30: #c1c7cd;
+    --coolgrey-40: #a2a9b0;
+    --coolgrey-50: #878d96;
+    --coolgrey-60: #697077;
+    --coolgrey-70: #4d5358; /* Primary Text Label*/
+    --coolgrey-80: #343a3f;
+    --coolgrey-90: #21272a;
+    --coolgrey-100: #121619;
 
- /* Border */
- --color-border-primary : var(--coolgrey-20);
- --color-border-secondary:  var(--blue);
+    /* Badge colors */
+    --badge-green-bg: #02ba3c16;
+    --badge-green-text: #006b3be7;
+    --badge-blue-bg: #0144ff0f;
+    --badge-blue-text: #00259e;
+    --badge-beige-bg: #ffbf012f;
+    --badge-beige-text: #783200cf;
+    --badge-peach-bg: #ff91012a;
+    --badge-peach-text: #7b2100c5;
+    --badge-lilac-bg: #d001d010;
+    --badge-lilac-text: #88009cd4;
+    --badge-grey-bg: #00003b0d;
+    --badge-grey-text: #0007139f;
 
- /* Text */
- --color-text-primary : var(--coolgrey-70);
- --color-text-secondary : var(--white);
+    /* body */
+    --color-body: var(--ltgrey); /* Each Every Page Background*/
 
- /* Button Style */
+    /*  Background */
+    --color-background-primary: var(--grey);
+    --color-background-secondary: var(--white);
 
- /* Primary button styles */
- --color-button-primary-background: var(--green);
- --color-button-primary-border: var(--green);
- --color-button-primary-text: var(--white);
- --color-button-primary-hover: var(--green-hover);
+    /* Border */
+    --color-border-primary: var(--coolgrey-20);
+    --color-border-secondary: var(--blue);
 
- /* Seondary button styles */
- --color-button-secondary-background: var(--grey);
- --color-button-secondary-border: var(--grey); /* Color is not decided yet once theme finalize will add there */
- --color-button-secondary-text: var(--white);
- --color-button-secondary-hover: var(--coolgrey-60); /* Color is not decided yet once theme finalize will add there */
+    /* Text */
+    --color-text-primary: var(--coolgrey-70);
+    --color-text-secondary: var(--white);
 
- /* Tertiary button styles */
- --color-button-tertiary-background: var(--blue); 
- --color-button-tertiary-border: var(--blue);  /* Color is not decided yet once theme finalize will add there */
- --color-button-tertiary-text: var(--white);  /* Color is not decided yet once theme finalize will add there */
- --color-button-tertiary-hover: var(--blue);  /* Color is not decided yet once theme finalize will add there */
+    /* Button Style */
 
- /* Button Style END */
+    /* Primary button styles */
+    --color-button-primary-background: var(--green);
+    --color-button-primary-border: var(--green);
+    --color-button-primary-text: var(--white);
+    --color-button-primary-hover: var(--green-hover);
 
- /* Form Style */
- --color-form-primary-background: var(--white);
- --color-form-primary-border: var(--coolgrey-30);
- --color-form-primary-text: var(--coolgrey-30);
- --color-form-primary-hover: var(--coolgrey-30);
- /* Form End */
+    /* Seondary button styles */
+    --color-button-secondary-background: var(--grey);
+    --color-button-secondary-border: var(
+      --grey
+    ); /* Color is not decided yet once theme finalize will add there */
+    --color-button-secondary-text: var(--white);
+    --color-button-secondary-hover: var(
+      --coolgrey-60
+    ); /* Color is not decided yet once theme finalize will add there */
+
+    /* Tertiary button styles */
+    --color-button-tertiary-background: var(--blue);
+    --color-button-tertiary-border: var(
+      --blue
+    ); /* Color is not decided yet once theme finalize will add there */
+    --color-button-tertiary-text: var(
+      --white
+    ); /* Color is not decided yet once theme finalize will add there */
+    --color-button-tertiary-hover: var(
+      --blue
+    ); /* Color is not decided yet once theme finalize will add there */
+
+    /* Button Style END */
+
+    /* Form Style */
+    --color-form-primary-background: var(--white);
+    --color-form-primary-border: var(--coolgrey-30);
+    --color-form-primary-text: var(--coolgrey-30);
+    --color-form-primary-hover: var(--coolgrey-30);
+    /* Form End */
   }
 }
-
