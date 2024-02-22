@@ -25,6 +25,9 @@ const FileUpload: React.FC<FileUploadProps> = ({
       setFile(file1);
       onUpload(file1);
     },
+    accept: {
+      ".xlsx": [],
+    },
   });
 
   return (
@@ -34,7 +37,12 @@ const FileUpload: React.FC<FileUploadProps> = ({
         className={`flex flex-col items-center justify-center p-16 gap-3 border border-dashed border-basics-grey40 bg-basics-grey20 w-full ${className}`}
       >
         <div className="flex flex-col items-center justify-center">
-          <input {...getInputProps({ accept: ".xlsx" })} />
+          <input
+            {...getInputProps({
+              accept:
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            })}
+          />
           {file ? (
             <div className="flex gap-2">
               <ExcelFileIcon />
