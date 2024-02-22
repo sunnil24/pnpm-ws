@@ -1,27 +1,38 @@
 import React, { useState, FC } from "react";
 import { Cross1Icon, InfoCircledIcon, CheckIcon } from "@radix-ui/react-icons";
 
+const statusMap = {
+  success: "success",
+  error: "error",
+  warning: "warning",
+};
+
 interface ToastProps {
-  message?: string;
-  position: string;
-  type: "success" | "error" | "warning";
-  handleClose: () => void;
+  message: string;
+  position?: string;
+  type?: "success" | "error" | "warning";
+  handleClose?: () => void;
 }
 
-const Toast: FC<ToastProps> = ({ handleClose, message, position, type }) => {
+const Toast: FC<ToastProps> = ({
+  handleClose,
+  message,
+  position = "top",
+  type = statusMap.success,
+}) => {
   const [show, setShow] = useState(true);
 
   let bgColor, Icon;
   switch (type) {
-    case "success":
+    case statusMap.success:
       bgColor = "bg-basics-success";
       Icon = CheckIcon;
       break;
-    case "error":
+    case statusMap.error:
       bgColor = "bg-basics-error";
       Icon = InfoCircledIcon;
       break;
-    case "warning":
+    case statusMap.warning:
       bgColor = "bg-basics-warning";
       Icon = InfoCircledIcon;
       break;
@@ -38,12 +49,14 @@ const Toast: FC<ToastProps> = ({ handleClose, message, position, type }) => {
     >
       <div className="flex items-center">
         <Icon className="h-5 w-5 mr-2" />
-        <span className="p-0 m-0">{message}</span>
+        <p className="p-0 m-0">{message}</p>
       </div>
       <button
         onClick={() => {
           setShow(false);
-          handleClose();
+          if (handleClose) {
+            handleClose();
+          }
         }}
       >
         <Cross1Icon className="h-5 w-5" />

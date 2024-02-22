@@ -1,9 +1,9 @@
 {
   "name": "@xyzproject/toast",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Toast component",
   "license": "MIT",
-   "module": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
@@ -26,9 +26,9 @@
     "vitest": "^1.x"
   },
   "dependencies": {
-    "@radix-ui/react-icons":"^1.3.0"
+    "@radix-ui/react-icons": "^1.3.0"
   },
-   "scripts": {
+  "scripts": {
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",
