@@ -16,7 +16,7 @@
     --ltgrey: #f2f3f4;
     --black: #000000;
     --white: #ffffff;
-    --error: #da1e28;
+    --error: #da1e281a;
     --warning: #f1c21b;
     --success: #25a249;
     --coolgrey-10: #f2f4f8;
@@ -29,6 +29,7 @@
     --coolgrey-80: #343a3f;
     --coolgrey-90: #21272a;
     --coolgrey-100: #121619;
+    --coolgrey-110: #666C7E;
 
     /* Badge colors */
     --badge-green-bg: #02ba3c16;

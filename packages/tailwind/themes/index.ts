@@ -39,6 +39,7 @@ export const baseTheme = {
         grey80: "var(--coolgrey-80)",
         grey90: "var(--coolgrey-90)",
         grey100: "var(--coolgrey-100)",
+        grey110: "var(--coolgrey-110)",
       },
       body: "var(--color-body)",
       background: {

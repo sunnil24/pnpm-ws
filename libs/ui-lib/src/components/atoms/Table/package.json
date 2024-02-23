@@ -1,9 +1,9 @@
 {
   "name": "@xyzproject/table",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Table component",
   "license": "MIT",
-   "module": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
@@ -29,7 +29,7 @@
     "@storybook/react": "7.x",
     "vitest": "^1.x"
   },
-   "scripts": {
+  "scripts": {
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",
