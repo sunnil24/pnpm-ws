@@ -21,7 +21,7 @@ const LabeledDataPair: React.FC<LabeledDataPairProps> = ({
   className,
 }) => {
   return (
-    <dl className={`flex space-x-6 ${className}`}>
+    <dl className={`flex space-x-20 ${className}`}>
       {items.map((item, index) => (
         <DataItem key={index} label={item.label} data={item.data} />
       ))}
