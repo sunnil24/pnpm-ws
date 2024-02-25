@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/labeled-data-pair",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "LabeledDataPair component",
   "license": "MIT",
   "module": "dist/index.js",

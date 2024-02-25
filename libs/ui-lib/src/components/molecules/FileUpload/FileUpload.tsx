@@ -9,6 +9,7 @@ export interface FileUploadProps {
   fileFormatText?: string;
   dragText?: string;
   className?: string;
+  onCancel?: () => void;
 }
 
 const FileUpload: React.FC<FileUploadProps> = ({
@@ -17,6 +18,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
   onUpload,
   uploadText,
   className,
+  onCancel,
 }) => {
   const [file, setFile] = React.useState<File | null>(null);
   const { getInputProps, getRootProps } = useDropzone({
@@ -34,6 +36,9 @@ const FileUpload: React.FC<FileUploadProps> = ({
 
   const handleRevert = () => {
     setFile(null);
+    if (onCancel) {
+      onCancel();
+    }
   };
 
   return (
@@ -61,7 +66,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
             </div>
           ) : (
             <>
-              <div className="flex h-8 px-3 justify-center items-center gap-2 flex-shrink-0 rounded-md border border-basics-grey100">
+              <div className="flex cursor-pointer h-8 px-3 justify-center items-center gap-2 flex-shrink-0 rounded-md border border-basics-grey100">
                 <span className="underline">
                   <UploadIcon />
                 </span>

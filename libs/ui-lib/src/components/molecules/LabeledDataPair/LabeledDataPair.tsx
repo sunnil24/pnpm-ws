@@ -5,9 +5,9 @@ interface DataItemProps {
   data: string;
 }
 const DataItem: React.FC<DataItemProps> = ({ label, data }) => (
-  <div className="flex flex-col">
-    <dt className="font-semibold text-base pb-2">{label}</dt>
-    <dd className="text-sm">{data}</dd>
+  <div className="flex flex-col mr-6">
+    <dt className="font-semibold text-sm pb-2 text-para-primary">{label}</dt>
+    <dd className="text-base">{data}</dd>
   </div>
 );
 
