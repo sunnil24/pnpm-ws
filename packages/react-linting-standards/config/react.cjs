@@ -1,5 +1,5 @@
 module.exports = {
-  "react/display-name": "off",
+  'react/display-name': 'off',
   'react/function-component-definition': 'off',
   'react/jsx-filename-extension': [
     'warn',
@@ -10,4 +10,5 @@ module.exports = {
   'react/jsx-props-no-spreading': 'off',
   'react/prop-types': 'off',
   'react/react-in-jsx-scope': 'off',
+  'react/jsx-uses-react': 'off',
 };
