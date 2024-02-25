@@ -1,4 +1,4 @@
-type LoaderSizes = 'sm' | 'md' | 'lg';
+type LoaderSizes = "sm" | "md" | "lg";
 
 interface LoaderProps {
   size?: LoaderSizes;
@@ -6,17 +6,18 @@ interface LoaderProps {
 }
 
 const sizeMap: Record<LoaderSizes, string> = {
-  sm: 'h-4 w-4',
-  md: 'h-8 w-8',
-  lg: 'h-12 w-12',
+  sm: "h-4 w-4",
+  md: "h-8 w-8",
+  lg: "h-12 w-12",
 };
 
-export const Loader: React.FC<LoaderProps> = ({ className, size = 'sm' }) => {
+export const Loader: React.FC<LoaderProps> = (props: LoaderProps) => {
+  const { className, size = "sm" } = props;
   return (
-    <div role="status" data-testid="spinner">
+    <div role="status" data-testid="spinner" className={className}>
       <svg
         aria-hidden="true"
-        className={`${sizeMap[size]} inline text-[--loader-track] animate-spin dark:text-[--loader-track] fill-[--loader-segment] ${className || ''}`}
+        className={`${sizeMap[size]} inline text-[--loader-track] animate-spin dark:text-[--loader-track] fill-[--loader-segment] ${className || ""}`}
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -35,4 +36,18 @@ export const Loader: React.FC<LoaderProps> = ({ className, size = 'sm' }) => {
   );
 };
 
+interface OverlayProps {
+  children: React.ReactNode;
+}
+
+const Overlay: React.FC<OverlayProps> = (props: OverlayProps) => {
+  const { children } = props;
+  return (
+    <div className="flex justify-center items-center bg-basics-grey30 opacity-30 text-white fixed top-0 left-0 w-screen h-screen z-50">
+      {children}
+    </div>
+  );
+};
+
 export default Loader;
+export { Overlay };
