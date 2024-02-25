@@ -37,7 +37,7 @@ const Toast: FC<ToastProps> = ({
 
   return (
     <div
-      className={`${position} w-full p-4 ${bgColor} text-white flex items-center justify-between`}
+      className={`${position} w-full p-4 ${bgColor} text-white flex items-center justify-between rounded-md`}
     >
       <div className="flex items-center">
         <Icon className="h-5 w-5 mr-2" />
