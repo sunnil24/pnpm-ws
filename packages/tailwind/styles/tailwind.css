@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'sans-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'sans-bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'sans-semibold';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+
+  src: url('./fonts/semibold.woff2') format('woff2');
+}
+
 @layer base {
   /* ------- Design Tokens ------- */
 
@@ -16,9 +41,11 @@
     --ltgrey: #f2f3f4;
     --black: #000000;
     --white: #ffffff;
-    --error: #da1e28;
+    --error: #DA1E28;
+    --error10: #da1e281a;
     --warning: #f1c21b;
     --success: #25a249;
+    --success10: #25a2491a;
     --coolgrey-10: #f2f4f8;
     --coolgrey-20: #dde1e6;
     --coolgrey-30: #c1c7cd;
@@ -29,6 +56,7 @@
     --coolgrey-80: #343a3f;
     --coolgrey-90: #21272a;
     --coolgrey-100: #121619;
+    --coolgrey-110: #666C7E;
 
     /* Badge colors */
     --badge-green-bg: #02ba3c16;
@@ -74,7 +102,7 @@
     ); /* Color is not decided yet once theme finalize will add there */
     --color-button-secondary-text: var(--white);
     --color-button-secondary-hover: var(
-      --coolgrey-60
+      --grey
     ); /* Color is not decided yet once theme finalize will add there */
 
     /* Tertiary button styles */
@@ -86,7 +114,7 @@
       --white
     ); /* Color is not decided yet once theme finalize will add there */
     --color-button-tertiary-hover: var(
-      --blue
+      --grey
     ); /* Color is not decided yet once theme finalize will add there */
 
     /* Button Style END */

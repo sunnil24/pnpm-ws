@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/card",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Card component",
   "license": "MIT",
   "module": "dist/index.js",

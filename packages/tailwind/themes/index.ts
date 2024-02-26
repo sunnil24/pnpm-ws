@@ -26,8 +26,10 @@ export const baseTheme = {
         black: "var(--black)",
         white: "var(--white)",
         error: "var(--error)",
+        error10: "var(--error10)",
         warning: "var(--warning)",
         success: "var(--success)",
+        success10: "var(--success10)",
         overlay: "var(--overlay)",
         grey10: "var(--coolgrey-10)",
         grey20: "var(--coolgrey-20)",
@@ -39,6 +41,7 @@ export const baseTheme = {
         grey80: "var(--coolgrey-80)",
         grey90: "var(--coolgrey-90)",
         grey100: "var(--coolgrey-100)",
+        grey110: "var(--coolgrey-110)",
       },
       body: "var(--color-body)",
       background: {
