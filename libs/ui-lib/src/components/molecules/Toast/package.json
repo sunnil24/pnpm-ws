@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/toast",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "description": "Toast component",
   "license": "MIT",
   "module": "dist/index.js",
