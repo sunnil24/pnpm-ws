@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'sans-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'sans-bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'sans-semibold';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+
+  src: url('./fonts/semibold.woff2') format('woff2');
+}
+
 @layer base {
   /* ------- Design Tokens ------- */
 
