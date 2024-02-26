@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/table",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Table component",
   "license": "MIT",
   "module": "dist/index.js",

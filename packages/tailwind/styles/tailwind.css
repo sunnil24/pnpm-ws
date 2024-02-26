@@ -16,9 +16,11 @@
     --ltgrey: #f2f3f4;
     --black: #000000;
     --white: #ffffff;
-    --error: #da1e281a;
+    --error: #DA1E28;
+    --error10: #da1e281a;
     --warning: #f1c21b;
     --success: #25a249;
+    --success10: #25a2491a;
     --coolgrey-10: #f2f4f8;
     --coolgrey-20: #dde1e6;
     --coolgrey-30: #c1c7cd;
@@ -75,7 +77,7 @@
     ); /* Color is not decided yet once theme finalize will add there */
     --color-button-secondary-text: var(--white);
     --color-button-secondary-hover: var(
-      --coolgrey-60
+      --grey
     ); /* Color is not decided yet once theme finalize will add there */
 
     /* Tertiary button styles */
@@ -87,7 +89,7 @@
       --white
     ); /* Color is not decided yet once theme finalize will add there */
     --color-button-tertiary-hover: var(
-      --blue
+      --grey
     ); /* Color is not decided yet once theme finalize will add there */
 
     /* Button Style END */

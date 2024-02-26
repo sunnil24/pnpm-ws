@@ -1,17 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { AgGridReact, AgGridReactProps } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
-// import "ag-grid-community/styles/ag-theme-quartz.css";
-
-import { useEffect, useState } from "react";
-
 export interface TableProps extends AgGridReactProps {
   className?: string;
   headerClass?: string;
 }
 
 const Table: React.FC<TableProps> = ({
-  className = "w-[auto] h-100 ",
+  className = "w-[auto] h-100 custom-table",
   columnDefs,
   rowClass,
   headerClass,
@@ -19,29 +15,18 @@ const Table: React.FC<TableProps> = ({
 }: TableProps) => {
   const updatedColumnDefs = columnDefs?.map((col) => ({
     ...col,
-    cellClass: "p-2 text-left",
-    headerClass: `py-2 text-center px-2 word-break white-space not-italic leading-normal font-semibold text-xs  text-basics-white  bg-basics-grey110 ${headerClass}`,
+    cellClass: "px-2 py-3 word-break white-space justify-center",
+    headerClass: `px-2 py-3 font-semibold text-xs  text-basics-white  bg-basics-grey110  word-break white-space not-italic leading-normal ${headerClass}`,
   }));
-  const [gridColumnApi, setGridColumnApi] = useState({
-    autoSizeAllColumns: () => {},
-  });
   const getRowClass = () => {
-    return `mt-[-10px]h-100 text-center hover:bg-basics-grey10 word-break white-space ${rowClass}`;
+    return `mt-[-1px]  align-center  hover:bg-basics-grey10 ${rowClass}`;
   };
   const defaultColDef = {
-    resizable: true, // Allow columns to be resized manually
-    cellStyle: { border: "1px solid #dde1e6" }
-  };
-
-  useEffect(() => {
-    if (gridColumnApi) {
-      // Automatically adjust column width based on content
-      gridColumnApi?.autoSizeAllColumns();
-    }
-  }, [gridColumnApi]);
-
-  const onGridReady = (params: any) => {
-    setGridColumnApi(params.columnApi);
+    cellStyle: {
+      border: "1px solid #dde1e6",
+      whiteSpace: "normal",
+      wordBreak: "break-word",
+    },
   };
 
   return (
@@ -49,11 +34,12 @@ const Table: React.FC<TableProps> = ({
       <AgGridReact
         domLayout="autoHeight"
         defaultColDef={defaultColDef}
-        headerHeight={40}
-        rowHeight={52}
+        headerHeight={65}
+        rowHeight={50}
+        suppressRowClickSelection={true}
         columnDefs={updatedColumnDefs}
         getRowClass={getRowClass}
-        onGridReady={onGridReady}
+        onGridReady={(event) => event.api.autoSizeAllColumns()}
         {...rest}
       />
     </div>
