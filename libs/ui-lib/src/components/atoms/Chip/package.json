@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/chip",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Chip component",
   "license": "MIT",
   "main": "dist/index.js",
@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "@radix-ui/themes": "^2.x",
-    "@xyzproject/tailwind-config": "workspace:*"
+    "@xyzproject/tailwind-config": "workspace:*",
+    "class-variance-authority": "0.x"
   },
   "peerDependencies": {
     "react": "18.x",

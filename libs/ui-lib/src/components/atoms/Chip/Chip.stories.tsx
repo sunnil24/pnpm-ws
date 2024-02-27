@@ -18,7 +18,7 @@ export const Default: Story = {
   render: Template,
 }
 
-const statusVariants: Array<ChipVariants> = [0, 1, 2, 3, 4, 5, 6]
+const statusVariants: Array<ChipVariants> = [1, 2, 3, 4, 5, 6, 7]
 export const StatusVariants: StoryFn = () => (
   <div className='flex  gap-md'>
     {statusVariants.map((variant) => (
