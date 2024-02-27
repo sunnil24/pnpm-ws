@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "@radix-ui/themes": "^2.x",
-    "@xyzproject/tailwind-config": "workspace:*"
+    "@xyzproject/tailwind-config": "workspace:*",
+    "class-variance-authority": "0.x"
   },
   "peerDependencies": {
     "react": "18.x",
