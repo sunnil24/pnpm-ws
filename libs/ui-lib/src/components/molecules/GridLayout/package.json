@@ -1,8 +1,9 @@
 {
   "name": "@xyzproject/gridlayout",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Gridlayout component",
   "license": "MIT",
+  "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",

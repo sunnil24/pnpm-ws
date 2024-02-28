@@ -1,11 +1,12 @@
 {
   "name": "@xyzproject/card",
-  "version": "0.3.0",
+  "version": "0.8.2",
   "description": "Card component",
   "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "files": [
     "dist",
     "README.md",
