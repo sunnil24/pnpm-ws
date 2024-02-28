@@ -28,8 +28,11 @@ const FileUpload: React.FC<FileUploadProps> = ({
       onUpload(file1);
     },
     accept: {
-      ".xlsx": [],
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [
+        ".xlsx",
+      ],
     },
+    multiple: false,
     disabled: !!file, // Disable dropzone if file is already selected
     noClick: !!file, // Prevent file dialog from opening if file is already selected
   });
@@ -48,12 +51,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
         className={`flex flex-col items-center justify-center p-16 gap-3 border border-dashed border-basics-grey40 bg-basics-grey10 w-full ${className}`}
       >
         <div className="flex flex-col items-center justify-center">
-          <input
-            {...getInputProps({
-              accept:
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            })}
-          />
+          <input {...getInputProps()} />
           {file ? (
             <div className="flex items-center justify-between w-full">
               <div className="flex gap-2">
