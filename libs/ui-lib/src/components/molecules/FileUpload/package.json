@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/file-upload",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "FileUpload component",
   "license": "MIT",
   "main": "dist/index.cjs",
