@@ -5,10 +5,10 @@ export default {
   bundle: true,
   skipNodeModulesBundle: true,
   entry: {
-    index: 'index.ts',
+    index: "index.ts",
   },
-  target: 'es2022',
-  format: ['esm'],
+  target: "es2022",
+  format: ["cjs", "esm"],
   treeshake: true,
   splitting: true,
 };

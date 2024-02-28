@@ -1,8 +1,9 @@
 {
   "name": "@xyzproject/heading",
-  "version": "0.1.3",
+  "version": "0.2.2",
   "description": "Heading component",
   "license": "MIT",
+  "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",

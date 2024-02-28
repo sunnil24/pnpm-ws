@@ -3,6 +3,7 @@
   "version": "2.0.5",
   "description": "FileUpload component",
   "license": "MIT",
+  "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
