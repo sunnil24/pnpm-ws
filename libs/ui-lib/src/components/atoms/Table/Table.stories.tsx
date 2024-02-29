@@ -29,6 +29,7 @@ export const Default: Story = {
         headerName: "Security Name",
         field: "securityName",
         sortable: false,
+        maxWidth: 200,
       },
       {
         headerName: "Price",

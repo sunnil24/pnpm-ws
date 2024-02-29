@@ -13,13 +13,14 @@ const Table: React.FC<TableProps> = ({
   headerClass,
   ...rest
 }: TableProps) => {
-  const updatedColumnDefs = columnDefs?.map((col) => ({
+  const updatedColumnDefs = columnDefs?.map((col: Record<string, any>) => ({
     ...col,
-    cellClass: "px-2 py-3 word-break white-space justify-center",
-    headerClass: `px-2 py-3 font-semibold text-xs  text-basics-white  bg-basics-grey110  word-break white-space not-italic leading-normal ${headerClass}`,
+    cellClass: `px-2 py-3 text-xs word-break white-space flex justify-start ${col.cellClass || ''}`,
+    headerClass: `px-2 py-3 font-normal text-xs  text-basics-white  bg-basics-grey110  word-break white-space not-italic leading-normal ${headerClass}`,
+    autoHeight: true,
   }));
   const getRowClass = () => {
-    return `mt-[-1px]  align-center  hover:bg-basics-grey10 ${rowClass}`;
+    return `mt-[-1px]  align-center text-xs hover:bg-basics-grey10 ${rowClass}`;
   };
   const defaultColDef = {
     cellStyle: {
