@@ -10,6 +10,7 @@ export interface FileUploadProps {
   dragText?: string;
   className?: string;
   onCancel?: () => void;
+  onWrongFile?: () => void;
 }
 
 const FileUpload: React.FC<FileUploadProps> = ({
@@ -19,6 +20,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
   uploadText,
   className,
   onCancel,
+  onWrongFile,
 }) => {
   const [file, setFile] = React.useState<File | null>(null);
   const { getInputProps, getRootProps } = useDropzone({
@@ -35,6 +37,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
     multiple: false,
     disabled: !!file, // Disable dropzone if file is already selected
     noClick: !!file, // Prevent file dialog from opening if file is already selected
+    onDropRejected: onWrongFile,
   });
 
   const handleRevert = () => {
