@@ -15,18 +15,20 @@ const Table: React.FC<TableProps> = ({
 }: TableProps) => {
   const updatedColumnDefs = columnDefs?.map((col: Record<string, any>) => ({
     ...col,
-    cellClass: `px-2 py-3 text-xs word-break white-space flex justify-start ${col.cellClass || ''}`,
-    headerClass: `px-2 py-3 font-normal text-xs  text-basics-white  bg-basics-grey110  word-break white-space not-italic leading-normal ${headerClass}`,
-    autoHeight: true,
+    cellClass: `px-2 py-6 text-xs  flex  justify-start ${col.cellClass || ""}`,
+    headerClass: `px-2 py-3 font-normal text-xs  text-basics-white   bg-basics-grey110   ${headerClass}`,
   }));
   const getRowClass = () => {
-    return `mt-[-1px]  align-center text-xs hover:bg-basics-grey10 ${rowClass}`;
+    return `mt-[-1px]  align-center text-xs hover:bg-basics-grey10  ${rowClass}`;
   };
   const defaultColDef = {
+    resizable: true,
+    sortable: false,
+    autoHeight: true,
+    wrapText: true,
+    wrapHeaderText: true,
     cellStyle: {
       border: "1px solid #dde1e6",
-      whiteSpace: "normal",
-      wordBreak: "break-word",
     },
   };
 
@@ -36,11 +38,12 @@ const Table: React.FC<TableProps> = ({
         domLayout="autoHeight"
         defaultColDef={defaultColDef}
         headerHeight={65}
-        rowHeight={50}
         suppressRowClickSelection={true}
         columnDefs={updatedColumnDefs}
         getRowClass={getRowClass}
-        onGridReady={(event) => event.api.autoSizeAllColumns()}
+        onGridReady={(event) => {
+          event.api.autoSizeAllColumns();
+        }}
         {...rest}
       />
     </div>
