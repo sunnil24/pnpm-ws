@@ -9,11 +9,12 @@ export interface ModalProps {
   title?: string
   children?: ReactNode | string
   renderCTA?: () => ReactNode
+  onClose: () => void
   className?: string
 }
 
 const Modal: React.FC<ModalProps> = (props) => {
-  const { modalOpen, title, children, renderCTA, className = '' } = props
+  const { modalOpen, title, children, renderCTA, onClose, className = '' } = props
 
   return (
     <>
@@ -25,7 +26,7 @@ const Modal: React.FC<ModalProps> = (props) => {
               <Heading asTag='h2' className='text-lg w-11/12'>
                 {title}
               </Heading>
-              <Dialog.Close>
+              <Dialog.Close onClick={onClose}>
                 <Cross2Icon className='cursor-pointer w-5 h-5' />
               </Dialog.Close>
             </div>
