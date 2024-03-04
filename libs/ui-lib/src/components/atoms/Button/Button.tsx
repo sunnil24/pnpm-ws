@@ -6,7 +6,7 @@ import { cn } from "@xyzproject/tailwind-config";
  * The ButtonVProps interface extends the ButtonPrimitive.PrimitiveButtonProps interface, the ButtonVariantProps interface
  * of buttonVariants object.
  */
-interface ButtonProps
+export interface ButtonProps
   extends ButtonPrimitive.PrimitiveButtonProps,
     ButtonVariantsProps {
   asChild?: boolean;
