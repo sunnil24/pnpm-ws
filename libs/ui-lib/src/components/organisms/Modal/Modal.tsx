@@ -37,7 +37,7 @@ const Modal: React.FC<ModalProps> = (props) => {
           </Dialog.Description>
           {/* main body end */}
           {/* CTA section start */}
-          {renderCTA && renderCTA()}
+          <div className='flex justify-end'>{renderCTA && renderCTA()}</div>
           {/* CTA section end */}
         </Dialog.Content>
       </Dialog.Root>
