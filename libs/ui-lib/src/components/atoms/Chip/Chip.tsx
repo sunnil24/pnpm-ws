@@ -1,6 +1,6 @@
-import { Badge } from '@radix-ui/themes'
-import { chipVariants } from './Chip.styles'
-import { cn } from '@xyzproject/tailwind-config'
+import { Badge } from "@radix-ui/themes";
+import { chipVariants } from "./Chip.styles";
+import { cn } from "@xyzproject/tailwind-config";
 
 // ChipVariants =
 // 1 maps to the content 'New'
@@ -11,16 +11,16 @@ import { cn } from '@xyzproject/tailwind-config'
 // 6 maps to the content 'Trade In Progress'
 // 7 maps to the content 'EOD Complete'
 
-export type ChipVariants = 1 | 2 | 3 | 4 | 5 | 6 | 7
+export type ChipVariants = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
 export interface ChipProps {
-  content: string
-  variation?: ChipVariants
-  className?: string
+  content: string;
+  variation?: ChipVariants;
+  className?: string;
 }
 
 const Chip: React.FC<ChipProps> = (props) => {
-  const { content, className = '', variation = 1 } = props
+  const { content, className = "", variation = 1 } = props;
 
   const applyClasses = (classes: object): string =>
     cn(
@@ -28,14 +28,14 @@ const Chip: React.FC<ChipProps> = (props) => {
         variation,
         className,
       }),
-      classes
-    )
+      classes,
+    );
 
   return (
-    <Badge variant='soft' className={applyClasses({})}>
+    <Badge variant="soft" className={applyClasses({})}>
       {content}
     </Badge>
-  )
-}
+  );
+};
 
-export default Chip
+export default Chip;
