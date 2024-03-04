@@ -5,7 +5,7 @@ import { cva, VariantProps } from "class-variance-authority";
  * which contains CSS classes for various button variants.
  */
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-md text-sm font-medium",
+  "inline-flex items-center justify-center rounded-md text-sm font-semibold",
   {
     variants: {
       variant: {
@@ -14,6 +14,9 @@ export const buttonVariants = cva(
           "text-button-primary-text",
           "hover:bg-button-primary-hover",
           "hover:text-button-primary-text",
+          "border-button-primary",
+          "border-button-primary-border",
+          "border",
         ],
         primaryOutlined: [
           "border-button-primary",
@@ -36,6 +39,9 @@ export const buttonVariants = cva(
           "text-button-secondary-text",
           "hover:bg-button-secondary-hover",
           "hover:text-button-secondary-text",
+          "border-button-secondary",
+          "border-button-secondary-border",
+          "border",
         ],
         secondaryOutlined: [
           "border-button-secondary",
@@ -45,7 +51,6 @@ export const buttonVariants = cva(
           "border",
           "m-2",
           "hover:bg-button-secondary-hover",
-          "hover:border-0",
           "hover:text-button-secondary-text",
         ],
         secondaryLink: [
