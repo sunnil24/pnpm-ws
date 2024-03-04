@@ -4,6 +4,7 @@
   "description": "Select component",
   "license": "MIT",
   "module": "dist/index.js",
+  "main": "dist/index.cjs",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
