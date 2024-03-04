@@ -14,9 +14,6 @@ export const buttonVariants = cva(
           "text-button-primary-text",
           "hover:bg-button-primary-hover",
           "hover:text-button-primary-text",
-          "border-button-primary",
-          "border-button-primary-border",
-          "border",
         ],
         primaryOutlined: [
           "border-button-primary",
@@ -39,9 +36,6 @@ export const buttonVariants = cva(
           "text-button-secondary-text",
           "hover:bg-button-secondary-hover",
           "hover:text-button-secondary-text",
-          "border-button-secondary",
-          "border-button-secondary-border",
-          "border",
         ],
         secondaryOutlined: [
           "border-button-secondary",
