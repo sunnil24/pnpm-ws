@@ -2,7 +2,6 @@ import React from "react";
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
 import { DocsContainer, DocsContainerProps } from "@storybook/blocks";
 import '@xyzproject/tailwind-config/styles/tailwind.css';
-import '@xyzproject/tailwind-config/styles/normalize.css';
 
 interface ExampleContainerProps extends DocsContainerProps {
   children: React.ReactNode;

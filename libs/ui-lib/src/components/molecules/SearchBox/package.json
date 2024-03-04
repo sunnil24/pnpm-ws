@@ -1,8 +1,9 @@
 {
   "name": "@xyzproject/searchbox",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "SearchBox component",
   "license": "MIT",
+  "main": "dist/index.cjs",
   "module": "dist/index.js",
   "type": "module",
   "types": "dist/index.d.ts",
@@ -18,20 +19,20 @@
   "dependencies": {
     "@radix-ui/react-icons": "1.x",
     "@xyzproject/button": "workspace:*"
-    },
-    "peerDependencies": {
-      "react": "18.x",
-      "react-dom": "18.x",
-      "class-variance-authority": "0.x"
-    },
-    "devDependencies": {
-      "@testing-library/react": "14.x",
-      "@testing-library/jest-dom": "6.x",
-      "@storybook/react": "7.x",
-      "vitest": "^1.x"
-    },
+  },
+  "peerDependencies": {
+    "react": "18.x",
+    "react-dom": "18.x",
+    "class-variance-authority": "0.x"
+  },
+  "devDependencies": {
+    "@testing-library/react": "14.x",
+    "@testing-library/jest-dom": "6.x",
+    "@storybook/react": "7.x",
+    "vitest": "^1.x"
+  },
   "scripts": {
-    "build":"tsup",
+    "build": "tsup",
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",

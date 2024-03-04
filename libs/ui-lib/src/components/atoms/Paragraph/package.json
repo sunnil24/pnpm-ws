@@ -1,9 +1,10 @@
 {
   "name": "@xyzproject/paragraph",
-  "version": "0.1.0",
+  "version": "0.2.2",
   "description": "Paragraph component",
   "license": "MIT",
-   "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
@@ -28,7 +29,7 @@
     "@storybook/react": "7.x",
     "vitest": "^1.x"
   },
-   "scripts": {
+  "scripts": {
     "publish": "pnpm publish",
     "test": "vitest ./",
     "lint": "eslint ./",

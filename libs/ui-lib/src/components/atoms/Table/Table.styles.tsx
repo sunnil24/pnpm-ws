@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { cva, VariantProps } from "class-variance-authority";
 
 /**
@@ -5,7 +6,7 @@ import { cva, VariantProps } from "class-variance-authority";
  * which contains CSS classes for various button variants.
  */
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-md text-sm font-semibold",
+  "inline-flex items-center justify-center rounded-md text-sm font-medium",
   {
     variants: {
       variant: {
@@ -20,7 +21,7 @@ export const buttonVariants = cva(
           "rounded",
           "text-button-primary",
           "border-button-primary-border",
-          "border",
+          "border-2",
           "m-2",
           "hover:bg-button-primary-hover",
           "hover:text-button-primary-text",
@@ -29,7 +30,6 @@ export const buttonVariants = cva(
           "underline-offset-4 ",
           "hover:underline ",
           "text-button-primary",
-          "underline",
         ],
         secondaryContained: [
           "bg-button-secondary",
@@ -42,7 +42,7 @@ export const buttonVariants = cva(
           "rounded",
           "text-button-secondary",
           "border-button-secondary-border",
-          "border",
+          "border-2",
           "m-2",
           "hover:bg-button-secondary-hover",
           "hover:text-button-secondary-text",
@@ -51,13 +51,12 @@ export const buttonVariants = cva(
           "underline-offset-4 ",
           "hover:underline ",
           "text-button-secondary",
-          "underline",
         ],
       },
       size: {
-        sm: ["px-3 py-2 rounded-md"],
-        md: ["px-4 py-2.5 rounded-md"],
-        lg: ["px-8 py-3 rounded-md"],
+        md: ["h-10 ", "py-2 ", "px-4"],
+        sm: ["h-9 ", "px-3 ", "rounded-md'"],
+        lg: ["h-11 ", "px-8 ", "rounded-md"],
       },
     },
     defaultVariants: {

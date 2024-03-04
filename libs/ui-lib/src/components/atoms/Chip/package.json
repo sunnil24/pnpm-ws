@@ -1,6 +1,8 @@
 {
-  "name": "@xyzproject/textfield",
-  "version": "0.1.3",
+  "name": "@xyzproject/chip",
+  "version": "0.4.0",
+  "description": "Chip component",
+  "license": "MIT",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,8 +17,9 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@radix-ui/themes": "2.x",
-    "@radix-ui/react-icons": "1.x"
+    "@radix-ui/themes": "^2.x",
+    "@xyzproject/tailwind-config": "workspace:*",
+    "class-variance-authority": "0.x"
   },
   "peerDependencies": {
     "react": "18.x",
