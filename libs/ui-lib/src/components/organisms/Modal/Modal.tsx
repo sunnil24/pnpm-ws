@@ -1,27 +1,30 @@
 import { Dialog } from '@radix-ui/themes'
 import { Cross2Icon } from '@radix-ui/react-icons'
 import { ReactElement, ReactNode } from 'react'
-import { ButtonProps } from '../../atoms/Button/Button'
 import '@radix-ui/themes/styles.css'
+import Heading from '../../atoms/Heading'
 
 export interface ModalProps {
   modalOpen: boolean
   title?: string
   children?: ReactNode | string
-  ctaArray?: Array<ReactElement<ButtonProps>>
+  renderCTA?: () => ReactNode
+  className?: string
 }
 
 const Modal: React.FC<ModalProps> = (props) => {
-  const { modalOpen, title, children, ctaArray } = props
+  const { modalOpen, title, children, renderCTA, className = '' } = props
 
   return (
     <>
       <Dialog.Root open={modalOpen}>
-        {/* title section start */}
-        <Dialog.Content className='flex flex-col' size={'3'}>
+        <Dialog.Content className={`flex flex-col ${className}`} size={'3'}>
+          {/* title section start */}
           <Dialog.Title id='modal_title'>
             <div className='flex justify-between items-start'>
-              <span className='w-11/12'>{title || ''}</span>
+              <Heading asTag='h2' className='text-lg w-11/12'>
+                {title}
+              </Heading>
               <Dialog.Close>
                 <Cross2Icon className='cursor-pointer w-5 h-5' />
               </Dialog.Close>
@@ -29,16 +32,12 @@ const Modal: React.FC<ModalProps> = (props) => {
           </Dialog.Title>
           {/* title section end */}
           {/* main body start */}
-          <Dialog.Description id='modal_description'>
-            {children || ''}
+          <Dialog.Description id='modal_description' className='mb-2'>
+            {children}
           </Dialog.Description>
           {/* main body end */}
           {/* CTA section start */}
-          {ctaArray?.length && (
-            <div className='flex items-center justify-end modal_cta'>
-              {ctaArray.map((cta) => cta)}
-            </div>
-          )}
+          {renderCTA && renderCTA()}
           {/* CTA section end */}
         </Dialog.Content>
       </Dialog.Root>

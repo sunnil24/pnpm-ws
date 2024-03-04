@@ -15,7 +15,12 @@ const modalProps: ModalProps = {
   modalOpen: false,
   title: 'Test modal title',
   children: <div></div>,
-  ctaArray: [<button>Cancel</button>, <button onClick={doneMock}>Done</button>],
+  renderCTA: () => (
+    <div id='modal_cta'>
+      <button>Cancel</button>
+      <button onClick={doneMock}>Done</button>
+    </div>
+  ),
 }
 
 describe('Modal organism', () => {
