@@ -32,6 +32,7 @@ const SelectItem = React.forwardRef<HTMLDivElement, SelectItemProps>(
 SelectItem.displayName = "SelectItem";
 
 interface SelectProps {
+  ariaLabelledBy: string;
   options: string[];
   isDisabled: boolean;
   defaultValue: string;
@@ -39,6 +40,8 @@ interface SelectProps {
 }
 
 const Select: React.FC<SelectProps> = ({
+  ariaLabelledBy,
+  defaultValue,
   options,
   handleSelectClick,
   isDisabled = false,
@@ -48,7 +51,10 @@ const Select: React.FC<SelectProps> = ({
     color = "bg-basics-grey10";
   }
   return (
-    <RadixSelect.Root>
+    <RadixSelect.Root
+      aria-labelledby={ariaLabelledBy}
+      defaultValue={defaultValue}
+    >
       <RadixSelect.Trigger
         className={`${color} inline-flex items-center disabled justify-between rounded px-[15px] text-[13px] leading-none h-[35px] gap-[5px]  text-violet11 hover:bg-mauve3 data-[placeholder]:text-violet9 outline-none w-48`}
         onPointerDown={(e) => {
