@@ -4,7 +4,6 @@
   "type": "module",
   "license": "MIT",
   "private": true,
-  "types": "module",
   "devDependencies": {
     "@commitlint/config-conventional": "^18.4.4",
     "@commitlint/cz-commitlint": "^18.4.4",
