@@ -9,66 +9,26 @@ Step 1 :
 
 Step 2 : 
 ## Runs all build scripts for generating build for each and every package.
-### `pnpm buildAll`
+### `pnpm build:package`
 
 Step 3 : 
-## Builds the storybook and outputs it to the `dist/storybook` directory.
-### `pnpm build:storybook`
-
-Step 4 : 
 ## Runs storybook 
 ###  `pnpm run storybook`
 
 
-### Build all the below package seperatly if you want already we built using buildAll command
-
-## Builds the scripts package that package will help to build the component package.
-
-### `pnpm --filter @xyzproject/scripts build`
+### Build all the below package seperatly if you want already we built using the below command
 
 ## Builds the tailwind configuration package.
 
-### `pnpm --filter @xyzproject/tailwind-config  build`
+### `pnpm build:package @xyzproject/tailwind-config`
 
-## Builds the commit lint standards package.
-
-### `pnpm --filter @xyzproject/commit-lint-standards build`
-
-## Builds the plop generation package.
-
-### `pnpm --filter @xyzproject/generate-plop build`
-
-## Builds the react linting standards package.
-
-### `pnpm --filter @xyzproject/react-linting-standards build`
-
-##  Build the Tailwin config viewer.
-
-### `pnpm build:tcv`
-
-## Builds the UI library using the build script located at `scripts/dist/index.js`.
-
-### `pnpm build:ui-lib`
 
 ## Publishing Packages
 
 ## To publish a package, use the corresponding publish script:
 
-### `pnpm --filter @xyzproject/tailwind-config  publish`
+### `pnpm publish:package @xyzproject/tailwind-config`
 
-## Publishes the tailwind configuration package.
 
-### `pnpm --filter @xyzproject/commit-lint-standards publish`
 
-## Publishes the commit lint standards package.
-
-### `pnpm --filter @xyzproject/generate-plop publish`
-
-## Publishes the plop generation package.
-
-### `pnpm --filter @xyzproject/react-linting-standards publish`
-
-## Publishes the react linting standards package.
-
-### `pnpm publish:ui-lib`
 
