@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/card",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Card component",
   "license": "MIT",
   "type": "module",

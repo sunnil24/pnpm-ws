@@ -11,7 +11,7 @@ const Card: React.FC<CardProps> = ({ children, className = "" }) => {
     <RadixCard
       size="1"
       variant="ghost"
-      className={`p-3.5 bg-white border border-[--color-secondary-foreground] ${className}`}
+      className={`p-3.5 bg-white border rounded border-basics-grey20 ${className}`}
     >
       {children}
     </RadixCard>
