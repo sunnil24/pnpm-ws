@@ -6,7 +6,7 @@ import Label from "./Label";
 
 describe("Label", () => {
   it("renders correctly with only required props", () => {
-    render(<Label labelText="Test Label" />);
+    render(<Label labelFor="Test Label">Test Label</Label>);
 
     const labelElement = screen.getByText("Test Label");
     expect(labelElement).toBeInTheDocument();
@@ -16,9 +16,13 @@ describe("Label", () => {
   });
 
   it("renders correctly with all props", () => {
-    render(<Label labelText="Test Label" className="custom-class" />);
+    render(
+      <Label labelFor="test-label-1" className="custom-class">
+        Test Label 1
+      </Label>,
+    );
 
-    const labelElement = screen.getByText("Test Label");
+    const labelElement = screen.getByText("Test Label 1");
     expect(labelElement).toBeInTheDocument();
     expect(labelElement).toHaveClass(
       "font-semibold text-sm text-basics-grey70 pb-2 custom-class",

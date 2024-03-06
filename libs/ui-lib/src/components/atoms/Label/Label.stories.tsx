@@ -15,11 +15,12 @@ const Template: Story<LabelProps> = (args) => <Label {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  labelText: "Default Label",
+  children: "Default Label",
 };
 
 export const WithClassName = Template.bind({});
 WithClassName.args = {
-  labelText: "Label with Custom Class",
+  children: "Label with Custom Class",
   className: "custom-class",
+  labelFor: "label-custom",
 };

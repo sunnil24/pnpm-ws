@@ -6,7 +6,7 @@ import Link from "./Link";
 
 describe("Link", () => {
   it("renders correctly", () => {
-    render(<Link href="https://example.com" label="Example" />);
+    render(<Link href="https://example.com">Children</Link>);
 
     const linkElement = screen.getByText("Example");
     expect(linkElement).toBeInTheDocument();

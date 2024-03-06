@@ -4,6 +4,7 @@
   "description": "Label component",
   "license": "MIT",
   "module": "dist/index.js",
+  "main": "dist/index.cjs",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
@@ -24,6 +25,9 @@
     "@testing-library/jest-dom": "6.x",
     "@storybook/react": "7.x",
     "vitest": "^1.x"
+  },
+  "dependencies": {
+    "@radix-ui/react-label": "^2.0.2"
   },
   "scripts": {
     "publish": "pnpm publish",

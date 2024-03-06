@@ -9,7 +9,7 @@ const meta: Meta<LinkProps> = {
   component: Link,
   argTypes: {
     href: { control: "text" },
-    label: { control: "text" },
+    children: { control: "text" },
   },
 };
 
@@ -20,5 +20,5 @@ const Template: Story<LinkProps> = (args) => <Link {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   href: "https://example.com",
-  label: "Example Link",
+  children: "Example Link",
 };
