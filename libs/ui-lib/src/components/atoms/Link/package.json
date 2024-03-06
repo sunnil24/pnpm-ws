@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/link",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Link component",
   "license": "MIT",
   "module": "dist/index.js",
