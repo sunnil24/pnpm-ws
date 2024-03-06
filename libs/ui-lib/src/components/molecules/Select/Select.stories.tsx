@@ -25,16 +25,19 @@ const Template: Story<SelectProps> = (args) => <Select {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  id: "fruits",
   options: ["Apple", "Banana", "Blueberry", "Grapes", "Pineapple"],
 };
 
 export const WithFewOptions = Template.bind({});
 WithFewOptions.args = {
+  id: "fruits1",
   options: ["Apple", "Banana"],
 };
 
 export const WithManyOptions = Template.bind({});
 WithManyOptions.args = {
+  id: "fruits2",
   options: [
     "Apple",
     "Banana",

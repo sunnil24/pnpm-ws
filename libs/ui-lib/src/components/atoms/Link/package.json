@@ -1,7 +1,7 @@
 {
-  "name": "@xyzproject/select",
-  "version": "0.1.9",
-  "description": "Select component",
+  "name": "@xyzproject/link",
+  "version": "0.1.2",
+  "description": "Link component",
   "license": "MIT",
   "module": "dist/index.js",
   "main": "dist/index.cjs",
@@ -19,10 +19,6 @@
   "peerDependencies": {
     "react": "18.x",
     "react-dom": "18.x"
-  },
-  "dependencies": {
-    "@radix-ui/react-select": "^2.0.0",
-    "@radix-ui/react-icons": "^1.3.0"
   },
   "devDependencies": {
     "@testing-library/react": "14.x",
