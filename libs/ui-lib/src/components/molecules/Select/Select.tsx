@@ -32,10 +32,12 @@ const SelectItem = React.forwardRef<HTMLDivElement, SelectItemProps>(
 SelectItem.displayName = "SelectItem";
 
 interface SelectProps {
-  id: string;
+  id?: string;
+  className?: string;
   options: string[];
-  isDisabled: boolean;
-  defaultValue: string;
+  isDisabled?: boolean;
+  defaultValue?: string;
+  placeholder?: string;
   handleSelectClick?: () => void;
 }
 
@@ -43,7 +45,9 @@ const Select: React.FC<SelectProps> = ({
   id,
   defaultValue,
   options,
+  className,
   handleSelectClick,
+  placeholder = "Select",
   isDisabled = false,
 }) => {
   let color = "bg-white";
@@ -54,7 +58,7 @@ const Select: React.FC<SelectProps> = ({
     <RadixSelect.Root defaultValue={defaultValue}>
       <RadixSelect.Trigger
         id={id}
-        className={`${color} inline-flex items-center disabled justify-between rounded px-[15px] text-[13px] leading-none h-[35px] gap-[5px]  text-violet11 hover:bg-mauve3 data-[placeholder]:text-violet9 outline-none w-48`}
+        className={`${color} ${className} inline-flex items-center disabled justify-between rounded px-[15px] text-[13px] leading-none h-[35px] gap-[5px]  text-violet11 hover:bg-mauve3 data-[placeholder]:text-violet9 outline-none`}
         onPointerDown={(e) => {
           if (isDisabled) {
             e.preventDefault();
@@ -65,7 +69,7 @@ const Select: React.FC<SelectProps> = ({
           }
         }}
       >
-        <RadixSelect.Value placeholder="New" />
+        <RadixSelect.Value placeholder={placeholder} />
         <RadixSelect.Icon className="text-violet11 text-gray-500">
           <ChevronDownIcon className="w-4 h-6" />
         </RadixSelect.Icon>

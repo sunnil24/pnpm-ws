@@ -1,6 +1,6 @@
 {
   "name": "@xyzproject/select",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Select component",
   "license": "MIT",
   "module": "dist/index.js",

@@ -27,6 +27,7 @@ export const Default = Template.bind({});
 Default.args = {
   id: "fruits",
   options: ["Apple", "Banana", "Blueberry", "Grapes", "Pineapple"],
+  className: "w-100",
 };
 
 export const WithFewOptions = Template.bind({});
