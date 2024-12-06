@@ -2,3 +2,4 @@ packages:
   - libs/ui-lib/src/components/*/*
   - libs/utils/hooks/*
   - "packages/*"
+  - "apps/*"

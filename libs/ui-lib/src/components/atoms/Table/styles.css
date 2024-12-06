@@ -1,0 +1,21 @@
+     /* Style the select element */
+     .ag-cell-edit-input {
+        /* Add your styles here */
+        background-color: #f9f9f9;
+        color: #333;
+        border: 1px solid #ccc;
+      }
+      
+      /* Change the select dropdown icon */
+      .ag-cell-edit-input {
+        appearance: none;
+        background-image: url('path_to_your_icon');
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding-right: 20px; /* Adjust this value based on the size of your icon */
+      }
+      .ag-cell-wrapper .ag-cell-edit-wrapper{
+             border: 1px solid black !important;
+         padding: 4px !important;
+         border-radius: 3px !important;
+           }

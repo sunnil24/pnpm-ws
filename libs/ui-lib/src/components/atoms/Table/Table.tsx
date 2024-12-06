@@ -1,16 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { AgGridReact, AgGridReactProps } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
+import "ag-grid-community/styles/ag-theme-quartz.css";
+import "./styles.css";
+
 export interface TableProps extends AgGridReactProps {
   className?: string;
   headerClass?: string;
+  validateCell?: (params: any) => boolean; // Add a validateCell prop
 }
 
 const Table: React.FC<TableProps> = ({
-  className = "w-[auto] h-100 custom-table",
+  className = "w-[auto] h-100 custom-table  ag-theme-quartz",
   columnDefs,
   rowClass,
   headerClass,
+  validateCell,
   ...rest
 }: TableProps) => {
   const updatedColumnDefs = columnDefs?.map((col: Record<string, any>) => ({

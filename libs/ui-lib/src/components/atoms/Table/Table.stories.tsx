@@ -18,7 +18,11 @@ export const Default: Story = {
       {
         headerName: "Trade Action",
         field: "tradeAction",
-        sortable: false,
+        editable: true,
+        cellEditor: "agSelectCellEditor",
+        cellEditorParams: {
+          values: ["Porsche", "Toyota", "Ford", "AAA", "BBB", "CCC"],
+        },
       },
       {
         headerName: "Ticker",

@@ -80,6 +80,7 @@
     "clean": "turbo run clean",
     "cleanmodules": "turbo run cleanmodules && rm -rf ./node_modules ./pnpm-lock.yaml",
     "build": "turbo run build",
+    "dev": "turbo run dev",
     "build:package": "node scripts/build-and-publish-package.js",
     "publish:package": "node scripts/build-and-publish-package.js",
     "build:storybook": "storybook build -o dist/storybook",
