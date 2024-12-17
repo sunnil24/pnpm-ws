@@ -1,7 +1,7 @@
-import * as DropdownPrimitive from '@radix-ui/react-select';
-import { ChevronDownIcon, CheckIcon } from '@radix-ui/react-icons';
-import { cx } from 'class-variance-authority';
-import Button from '@xyzproject/button';
+import * as DropdownPrimitive from "@radix-ui/react-select";
+import { ChevronDownIcon, CheckIcon } from "@radix-ui/react-icons";
+import { cx } from "class-variance-authority";
+import Button from "@sldl/button";
 
 /**
  * Defines the props that are passed to the Dropdown component.
@@ -47,9 +47,9 @@ function Dropdown({ defaultValue, options }: DropdownProps): JSX.Element {
                 key={option.id}
                 value={option.value}
                 className={cx(
-                  'relative flex items-center px-8 py-2 rounded-md text-sm text-gray-700 dark:text-gray-300 font-medium focus:bg-gray-100 dark:focus:bg-gray-900',
-                  'radix-disabled:opacity-50',
-                  'focus:outline-none Dropdown-none cursor-pointer',
+                  "relative flex items-center px-8 py-2 rounded-md text-sm text-gray-700 dark:text-gray-300 font-medium focus:bg-gray-100 dark:focus:bg-gray-900",
+                  "radix-disabled:opacity-50",
+                  "focus:outline-none Dropdown-none cursor-pointer"
                 )}
               >
                 <DropdownPrimitive.ItemText>

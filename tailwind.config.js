@@ -1,12 +1,12 @@
-import { tailwindConfig } from "@xyzproject/tailwind-config";
-import extractDesignSystemVariables from "./tailwind.config.viewer"
-import { baseTheme } from "@xyzproject/tailwind-config";
+import { tailwindConfig } from "@sldl/tailwind-config";
+import extractDesignSystemVariables from "./tailwind.config.viewer";
+import { baseTheme } from "@sldl/tailwind-config";
 
-export const presets = [tailwindConfig]
-export const important = true
+export const presets = [tailwindConfig];
+export const important = true;
 export const theme = {
   ...baseTheme,
-  configViewer: { 
+  configViewer: {
     themeReplacements: extractDesignSystemVariables(),
-  }
-}
+  },
+};

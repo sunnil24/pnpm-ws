@@ -1,3 +1,3 @@
-import { postConfig } from '@xyzproject/tailwind-config';
+// import { postConfig } from "@sldl/tailwind-config";
 
-export default postConfig;
+export default {};

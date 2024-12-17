@@ -1,26 +1,26 @@
 import { Meta } from "@storybook/blocks";
 import { Callout } from "../helpers/Callout";
 
-<Meta title='Packages/TailwindConfig' />
-# TailwindConfig
+<Meta title="Packages/TailwindConfig" /># TailwindConfig
 
 ## Tailwind Config Installation
+
 Tailwind Configuration Package
 Our Tailwind Configuration Package offers a custom configuration for Tailwind CSS. It comes with a set of pre-defined themes, utility classes, and all necessary Tailwind-related packages.
 Follow these steps to install the Tailwind Configuration Package:
 
 ## 1. Run the following command in your project directory:
 
-  ```js
-        yarn add @xyzproject/tailwind-config@latest
+```js
+      yarn add @sldl/tailwind-config@latest
 
-  ```
+```
+
 ## 2. Create two configuration files in your project:
 
 Tailwind.config.js
 Postcss.config.js
 In these files, import the respective configurations from the installed package:
-
 
 - Run the install command (yarn install)
 
@@ -30,13 +30,13 @@ In these files, import the respective configurations from the installed package:
 
 ```js
 {/* In Tailwind.config.js: */}
-import { tailwindConfig } from "@xyzproject/tailwind-config ";
+import { tailwindConfig } from "@sldl/tailwind-config ";
 
 export default tailwindConfig
 
 {/* In Postcss.config.js: */}
 
-import { postconfig } from "@xyzproject/tailwind-config ";
+import { postconfig } from "@sldl/tailwind-config ";
 
 export default postConfig
 
@@ -47,7 +47,7 @@ export default postConfig
 - Go to your **\_app.tsx** file or the root file and import the following:
 
   ```js
-  import "@xyzproject/tailwind-config /styles/tailwind.css";
+  import "@sldl/tailwind-config /styles/tailwind.css";
   ```
 
 ## 4. Use The components
@@ -56,5 +56,5 @@ export default postConfig
 
 ```js
 import { Button } from "{button}";
-<Button>Button Component </Button>
+<Button>Button Component </Button>;
 ```

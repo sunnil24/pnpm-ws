@@ -1,6 +1,6 @@
 import { Badge } from "@radix-ui/themes";
 import { chipVariants } from "./Chip.styles";
-import { cn } from "@xyzproject/tailwind-config";
+import { cn } from "@sldl/tailwind-config";
 
 // ChipVariants =
 // 1 maps to the content 'New'
@@ -28,7 +28,7 @@ const Chip: React.FC<ChipProps> = (props) => {
         variation,
         className,
       }),
-      classes,
+      classes
     );
 
   return (

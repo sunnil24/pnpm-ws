@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Heading } from "@radix-ui/themes";
 import { headingVariants } from "./Heading.styles";
-import { cn } from "@xyzproject/tailwind-config";
+import { cn } from "@sldl/tailwind-config";
 
 export type HeadingLevels = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
@@ -21,7 +21,7 @@ const HeadingComponent = (props: HeadingProps) => {
         variant,
         className,
       }),
-      classes,
+      classes
     );
 
   return (

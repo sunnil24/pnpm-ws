@@ -1,5 +1,5 @@
 {
-  "name": "@xyzproject/tailwind-config",
+  "name": "@sldl/tailwind-config",
   "version": "3.5.0",
   "type": "module",
   "devDependencies": {
@@ -9,10 +9,6 @@
   "types": "./dist/index.d.ts",
   "module": "./dist/index.js",
   "main": "./dist/index.js",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "files": [
     "dist",
     "package.json",

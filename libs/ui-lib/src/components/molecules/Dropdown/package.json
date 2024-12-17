@@ -19,7 +19,7 @@
   "dependencies": {
     "@radix-ui/react-icons": "1.x",
     "@radix-ui/react-select": "1.x",
-    "@xyzproject/button": "workspace:*"
+    "@sldl/button": "workspace:*"
   },
   "peerDependencies": {
     "react": "18.x",

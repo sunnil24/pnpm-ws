@@ -20,14 +20,14 @@ Step 3 :
 
 ## Builds the tailwind configuration package.
 
-### `pnpm build:package @xyzproject/tailwind-config`
+### `pnpm build:package @sldl/tailwind-config`
 
 
 ## Publishing Packages
 
 ## To publish a package, use the corresponding publish script:
 
-### `pnpm publish:package @xyzproject/tailwind-config`
+### `pnpm publish:package @sldl/tailwind-config`
 
 
 

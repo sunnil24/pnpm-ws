@@ -1,7 +1,7 @@
 import React from "react";
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
 import { DocsContainer, DocsContainerProps } from "@storybook/blocks";
-import '@xyzproject/tailwind-config/styles/tailwind.css';
+import "@sldl/tailwind-config/styles/tailwind.css";
 
 interface ExampleContainerProps extends DocsContainerProps {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ interface ExampleContainerProps extends DocsContainerProps {
 const ExampleContainer = ({ children, ...props }: ExampleContainerProps) => {
   return (
     <DocsContainer {...props}>
-      <div id='doc-container'>{children}</div>
+      <div id="doc-container">{children}</div>
     </DocsContainer>
   );
 };
@@ -21,7 +21,13 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ["Getting Started","Tailwind Variables", "Packages", "Components", "*"],
+      order: [
+        "Getting Started",
+        "Tailwind Variables",
+        "Packages",
+        "Components",
+        "*",
+      ],
     },
   },
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -44,10 +50,10 @@ export const decorators = [
   }),
   (storyFn, { id, viewMode }) => {
     return (
-      <div className='relative w-full'>
+      <div className="relative w-full">
         {viewMode === "docs" && (
-          <div className='absolute -right-lg -top-xl'>
-            <a href={`/iframe.html?&id=${id}`} target='_blank'></a>
+          <div className="absolute -right-lg -top-xl">
+            <a href={`/iframe.html?&id=${id}`} target="_blank"></a>
           </div>
         )}
         {storyFn()}

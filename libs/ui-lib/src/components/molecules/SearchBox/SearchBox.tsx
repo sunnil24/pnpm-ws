@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import { cx } from 'class-variance-authority';
-import Button from '@xyzproject/button';
+import { useState } from "react";
+import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
+import { cx } from "class-variance-authority";
+import Button from "@sldl/button";
 
 /**
  * SearchBoxProps interface for defining props for the SearchBox component
@@ -41,9 +41,9 @@ const defaultSearch = (query: string) => {
 function SearchBox({
   className,
   onSearch = defaultSearch,
-  placeholder = 'Search',
+  placeholder = "Search",
 }: SearchBoxProps): JSX.Element {
-  const [state, setState] = useState<SearchBoxState>({ query: '' });
+  const [state, setState] = useState<SearchBoxState>({ query: "" });
 
   /**
    * Handles the change event of the input element and sets the query state
@@ -68,8 +68,8 @@ function SearchBox({
     <form
       onSubmit={handleSearch}
       className={cx(
-        'flex items-center rounded-md border border-gray-300',
-        className,
+        "flex items-center rounded-md border border-gray-300",
+        className
       )}
     >
       <input
