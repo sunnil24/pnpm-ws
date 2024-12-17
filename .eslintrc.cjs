@@ -1,4 +1,4 @@
-const linting = require("@xyzproject/react-linting-standards");
+const linting = require("@sldl/react-linting-standards");
 
 module.exports = {
   ...linting,
@@ -15,9 +15,12 @@ module.exports = {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": ["**/*.test.tsx", "**/*.test.ts", "**/*.stories.tsx"]
-    }]
-  }
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: ["**/*.test.tsx", "**/*.test.ts", "**/*.stories.tsx"],
+      },
+    ],
+  },
   // Add any other configurations as needed
 };

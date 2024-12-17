@@ -1,5 +1,5 @@
 {
-  "name": "@xyzproject/heading",
+  "name": "@sldl/heading",
   "version": "0.2.2",
   "description": "Heading component",
   "license": "MIT",
@@ -12,17 +12,13 @@
     "README.md",
     "package.json"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "dependencies": {
     "@radix-ui/themes": "^2.x",
     "@sldl/tailwind-config": "workspace:*"
   },
   "peerDependencies": {
-    "react": "18.x",
-    "react-dom": "18.x"
+    "react": "19.x",
+    "react-dom": "19.x"
   },
   "devDependencies": {
     "@testing-library/react": "14.x",

@@ -1,5 +1,5 @@
 {
-  "name": "@xyzproject/react-linting-standards",
+  "name": "@sldl/react-linting-standards",
   "version": "2.0.2",
   "description": "ESLint + Prettier config for React",
   "type": "module",

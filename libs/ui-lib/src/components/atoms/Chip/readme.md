@@ -5,4 +5,4 @@ This is the Chip component.
 ## Installation
 
 ```bash
-npm install @xyzproject/chip
+npm install @sldl/chip

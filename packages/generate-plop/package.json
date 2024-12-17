@@ -1,5 +1,5 @@
 {
-  "name": "@xyzproject/generate-plop",
+  "name": "@sldl/generate-plop",
   "version": "1.0.9",
   "description": "Generate new components fast and consistently.",
   "type": "module",
@@ -20,7 +20,7 @@
     "plop": "^4.0.1",
     "copyfiles": "2.4.1",
     "vitest": "1.x",
-    "@xyzproject/commit-lint-standards": "workspace:*",
-    "@xyzproject/react-linting-standards": "workspace:*"
+    "@sldl/commit-lint-standards": "workspace:*",
+    "@sldl/react-linting-standards": "workspace:*"
   }
 }

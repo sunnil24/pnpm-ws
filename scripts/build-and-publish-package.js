@@ -14,13 +14,17 @@ try {
   if (operation === "build") {
     if (packageName) {
       console.log(`Building ${packageName}...`);
-      execSync(`turbo run build --scope=${packageName}`, { stdio: "inherit" });
+      execSync(`turbo run build`, {
+        stdio: "inherit",
+      });
     } else {
       console.log(`Building priority components...`);
       // Build priority components
       for (const component of priorityComponents) {
         console.log(`Building ${component}...`);
-        execSync(`turbo run build --scope=${component}`, { stdio: "inherit" });
+        execSync(`turbo run build`, {
+          stdio: "inherit",
+        });
       }
       console.log(`Building all remaining packages...`);
       execSync(`turbo run build`, { stdio: "inherit" });

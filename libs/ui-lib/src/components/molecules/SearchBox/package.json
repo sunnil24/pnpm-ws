@@ -1,5 +1,5 @@
 {
-  "name": "@xyzproject/searchbox",
+  "name": "@sldl/searchbox",
   "version": "0.1.4",
   "description": "SearchBox component",
   "license": "MIT",
@@ -12,17 +12,13 @@
     "README.md",
     "package.json"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "dependencies": {
     "@radix-ui/react-icons": "1.x",
     "@sldl/button": "workspace:*"
   },
   "peerDependencies": {
-    "react": "18.x",
-    "react-dom": "18.x",
+    "react": "19.x",
+    "react-dom": "19.x",
     "class-variance-authority": "0.x"
   },
   "devDependencies": {

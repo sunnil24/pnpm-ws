@@ -1,5 +1,5 @@
 {
-  "name": "@xyzproject/chip",
+  "name": "@sldl/chip",
   "version": "0.4.0",
   "description": "Chip component",
   "license": "MIT",
@@ -12,18 +12,14 @@
     "README.md",
     "package.json"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "dependencies": {
     "@radix-ui/themes": "^2.x",
     "@sldl/tailwind-config": "workspace:*",
     "class-variance-authority": "0.x"
   },
   "peerDependencies": {
-    "react": "18.x",
-    "react-dom": "18.x"
+    "react": "19.x",
+    "react-dom": "19.x"
   },
   "devDependencies": {
     "@testing-library/react": "14.x",

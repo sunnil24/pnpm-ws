@@ -1,5 +1,5 @@
 {
-  "name": "@xyzproject/card",
+  "name": "@sldl/card",
   "version": "0.8.3",
   "description": "Card component",
   "license": "MIT",
@@ -12,16 +12,12 @@
     "README.md",
     "package.json"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "dependencies": {
     "@radix-ui/themes": "2.x"
   },
   "peerDependencies": {
-    "react": "18.x",
-    "react-dom": "18.x"
+    "react": "19.x",
+    "react-dom": "19.x"
   },
   "devDependencies": {
     "@sldl/tailwind-config": "workspace:*",

@@ -20,7 +20,7 @@ In these files, import the respective configurations from the installed package:
 
 import { tailwindConfig } from "@sldl/tailwind-config ";
 
-export default {presets:[tailwindConfig], content: [...tailwindConfig.content,'../../node_modules/@xyzproject/**/**/es/index.js']}
+export default {presets:[tailwindConfig], content: [...tailwindConfig.content,'../../node_modules/@sldl/**/**/es/index.js']}
 
 ### In Postcss.config.js:
 

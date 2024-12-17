@@ -1,5 +1,5 @@
 {
-  "name": "@xyzproject/debounce-hook",
+  "name": "@sldl/debounce-hook",
   "version": "1.0.0",
   "type": "module",
   "devDependencies": {
@@ -8,10 +8,6 @@
   },
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "files": [
     "dist",
     "package.json"

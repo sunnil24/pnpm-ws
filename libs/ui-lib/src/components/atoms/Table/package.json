@@ -1,5 +1,5 @@
 {
-  "name": "@xyzproject/table",
+  "name": "@sldl/table",
   "version": "1.3.0",
   "description": "Table component",
   "license": "MIT",
@@ -12,17 +12,13 @@
     "README.md",
     "package.json"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "dependencies": {
     "ag-grid-react": "^31.x",
     "ag-grid-community": "^31.x"
   },
   "peerDependencies": {
-    "react": "18.x",
-    "react-dom": "18.x"
+    "react": "19.x",
+    "react-dom": "19.x"
   },
   "devDependencies": {
     "@testing-library/react": "14.x",

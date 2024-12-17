@@ -1,5 +1,5 @@
 {
-  "name": "@xyzproject/dropdown",
+  "name": "@sldl/dropdown",
   "version": "0.2.3",
   "description": "Dropdown component",
   "license": "MIT",
@@ -12,18 +12,14 @@
     "package.json"
   ],
   "type": "module",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "dependencies": {
     "@radix-ui/react-icons": "1.x",
     "@radix-ui/react-select": "1.x",
     "@sldl/button": "workspace:*"
   },
   "peerDependencies": {
-    "react": "18.x",
-    "react-dom": "18.x",
+    "react": "19.x",
+    "react-dom": "19.x",
     "class-variance-authority": "0.x"
   },
   "devDependencies": {
