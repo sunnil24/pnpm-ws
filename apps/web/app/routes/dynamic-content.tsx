@@ -4,10 +4,7 @@ import type { Route } from "./+types/home";
 
 import Layout from "~/experience/layout";
 import ExperienceMap from "~/experience/experience-map";
-import { PAGE_EXPERIENCE } from "~/experience/page-experience";
-import { useLoaderData } from "react-router";
-
-const layout = Layout[PAGE_EXPERIENCE.home.layout];
+import { redirect, useLoaderData } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -16,13 +13,31 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export const loader = async () => {
-  return { layout };
+export const loader = async ({ params }: Route.LoaderArgs) => {
+  const layout = await fetch("http://localhost:3000/get-layout");
+  const templateDb: {
+    [key: string]: unknown;
+  } = await layout.json();
+  const slug = params["*"];
+
+  if (slug && typeof slug === "string" && slug in templateDb) {
+    const { layout: template, regions } =
+      (templateDb[slug] as { layout: unknown; regions: unknown }) || {};
+
+    return {
+      template,
+      regions,
+    };
+  }
+  return redirect("/not-found");
 };
 
 export default function Home(props: any) {
-  const loaderData = useLoaderData();
-  console.log(loaderData, "--");
+  const { template, regions } = useLoaderData<{
+    template: keyof typeof Layout;
+    regions: unknown;
+  }>();
+  const layout = Layout[template];
 
-  return layout(PAGE_EXPERIENCE.home.regions, props, ExperienceMap);
+  return layout(regions, props, ExperienceMap);
 }

@@ -1,5 +1,3 @@
-import React from "react";
-
 import getComponents from "../component-util";
 
 export const LayoutDefault = (
@@ -10,6 +8,7 @@ export const LayoutDefault = (
   if (!regions) {
     return null;
   }
+
   return (
     <div className={""}>
       <div className="main">

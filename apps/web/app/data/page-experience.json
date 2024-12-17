@@ -1,0 +1,40 @@
+{
+  "home": {
+    "layout": "LayoutDefault",
+    "regions": {
+      "first": {
+        "components": [   
+          {
+            "name": "Header",
+            "params": {
+              "variant": ""
+            },
+            "apiEndpoint": "/api/getHero"
+          }
+        ]
+      },
+      "second": {
+        "components": [
+          {
+            "name": "Welcome",
+            "params": {
+              "fullBleed": true
+            },
+            "apiEndpoint": "/api/getAboutEventHome"
+          }
+        ]
+      },
+      "third": {
+        "components": [
+          {
+            "name": "Footer",
+            "params": {
+              "fullBleed": true,
+              "label": "web_theme_xtsummit"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

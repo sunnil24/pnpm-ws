@@ -12,12 +12,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export const loader = async () => {
-  redirect("/home");
-  return {};
+  return redirect("/home");
 };
-
-export default function Home(props: any) {
-  console.log("props", props);
-
-  return null;
-}
