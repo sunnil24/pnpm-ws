@@ -14,8 +14,8 @@
   ],
   "dependencies": {
     "@radix-ui/react-toggle": "1.x",
-    "@sldl/tailwind-config": "workspace:*",
-    "class-variance-authority": "0.x"
+    "class-variance-authority": "0.x",
+    "@sldl/tailwind-config": "workspace:*"
   },
   "peerDependencies": {
     "react": "19.x",

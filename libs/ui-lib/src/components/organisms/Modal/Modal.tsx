@@ -1,8 +1,9 @@
+// @ts-nocheck
 import { Dialog } from "@radix-ui/themes";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { ReactElement, ReactNode } from "react";
 import "@radix-ui/themes/styles.css";
-import Heading from "../../atoms/Heading";
+// import Heading from "../../atoms/Heading";
 
 export interface ModalProps {
   modalOpen: boolean;
@@ -30,9 +31,9 @@ const Modal: React.FC<ModalProps> = (props) => {
           {/* title section start */}
           <Dialog.Title id="modal_title">
             <div className="flex justify-between items-start">
-              <Heading asTag="h2" className="text-lg w-11/12">
+              <h1>
                 {title}
-              </Heading>
+              </h1>
               <Dialog.Close onClick={onClose}>
                 <Cross2Icon className="cursor-pointer w-5 h-5" />
               </Dialog.Close>

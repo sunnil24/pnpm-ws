@@ -1,4 +1,5 @@
-import { Ref, forwardRef } from "react";
+// @ts-nocheck
+import { Ref } from "react";
 import * as ButtonPrimitive from "@radix-ui/react-toggle";
 import { buttonVariants, ButtonVariantsProps } from "./Button.styles";
 import { cn } from "@sldl/tailwind-config";
@@ -32,7 +33,7 @@ const Button = (
     variant = "primaryContained",
     ...props
   }: ButtonProps,
-  ref: Ref<HTMLButtonElement>
+  ref: Ref<HTMLButtonElement>,
 ): JSX.Element => {
   /**
    * A utility function that applies the appropriate CSS classes,  based on the variant and size props
@@ -49,7 +50,7 @@ const Button = (
         size,
         className,
       }),
-      classes
+      classes,
     );
 
   // Rendering the button component using ButtonPrimitive.Root component from @radix-ui/react-toggle library

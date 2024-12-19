@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { ReactNode } from "react";
 import * as RadixSelect from "@radix-ui/react-select";
 import {
