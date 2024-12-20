@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 
-
 module.exports = function extractDesignSystemVariables() {
   const tokens = {};
   const regex = /--[^:\s]+:\s[^;]+;/g;

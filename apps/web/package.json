@@ -16,7 +16,8 @@
     "lucide-react": "^0.468.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.0.2"
+    "react-router": "^7.0.2",
+    "@sldl/button": "workspace:*"
   },
   "devDependencies": {
     "@react-router/dev": "^7.0.2",
@@ -30,6 +31,7 @@
     "tailwindcss": "^3.4.16",
     "typescript": "^5.7.2",
     "vite": "^5.4.11",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^5.1.4",
+    "@sldl/tailwind-config": "workspace:*"
   }
 }

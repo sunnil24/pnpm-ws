@@ -3,7 +3,7 @@ import getComponents from "../component-util";
 export const LayoutDefault = (
   regions: unknown,
   props = {},
-  components = {}
+  components = {},
 ) => {
   if (!regions) {
     return null;

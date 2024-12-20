@@ -1,6 +1,6 @@
 import { execSync } from "child_process";
-import glob from "glob";
 import fs from "fs";
+import glob from "glob";
 import path from "path";
 
 const scriptName = process.env.npm_lifecycle_event;
@@ -14,17 +14,13 @@ try {
   if (operation === "build") {
     if (packageName) {
       console.log(`Building ${packageName}...`);
-      execSync(`turbo run build`, {
-        stdio: "inherit",
-      });
+      execSync(`turbo run build --filter=${packageName}`, { stdio: "inherit" });
     } else {
       console.log(`Building priority components...`);
       // Build priority components
       for (const component of priorityComponents) {
         console.log(`Building ${component}...`);
-        execSync(`turbo run build`, {
-          stdio: "inherit",
-        });
+        execSync(`turbo run build --filter=${component}`, { stdio: "inherit" });
       }
       console.log(`Building all remaining packages...`);
       execSync(`turbo run build`, { stdio: "inherit" });
